@@ -340,7 +340,7 @@ Your GWT Glace development environment is ready! Start exploring the project, ma
 
 # DB setup
 ## SSH into the server and authenticate
-root@software-H110M-H:/home/software# ssh glace@192.168.2.3 -p24
+root@software-H110M-H:/home/software# ssh glace@192.168.2.3 -p24 <br>
 glace@192.168.2.3's password: glacenxt
 
 ## List all available databases to verify the connection
