@@ -337,3 +337,30 @@ Ensure your system meets the following requirements:
 ## 10. Next Steps: Starting Your Work
 
 Your GWT Glace development environment is ready! Start exploring the project, making changes, and committing them using Eclipse's Git integration.
+
+# DB setup
+## SSH into the server and authenticate
+root@software-H110M-H:/home/software# ssh glace@192.168.2.3 -p24
+glace@192.168.2.3's password: glacenxt
+
+## List all available databases to verify the connection
+[glace@svn ~]$ psql -l
+
+## Connect to the `ciama_local` database
+[glace@svn ~]$ psql ciama_local
+
+## List all tables in the `ciama_local` database
+ciama_local=# \dt
+
+## Check the structure of the `patient_registration` table (to see the columns)
+ciama_local=# \d patient_registration
+
+## Toggle expanded output mode for better readability of query results
+ciama_local=# \x
+
+## Retrieve the first row from `patient_registration` table
+ciama_local=# SELECT * FROM patient_registration LIMIT 1;
+
+
+
+
