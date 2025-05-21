@@ -1,4 +1,8 @@
-## Daily Progress
+# Daily Progress
+
+Welcome to my daily progress logs as a Software Engineer. This repository tracks what I learn and work on each day.
+
+## 📅 Daily Log Summary
 
  **Day 1:** [**Setting Up Eclipse, Tomcat, and Java on Linux || GWT Glace Development Environment Setup**](Day1-README.md) <br>
  **Day 2:** [**Day 2**](Day2-README.md) <br>
