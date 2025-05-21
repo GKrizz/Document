@@ -338,28 +338,105 @@ Ensure your system meets the following requirements:
 
 Your GWT Glace development environment is ready! Start exploring the project, making changes, and committing them using Eclipse's Git integration.
 
-# DB setup
-## SSH into the server and authenticate
-root@software-H110M-H:/home/software# ssh glace@192.168.2.3 -p24 <br>
-glace@192.168.2.3's password: glacenxt
+Sure! Here's a clean, professional README-style documentation for your DB setup instructions:
 
-## List all available databases to verify the connection
-[glace@svn ~]$ psql -l
+---
 
-## Connect to the `ciama_local` database
-[glace@svn ~]$ psql ciama_local
+# Database Setup 
 
-## List all tables in the `ciama_local` database
-ciama_local=# \dt
+---
 
-## Check the structure of the `patient_registration` table (to see the columns)
-ciama_local=# \d patient_registration
+## Prerequisites
 
-## Toggle expanded output mode for better readability of query results
-ciama_local=# \x
+* SSH access credentials for the remote server.
+* PostgreSQL client installed on the remote server.
+* Necessary permissions to access the target database.
 
-## Retrieve the first row from `patient_registration` table
-ciama_local=# SELECT * FROM patient_registration LIMIT 1;
+---
+
+## Steps
+
+### 1. SSH into the Server
+
+Connect to the remote server using SSH on the specified port.
+
+```bash
+ssh glace@192.168.2.3 -p24
+```
+
+* When prompted, enter the password: `glacenxt`
+
+---
+
+### 2. List All Available Databases
+
+Once logged in, list all PostgreSQL databases to verify connection and check available databases.
+
+```bash
+psql -l
+```
+
+---
+
+### 3. Connect to the `ciama_local` Database
+
+Connect to the target database named `ciama_local`.
+
+```bash
+psql ciama_local
+```
+
+---
+
+### 4. List All Tables in the Database
+
+Inside the `ciama_local` database, list all tables to explore the schema.
+
+```sql
+\dt
+```
+
+---
+
+### 5. Check Table Structure
+
+View the detailed structure (columns, types, constraints) of the table `patient_registration`.
+
+```sql
+\d patient_registration
+```
+
+---
+
+### 6. Enable Expanded Output Mode
+
+Toggle expanded output mode for better readability of query results (especially useful for wide tables).
+
+```sql
+\x
+```
+
+---
+
+### 7. Retrieve Sample Data
+
+Fetch the first row of data from the `patient_registration` table as a sample.
+
+```sql
+SELECT * FROM patient_registration LIMIT 1;
+```
+
+---
+
+## Notes
+
+* Use `\q` to exit the `psql` interface.
+* Replace `patient_registration` with any other table name to explore different tables.
+* Always ensure secure handling of credentials and permissions.
+
+---
+
+Let me know if you want this formatted as Markdown or in any other style!
 
 
 
