@@ -1,3 +1,6 @@
+#Day 2 
+
+
 ## 🔹 **Session Tracking**
 
 Session tracking refers to techniques used to **maintain the state of a user (client)** across multiple HTTP requests in a web application.
