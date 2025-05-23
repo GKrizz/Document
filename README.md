@@ -7,5 +7,6 @@ Welcome to my daily progress logs as a **Software Engineer**. This repository se
 ## 📅 Daily Log Summary
 
 - **Day 1:** [Setting Up Eclipse, Tomcat, and Java on Linux · GWT Glace Development Environment Setup](Day1-README.md)  
-- **Day 2:** [Java Servlet || Session Tracking ||  Request Management || JSP ](Day2-README.md)  
-- **Day 3:** [Investigation: Fetching and Storing of Menu Items](Day3-README.md) 
+- **Day 2:** [Java Servlet || Session Tracking ||  Request Management || JSP ](Day2-README.md) 
+- **Day 3:** [](Day3-README.md) 
+- **Day 4:** [Investigation: Fetching and Storing of Menu Items](Day4-README.md) 
