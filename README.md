@@ -11,7 +11,7 @@
 |---------:|-----------------------------------------------------------------------------------------------------|----------------------|
 | **Day 1** | ⚙️ Setting Up Eclipse, Tomcat, and Java on Linux<br>🌐 GWT Glace Development Environment Setup<br>🗄️ Database Setup | [View →](Day1-README.md) |
 | **Day 2** | 🔁 Java Servlet • 🛡️ Session Tracking • 📬 Request Management • 📝 JSP | [View →](Day2-README.md) |
-| **Day 3** | 📦 Cloned & Configured Projects:<br> • `glacelegacy` – Import & Config Completed✅ <br> •  `glaceemr` – Import & Config Completed✅<br> •  `glaceemr_ui` – Pending Setup ⏳| [View →](Day3-README.md) |
+| **Day 3** | 📦 Cloned & Configured Projects:<br> • `glacelegacy` – Import & Config Completed✅ <br> •  `glaceemr` – Import & Config Completed✅<br> •  `glaceemr_ui` – Completed ✅| [View →](Day3-README.md) |
 | **Day 4** | 🧭 Menu Source Investigation<br>🧬 “New Patient” Navigation Flow Analysis                              | [View →](Day4-README.md) |
-| **Day 5** | 🛠️ Work in Progress                                                                                  | [View →](Day5-README.md) |
+| **Day 5** | 🔍 Identify Table Storing Patient Insurance Details                                                       | [View →](Day5-README.md) |
 
