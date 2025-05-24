@@ -338,8 +338,6 @@ Ensure your system meets the following requirements:
 
 Your GWT Glace development environment is ready! Start exploring the project, making changes, and committing them using Eclipse's Git integration.
 
-Sure! Here's a clean, professional README-style documentation for your DB setup instructions:
-
 ---
 
 # Database Setup 
