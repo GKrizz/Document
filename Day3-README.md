@@ -2,6 +2,31 @@
 
 ---
 
+
+### 🏢 **Company Commit Workflow**
+
+| Commit Type        | Days           |
+| ------------------ | -------------- |
+| Beta Commit        | Mon, Tue, Thu  |
+| Beta Stable Commit | Thursday       |
+| Stable Commit      | Next Wednesday |
+
+---
+
+### 🛠️ **Environment Setup**
+
+* ✅ Installed **Eclipse IDE** (Version 14)
+* ✅ Installed **Java 8** (Required for **GWT – Google Web Toolkit**)
+* ✅ Cloned repositories:
+
+  ```
+  1. glacelegacy    → Legacy project (GWT-based)
+  2. glaceemr_ui    → Front-end/UI project
+  3. glaceemr       → Spring-based backend project
+  ```
+
+---
+
 ### 📁 **1. Import & Configure Legacy Project**
 
 #### 🔗 Clone from Git
@@ -27,6 +52,9 @@
 
 * **`webfarm.xml`**
 
+  
+  * Set local IP and context path 
+
   * Set:
 
     ```xml
@@ -35,6 +63,8 @@
   * Replace all IP addresses with your stage/local IP
 
 * **`DBFarm.xml`**
+
+  * Configure database access using local IP
 
   * Ensure:
 
@@ -76,18 +106,38 @@ http://localhost:8080/
 
 ---
 
-### 🧱 **2. Setup GlaceEMR (Maven Project)**
+#### 🌐 Check Output
 
-#### ⚙ Convert and Configure
+Open in browser:
+
+```
+http://localhost:8080/
+```
+
+✅ **Legacy project running successfully**
+
+> ⚠️ *Note: Avoid editing Apache files while Tomcat is running.*
+
+#### 🛑 Stop Tomcat Server
+
+```bash
+./shutdown.sh
+```
+
+---
+
+### 🧱 **2. Setup GlaceEMR Project (`glaceemr`) – Maven**
+
+#### ⚙ Convert to Maven
 
 1. Right-click the project → `Configure` → `Convert to Maven Project`
 
-2. Update the following files:
+#### 🔧 Update Configuration Files
 
-   * `applicationContext.xml`
-   * `pom.xml`
-   * `security.xml`
-   * `application.properties`
+* `applicationContext.xml`
+* `pom.xml`
+* `security.xml`
+* `application.properties`
 
 #### 🔨 Build with Maven
 
@@ -96,4 +146,44 @@ http://localhost:8080/
 
    * `Maven Clean`
    * `Maven Install`
+
+#### 🚀 Deploy WAR File
+
+1. Right-click the project → `Run on Server`
+2. Check output:
+
+```text
+Welcome to glenwoodsystems
+IP: 127.0.0.1
+```
+
+✅ **Backend project deployed successfully**
+
+---
+
+### 🎨 **3. UI Project (`glaceemr_ui`) – GWT**
+
+#### 📌 Entry Points
+
+* `glaceemr.html`
+* `glaceemr.java`
+
+#### 🧪 Run GWT in Dev Mode (Jetty)
+
+1. Allocate RAM: 6 GB
+2. Bind local IP
+3. Run:
+
+   * `Maven Clean`
+   * `Maven Install`
+   * Start in GWT Dev Mode
+
+#### 🌐 Check Development Output
+
+```
+Compiling glaceemr...
+```
+
+✅ **UI displayed in browser**
+
 
