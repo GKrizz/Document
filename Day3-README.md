@@ -98,12 +98,6 @@ cd tomcat9/bin
 sudo ./startup.sh
 ```
 
-#### 🌐 Open in Browser
-
-```url
-http://localhost:8080/
-```
-
 ---
 
 #### 🌐 Check Output
@@ -183,7 +177,13 @@ IP: 127.0.0.1
 ```
 Compiling glaceemr...
 ```
+#### 🌐 Check Output
 
+Open in browser:
+
+```
+http://localhost:8080/
+```
 ✅ **UI displayed in browser**
 
 
