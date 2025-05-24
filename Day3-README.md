@@ -1,15 +1,14 @@
-## ✅ Day 3
+# ✅ Day 3
 
 ---
 
-
 ### 🏢 **Company Commit Workflow**
 
-| Commit Type        | Days           |
-| ------------------ | -------------- |
-| Beta Commit        | Mon, Tue, Thu  |
-| Beta Stable Commit | Thursday       |
-| Stable Commit      | Next Wednesday |
+| Commit Type            | Days           |
+| ---------------------- | -------------- |
+| **Beta Commit**        | Mon, Tue, Thu  |
+| **Beta Stable Commit** | Thursday       |
+| **Stable Commit**      | Next Wednesday |
 
 ---
 
@@ -46,16 +45,11 @@
 6. Choose: `Import as General Project`
 7. Click `Finish`
 
----
-
 #### 🔧 Configure the Project
 
 * **`webfarm.xml`**
 
-  
-  * Set local IP and context path 
-
-  * Set:
+  * Set local IP and context path:
 
     ```xml
     <context-path>GlaceStage</context-path>
@@ -65,7 +59,6 @@
 * **`DBFarm.xml`**
 
   * Configure database access using local IP
-
   * Ensure:
 
     ```xml
@@ -133,6 +126,13 @@ http://localhost:8080/
 * `security.xml`
 * `application.properties`
 
+> ⚙️ Additional Configuration:
+> Right-click → `Build Path` → `Configure Build Path` → `Java Compiler` → `Annotation Processing` → Set generated source directory:
+>
+> ```
+> target/generated-sources
+> ```
+
 #### 🔨 Build with Maven
 
 1. Right-click the project
@@ -144,7 +144,8 @@ http://localhost:8080/
 #### 🚀 Deploy WAR File
 
 1. Right-click the project → `Run on Server`
-2. Check output:
+2. Select **Tomcat**, provide the path, then click `Finish`
+3. Check output:
 
 ```text
 Welcome to glenwoodsystems
@@ -164,26 +165,24 @@ IP: 127.0.0.1
 
 #### 🧪 Run GWT in Dev Mode (Jetty)
 
-1. Allocate RAM: 6 GB
+1. Allocate RAM: **6 GB**
 2. Bind local IP
-3. Run:
+3. Perform:
 
    * `Maven Clean`
    * `Maven Install`
-   * Start in GWT Dev Mode
+   * Right-click → `Run As` → `GWT Dev Mode (Jetty)`
 
 #### 🌐 Check Development Output
 
 ```
 Compiling glaceemr...
 ```
-#### 🌐 Check Output
 
-Open in browser:
+#### 🌐 View in Browser
 
 ```
 http://localhost:8080/
 ```
-✅ **UI displayed in browser**
 
-
+✅ **UI displayed successfully in the browser**
