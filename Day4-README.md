@@ -1,13 +1,18 @@
+# ✅ Day 4
 
-## 📝 **Day 4**
+**📅 Date:** 23/05/2025 <br>
+**📝 Tasks Completed:**
 
-**📅 Date:** 23/05/2025
-**🔧 Task:** Investigation – Source of Menu Items in Main Navigation
-**🗂 Module:** Main Menu / Navigation
-
+1. [Investigation – Source of Menu Items in Main Navigation](#investigation--source-of-menu-items-in-main-navigation)
+2. [Flow Analysis – “New Patient” Navigation](#flow-analysis--new-patient-navigation)
 
 ---
 
+## 🔧 Investigation – Source of Menu Items in Main Navigation
+
+**📂 Module:** Main Menu / Navigation
+
+---
 
 ### 🔍 **Steps Performed**
 
@@ -57,15 +62,10 @@
 * The `main.jsp` file relies on `menu_config` for retrieving menu items, which suggests newer environments (e.g., staging/production) are using this updated structure.
 * Legacy/local environments still use the older `menus` table.
 
-
-Here is your refined and well-structured log entry for **✅ Day 4**, summarizing the full backend and frontend flow when navigating to **"New Patient"** from the main menu:
-
 ---
 
-## ✅ **Day 4**
+## 🔍 Flow Analysis – “New Patient” Navigation
 
-**📅 Date:** 23/05/2025
-**🔍 Task:** Flow Analysis – **“New Patient” Navigation**
 **📂 Module:** Patient Registration / Navigation
 
 ---
@@ -125,7 +125,7 @@ Here is your refined and well-structured log entry for **✅ Day 4**, summarizin
 
 * On the **main.jsp** screen, clicking “New Patient” triggers a **JavaScript function** from:
 
-  ```
+  ```js
   mainmenu.js
   ```
 
@@ -135,7 +135,7 @@ Here is your refined and well-structured log entry for **✅ Day 4**, summarizin
   http://localhost:8080/GlaceStage/jsp/patient/PatientBook.Action?option=1
   ```
 
-#### 🎯 Breakdown:
+#### 🎯 Breakdown
 
 * `PatientBook.Action`: A mapped Java Action class
 * `option=1`: Indicates action to **create a new patient**
@@ -145,16 +145,23 @@ Here is your refined and well-structured log entry for **✅ Day 4**, summarizin
 ### 🧠 **5. Detailed Backend Workflow**
 
 1. Browser → `PostLoginProcess.Action`
+
 2. Framework maps to → `PostLoginProcessAction` class
+
 3. Executes `performAction()` → returns `"QuickLogin.NextScreen"`
+
 4. Framework looks up mapping → `/jsp/main.jsp`
+
 5. JSP loads UI with "New Patient" option
+
 6. On click, `mainmenu.js` sends:
 
    ```url
    /jsp/patient/PatientBook.Action?option=1
    ```
+
 7. Server routes this to the corresponding patient registration logic
+
 8. The JSP (likely `/WEB-INF/jsp/patientRegistration.jsp`) generates and sends back HTML
 
 ---
@@ -163,7 +170,7 @@ Here is your refined and well-structured log entry for **✅ Day 4**, summarizin
 
 * The final JSP (e.g., `patientRegistration.jsp`) is executed **server-side**.
 * The response is sent back to the browser.
-* **URL in address bar remains**:
+* **URL in address bar remains:**
 
   ```url
   http://localhost:8080/GlaceStage/jsp/PostLoginProcess.Action
@@ -183,3 +190,5 @@ Here is your refined and well-structured log entry for **✅ Day 4**, summarizin
 | 4    | **JS Trigger (mainmenu.js)** | Loads `PatientBook.Action?option=1`                      |
 | 5    | **New Patient UI Load**      | Action renders patient registration screen (via JSP)     |
 | 6    | **Internal Forward**         | Final JSP forwards response without changing browser URL |
+
+---
