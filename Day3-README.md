@@ -26,63 +26,63 @@
 
 ---
 
-### 📁 **1. Import & Configure Legacy Project**
+### 📁 **1. Import & Configure Legacy Project (`glacelegacy`)**
 
 #### 🔗 Clone from Git
 
 1. Go to: [http://cs.glaceemr.com](http://cs.glaceemr.com)
 2. Navigate to: **Projects > Project List**
-3. Search and select your project
+3. Search and select the required project
 4. Copy the **SSH URL**
 
 #### 📥 Import into Eclipse
 
 1. Open **Eclipse**
 2. `Right-click` in the Project Explorer → `Import`
-3. Choose: `Git > Projects from Git` → `Clone URI`
+3. Select: `Git > Projects from Git` → `Clone URI`
 4. Paste the SSH URL
-5. Select a destination folder
+5. Select destination folder
 6. Choose: `Import as General Project`
 7. Click `Finish`
 
-#### 🔧 Configure the Project
+#### 🔧 Configure Project Files
 
-* **`webfarm.xml`**
+* **webfarm.xml**
 
-  * Set local IP and context path:
+  ```xml
+  <context-path>GlaceStage</context-path>
+  ```
 
-    ```xml
-    <context-path>GlaceStage</context-path>
-    ```
-  * Replace all IP addresses with your stage/local IP
+  Replace all IP addresses with your local/stage IP.
 
-* **`DBFarm.xml`**
+* **DBFarm.xml**
 
-  * Configure database access using local IP
-  * Ensure:
+  ```xml
+  <context-path>GlaceStage</context-path>
+  ```
 
-    ```xml
-    <context-path>GlaceStage</context-path>
-    ```
+  * Configure database access using your local IP.
 
 #### ⚙ Tomcat Configuration
 
-1. Go to:
+1. Navigate to:
 
    ```
    tomcat9/conf/Catalina/localhost
    ```
+
 2. Open `GlaceStage.xml`
+
 3. Update project path:
 
-   * Right-click project in Eclipse → `Properties` → `Location`
-   * Copy full path and replace it in the XML
+   * Right-click project → `Properties` → `Location`
+   * Copy full path and update it in the XML file
 
-#### 🏗 Build the Project (Ant)
+#### 🏗 Build Project with Ant
 
 1. Right-click `build.xml`
-2. Select: `Run As > Ant Build`
-3. Verify build is successful
+2. Choose: `Run As > Ant Build`
+3. Ensure successful build
 
 #### 🚀 Start Tomcat Server
 
@@ -90,8 +90,6 @@
 cd tomcat9/bin
 sudo ./startup.sh
 ```
-
----
 
 #### 🌐 Check Output
 
@@ -101,9 +99,9 @@ Open in browser:
 http://localhost:8080/
 ```
 
-✅ **Legacy project running successfully**
+✅ **Legacy project is running successfully**
 
-> ⚠️ *Note: Avoid editing Apache files while Tomcat is running.*
+> ⚠️ *Avoid editing Apache files while Tomcat is running.*
 
 #### 🛑 Stop Tomcat Server
 
@@ -113,11 +111,11 @@ http://localhost:8080/
 
 ---
 
-### 🧱 **2. Setup GlaceEMR Project (`glaceemr`) – Maven**
+### 🧱 **2. Backend Project Setup (`glaceemr`) – Maven**
 
 #### ⚙ Convert to Maven
 
-1. Right-click the project → `Configure` → `Convert to Maven Project`
+1. Right-click project → `Configure` → `Convert to Maven Project`
 
 #### 🔧 Update Configuration Files
 
@@ -126,8 +124,11 @@ http://localhost:8080/
 * `security.xml`
 * `application.properties`
 
-> ⚙️ Additional Configuration:
-> Right-click → `Build Path` → `Configure Build Path` → `Java Compiler` → `Annotation Processing` → Set generated source directory:
+> 🔧 Also set annotation processing directory:
+>
+> * Right-click → `Build Path` → `Configure Build Path`
+> * Go to: `Java Compiler` → `Annotation Processing`
+> * Set:
 >
 > ```
 > target/generated-sources
@@ -135,21 +136,25 @@ http://localhost:8080/
 
 #### 🔨 Build with Maven
 
-1. Right-click the project
-2. Run:
-
-   * `Maven Clean`
-   * `Maven Install`
+1. Right-click project → `Run As` → `Maven Clean`
+2. Then → `Run As` → `Maven Install`
 
 #### 🚀 Deploy WAR File
 
-1. Right-click the project → `Run on Server`
-2. Select **Tomcat**, provide the path, then click `Finish`
-3. Check output:
+1. Right-click project → `Run on Server`
+2. Choose **Tomcat**, set path → Click `Finish`
+
+Open in browser:
+
+```
+http://192.168.2.241/glaceemr_backend/
+```
+
+Check Output:
 
 ```text
-Welcome to glenwoodsystems
-IP: 127.0.0.1
+Welcome To Glenwood Services !
+IP : 192.168.2.241
 ```
 
 ✅ **Backend project deployed successfully**
@@ -165,9 +170,9 @@ IP: 127.0.0.1
 
 #### 🧪 Run GWT in Dev Mode (Jetty)
 
-1. Allocate RAM: **6 GB**
+1. Allocate **6 GB RAM**
 2. Bind local IP
-3. Perform:
+3. Execute:
 
    * `Maven Clean`
    * `Maven Install`
@@ -179,10 +184,32 @@ IP: 127.0.0.1
 Compiling glaceemr...
 ```
 
-#### 🌐 View in Browser
+#### 🌐 Open in Browser
 
-```
-http://localhost:8080/
-```
+Options to test:
 
-✅ **UI displayed successfully in the browser**
+* **Main URL**
+
+  ```
+  http://192.168.2.241/glaceemr.html
+  ```
+
+* **Jetty Dev Mode**
+
+  ```
+  http://192.168.2.241:8888/glaceemr.html
+  ```
+
+* **Full URL with Parameters**
+
+  ```
+  http://192.168.2.241/glaceemr.html?homeParam=true&userId=1&loginId=2&contextPath=glace&dbn=glace&sprToken=ZGVmb2RvY3RvcjpmNDJlZGZiNjNlM2I5ZDM1M2QxZTIwZDZhMDY3NDg0MGNjMjNlZDY5NDMxZDM5MzcxODc2YTE4YTE3OGY2MTJhN2VjMWRlMDQwYTQxYWNhZDdjYmMzY2M5ZGEwMDY5Y2Q4YmI4ZTljMjRiNTg2Y2FmODlhNWExNGQyNzA2ZWFkYg==&localSharedPath=/home/abisheik/Documents/shared&springurl=http://localhost:9080/glaceemr_backend&taskIntegration=true&tomcaturl=http://192.168.2.241:8080/GlaceStage&userName=Demodoctor&demoFlag=0
+  ```
+
+* **Default Localhost (Tomcat)**
+
+  ```
+  http://localhost:8080/
+  ```
+
+✅ **UI displayed successfully in browser**
