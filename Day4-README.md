@@ -3,8 +3,8 @@
 **📅 Date:** 23/05/2025 <br>
 **📝 Tasks Completed:**
 
-1. [Investigation – Source of Menu Items in Main Navigation](#investigation--source-of-menu-items-in-main-navigation)
-2. [Flow Analysis – “New Patient” Navigation](#flow-analysis--new-patient-navigation)
+1. [Investigation – Source of Menu Items in Main Navigation](#-investigation--source-of-menu-items-in-main-navigation)
+2. [Flow Analysis – “New Patient” Navigation](#-flow-analysis--new-patient-navigation)
 
 ---
 
