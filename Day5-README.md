@@ -1,6 +1,4 @@
-# 🧠 Daily Progress Log
-
-## 📅 Day 5 — 24/05/2025
+# 📅 Day 5 — 24/05/2025
 
 ### 🥇 Task: Identify Table Storing Patient Insurance Details
 
