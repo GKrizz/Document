@@ -15,3 +15,17 @@
 | **Day 4** | 🧭 Menu Source Investigation<br>🧬 “New Patient” Navigation Flow Analysis                              | [View →](Week1/Day4-README.md) |
 | **Day 5** | 🔍 Identify Table Storing Patient Insurance Details                                                       | [View →](Week1/Day5-README.md) |
 
+
+---
+
+## 📅 **Week 2 Summary**
+
+|     📆 Day | 🚀 Highlights                                                                                                    | 📄 Link                         |
+| ---------: | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+|  **Day 6** |    | [View →](Week2/Day6-README.md)  |
+|  **Day 7** |    | [View →](Week2/Day7-README.md)  |
+|  **Day 8** |    | [View →](Week2/Day8-README.md)  |
+|  **Day 9** |    | [View →](Week2/Day9-README.md)  |
+| **Day 10** |    | [View →](Week2/Day10-README.md) |
+
+---
