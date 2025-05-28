@@ -27,8 +27,13 @@
    * Run on Tomcat
    * URLs:
 
-     * `http://localhost:8080/GlaceStage/jsp/PostLoginProcess.Action`
-     * `http://192.168.2.241/glaceemr.html?homeParam=true&userId=1&loginId=2&contextPath=glace&dbn=glace&sprToken=...&taskIntegration=true&tomcaturl=http://192.168.2.241:8080/GlaceStage&userName=Demodoctor&demoFlag=0#mytask:myTask/chartcenter:ChartCenter/...`
+     * ```
+       http://localhost:8080/GlaceStage/jsp/PostLoginProcess.Action```
+     * ```
+       http://192.168.2.241/glaceemr.html?homeParam=true&userId=1&loginId=2&contextPath=glace&dbn=glace&sprToken=ZGVtb2RvY3RvcjpmNDJlZGZiNjNlM2I5ZDM1M2QxZTIwZDZhMDY3NDg0MGNjMjNlZDY5NDMxZDM5MzcxODc2YTE4YTE3OGY2MTJhN2VjMWRlMDQwYTQxYWNhZDdjYmMzY2M5ZGEwMDY5Y2Q4YmI4ZTljMjRiNTg2Y2FmODlhNWExNGQyNzA2ZWFkYg==&localSharedPath=/home/abisheik/Documents/shared&springurl=http://localhost:9080/glaceemr_backend&taskIntegration=true&tomcaturl=http://192.168.2.241:8080/GlaceStage&userName=Demodoctor&demoFlag=0#mytask:myTask/chartcenter:ChartCenter/patientlookup:PatientLookup/checkoutencounterchartbeta:myTask/insuranceroot:myTask/newencounterroot:myTask/patientdemographicsroot:myTask/authorizationreferralroot:AuthorizationReferralRootPlace
+       ```
+       
+       
 
 ---
 
