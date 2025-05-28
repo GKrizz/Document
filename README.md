@@ -22,10 +22,10 @@
 
 |     📆 Day | 🚀 Highlights                                                                                                    | 📄 Link                         |
 | ---------: | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-|  **Day 6** | Patient Insurance ID Change Validation & Save Workflow | [View →](Week2/Day6-README.md)  |
-|  **Day 7** |    | [View →](Week2/Day7-README.md)  |
-|  **Day 8** |    | [View →](Week2/Day8-README.md)  |
-|  **Day 9** |    | [View →](Week2/Day9-README.md)  |
-| **Day 10** |    | [View →](Week2/Day10-README.md) |
+|  **Day 6** | 🆔 Validated Patient Insurance ID change <br> 💾 Analyzed Insurance Save Workflow| [View →](Week2/Day6-README.md)  |
+|  **Day 7** | 🔧 Ran UI and MVC Projects  📋 Investigated and updated Relationship Dropdown behavior in Edit UI <br> 🔧 Implemented Default + Auto-fill Logic| [View →](Week2/Day7-README.md)  |
+|  **Day 8** | (To be updated)   | [View →](Week2/Day8-README.md)  |
+|  **Day 9** | (To be updated)   | [View →](Week2/Day9-README.md)  |
+| **Day 10** |  (To be updated)  | [View →](Week2/Day10-README.md) |
 
 ---
