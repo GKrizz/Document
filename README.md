@@ -22,7 +22,7 @@
 
 |     📆 Day | 🚀 Highlights                                                                                                    | 📄 Link                         |
 | ---------: | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-|  **Day 6** |    | [View →](Week2/Day6-README.md)  |
+|  **Day 6** | Patient Insurance ID Change Validation & Save Workflow | [View →](Week2/Day6-README.md)  |
 |  **Day 7** |    | [View →](Week2/Day7-README.md)  |
 |  **Day 8** |    | [View →](Week2/Day8-README.md)  |
 |  **Day 9** |    | [View →](Week2/Day9-README.md)  |
