@@ -24,8 +24,9 @@
 | ---------: | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 |  **Day 6** | 🆔 Validated Patient Insurance ID change <br> 💾 Analyzed Insurance Save Workflow| [View →](Week2/Day6-README.md)  |
 |  **Day 7** | 🔧 Ran UI and MVC Projects  <br>📋 Investigated and updated Relationship Dropdown behavior in Edit UI <br> 🔧 Implemented Default + Auto-fill Logic| [View →](Week2/Day7-README.md)  |
-|  **Day 8** | 🔧 UI Modification – Dynamic Positioning of "OK" Button in Insurance Modal   | [View →](Week2/Day8-README.md)  |
-|  **Day 9** | (To be updated)   | [View →](Week2/Day9-README.md)  |
-| **Day 10** |  (To be updated)  | [View →](Week2/Day10-README.md) |
+|  **Day 8** <br> **Day 9** | 🔧 UI Modification – Dynamic Positioning of "OK" Button in Insurance Modal   | [View →](Week2/Day8-README.md)  |
+| **Day 10** | 🖨️ Integrated **After Hours Info** into **Print Appointment** screen <br> 📄 Modified backend (`PrintAppointmentAction.java`) and model (`PrintReportDetails.java`) to include "After Hours" data <br> 🧾 Updated `printAppointment.jsp` to render new section in print view | [View →](Week2/Day10-README.md) |
 
 ---
+
+
