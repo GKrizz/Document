@@ -30,3 +30,14 @@
 ---
 
 
+## 📅 **Week 3 Summary**
+
+|     📆 Day | 🚀 Highlights   | 📄 Link                         |
+| ---------: | --------------- | ------------------------------- |
+| **Day 11** | (To be updated) | [View →](Week3/Day11-README.md) |
+| **Day 12** | (To be updated) | [View →](Week3/Day12-README.md) |
+| **Day 13** | (To be updated) | [View →](Week3/Day13-README.md) |
+| **Day 14** | (To be updated) | [View →](Week3/Day14-README.md) |
+| **Day 15** | (To be updated) | [View →](Week3/Day15-README.md) |
+
+---
