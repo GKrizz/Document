@@ -65,3 +65,82 @@ Modify the UI so the **"OK"** button:
 
 
 
+---
+
+
+## 🔍 Implementation Details
+
+### 📄 Modified Files
+
+* `InsuranceDesktopView.java`
+* `InsuranceDesktopView.ui.xml`
+
+### ✅ Key Changes
+
+#### 1. **Created Method: `setModalHeight(int insType)`**
+
+This method dynamically sets the height of the modal dialog element based on the `insType`.
+
+```java
+private void setModalHeight(int insType) {
+    Element modalElement = getDomElementById("insuranceMyTaskCommonModal");
+
+    if (modalElement != null) {
+        Element modalDialogElement = modalElement.getFirstChildElement();
+        if (modalDialogElement != null) {
+            String heightStyle = (insType == 1 || insType == 2 || insType == 3) ? "94%" : "550px";
+            modalDialogElement.setAttribute("style",
+                "transition: height 0.3s ease;" +
+                "height:" + heightStyle + ";" +
+                "width: 75%;" +
+                "margin-top: 20px;" +
+                "margin-bottom: 10px;");
+        }
+    }
+}
+```
+
+#### 2. **Switch Case Block – Integration**
+
+Within the `switch (insType)` block (that handles drawing different insurance info panels), the following line was added for cases 1 through 8:
+
+```java
+setModalHeight(insType);
+```
+
+#### 3. **Modal Visibility Handling**
+
+```java
+Element modalElement = getDomElementById("insuranceMyTaskCommonModal");
+if (modalElement != null) {
+    modalElement.setClassName("modal show");
+} else {
+    GWT.log("Modal element with ID 'insuranceMyTaskCommonModal' not found in onDataSubmitResponse");
+}
+```
+
+---
+
+## 📌 Notes
+
+* Modal height now dynamically adjusts based on insurance type:
+
+  * `insType 1–3`: Taller modal (`94%`) for potentially more content.
+  * `insType 4–8`: Default modal height (`550px`).
+* This ensures the **"OK" button stays visible and appropriately positioned** across different insurance panels.
+* No change for `insType 9` as it's unhandled (remains unchanged).
+
+---
+
+## ✅ Status
+
+**Completed:** ✔️
+
+### 📸 **Final Output**
+
+The modal correctly resizes based on content and the "OK" button remains well-positioned:
+
+![Screenshot from 2025-05-29 22-55-06](https://github.com/user-attachments/assets/a231e38a-3428-41ab-8042-4be2c762b05c)
+
+
+
