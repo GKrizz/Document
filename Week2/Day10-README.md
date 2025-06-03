@@ -17,6 +17,10 @@ Update the **"Print Appointment"** screen to include **After Hours** information
 6. Click **"More Options" > "Print Patient Appointment"**
 
 ---
+## ✅ Status
+
+![Screenshot from 2025-05-30 14-09-49](https://github.com/user-attachments/assets/107a74b4-65fa-4ee6-8240-21a584bd3d35)
+
 
 ## 🛠️ Technical Implementation Details
 
@@ -136,6 +140,15 @@ if (practiceAfterHours != null && !practiceAfterHours.equals("")) {
 ```html
 <body onload="self.print();">
 ```
+
+---
+
+## ✅ Status
+
+**Completed:** ✔️
+
+### 📸 **Final Output**
+![Screenshot from 2025-06-02 09-53-52](https://github.com/user-attachments/assets/a74d422c-37bb-481c-9b04-5b901afbe9a7)
 
 ---
 
