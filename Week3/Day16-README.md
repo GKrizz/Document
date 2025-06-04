@@ -185,6 +185,12 @@ ScreeningsServiceImpl → Save each answer to DB
 ```
 
 ---
-table name : patient_clinical_findings
-risk_assessment
-emp_profile
+
+
+## 🗃️ Tables Involved
+
+| Table Name                  | Description                                       |
+| --------------------------- | ------------------------------------------------- |
+| `patient_clinical_findings` | Stores individual screening responses per patient |
+| `risk_assessment`           | Links assessments to patients and encounters      |
+| `emp_profile`               | Tracks employee (user) info for audit purposes    |
