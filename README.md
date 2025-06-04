@@ -36,9 +36,9 @@
 
 |     📆 Day | Date         | Day of Week | 🚀 Highlights   | 📄 Link                         |
 | ---------: | ------------ | ----------- | --------------- | ------------------------------- |
-| **Day 15** | June 2, 2025 | Monday      | (To be updated) | [View →](Week3/Day11-README.md) |
-| **Day 16** | June 3, 2025 | Tuesday     | (To be updated) | [View →](Week3/Day12-README.md) |
-| **Day 17** | June 4, 2025 | Wednesday   | (To be updated) | [View →](Week3/Day13-README.md) |
-| **Day 18** | June 5, 2025 | Thursday    | (To be updated) | [View →](Week3/Day14-README.md) |
-| **Day 19** | June 6, 2025 | Friday      | (To be updated) | [View →](Week3/Day15-README.md) |
+| **Day 15** | June 2, 2025 | Monday      | (To be updated) | [View →](Week3/Day15-README.md) |
+| **Day 16** | June 3, 2025 | Tuesday     | (To be updated) | [View →](Week3/Day16-README.md) |
+| **Day 17** | June 4, 2025 | Wednesday   | (To be updated) | [View →](Week3/Day17-README.md) |
+| **Day 18** | June 5, 2025 | Thursday    | (To be updated) | [View →](Week3/Day18-README.md) |
+| **Day 19** | June 6, 2025 | Friday      | (To be updated) | [View →](Week3/Day19-README.md) |
 
