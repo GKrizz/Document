@@ -39,7 +39,7 @@
 | **Day 15** | June 2, 2025 | Monday      | 🔁 Traced Scheduler End-to-End Flow: GWT UI → REST → Controller → Service → UI | [View →](Week3/Day15-README.md) |
 | **Day 16** | June 3, 2025 | Tuesday     |🟢 **Started working with New Team & Module** <br>🔍 Traced Save Flow in Screening Tab: Edit → Save → Service → DB  | [View →](Week3/Day16-README.md) |
 | **Day 17** | June 4, 2025 | Wednesday   |⚙️ Analyzed Backend Auto-Save Logic for HEDIS CPT Codes: BMI, BP, Mammogram, Current Meds <br>✔️ Handles Insert, Update, Delete of CPTs based on Clinical Data | [View →](Week3/Day17-README.md) |
-| **Day 18** | June 5, 2025 | Thursday    | (To be updated) | [View →](Week3/Day18-README.md) |
+| **Day 18** | June 5, 2025 | Thursday    |🧠 Implemented Auto-Save Logic for Depression Screening CPT (G8510) <br>📦 Integrated geteditData to extract screening result <br> 🔍 Added logic to insert if result is "Negative" & not already present| [View →](Week3/Day18-README.md) |
 | **Day 19** | June 6, 2025 | Friday      | (To be updated) | [View →](Week3/Day19-README.md) |
 
 
