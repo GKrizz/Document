@@ -1,6 +1,6 @@
 # 📄 Day 22 – June 9, 2025 (Monday)
 
-## 🔧 Task Summary
+## Task 1: Refactor `getNarativeBlock()` Method in `ResultSectionHandlerUtil.java`
 
 Refactored the `getNarativeBlock()` method in the lab narrative block rendering logic to improve **performance** and **readability**, without changing the output structure. The focus was on avoiding repeated DB calls by using **bulk data fetching** and organizing data for better debugging.
 
@@ -59,7 +59,7 @@ Fetched all lab parameters at once using a list of unique `testDetailIds`, drast
 
 ## 🧾 File Changes
 
-* `getNarativeBlock()` in `LabSummaryHelper.java`
+* `getNarativeBlock()` in `ResultSectionHandlerUtil.java`
 
 ---
 
@@ -83,5 +83,18 @@ END OF LAB RESULTS
 ## 🧠 Conclusion
 
 The refactor preserves the existing logic and UI, **eliminates redundant DB calls**, and enhances debuggability. This sets a good foundation for future improvements like pagination, lazy loading, or real-time data validation.
+
+---
+
+## Task 2: Commit Changes
+
+* Committed changes to `ResultSectionHandlerUtil.java`.
+* Updated `LabResultQueryFactory.java` in the method `collectPerticularLabParameters` by adding a new column: `"lab_entries_parameter_testdetailid"`.
+
+---
+
+## Task 3: Analyze MIPS Document
+
+* Ongoing review and analysis of the MIPS (Merit-based Incentive Payment System) documentation for future implementation.
 
 ---
