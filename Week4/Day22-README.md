@@ -1,54 +1,87 @@
-# 📅 Day 22 – June 9, 2025 (Monday)
+# 📄 Day 22 – June 9, 2025 (Monday)
 
-## ✅ Task: Refactor and Optimize Lab Results Narrative Block
+## 🔧 Task Summary
 
-### 🔍 Goal:
-
-Improve performance and readability of the `getNarativeBlock()` method used for generating lab results in a tabular format. Focus on minimizing database calls and structuring the data more efficiently for debugging and maintenance.
+Refactored the `getNarativeBlock()` method in the lab narrative block rendering logic to improve **performance** and **readability**, without changing the output structure. The focus was on avoiding repeated DB calls by using **bulk data fetching** and organizing data for better debugging.
 
 ---
 
-### ✅ **Changes Implemented**
+## 📌 Objective
 
-#### 🔁 Replaced Per-Row DB Fetching with Bulk Fetch
+* ✅ Ensure the **output remains the same** before and after changes
+* 🧠 Replace repetitive DAO calls with a **batch DB call**
+* 🗂️ Use a `HashMap<String, List<List<String>>>` to store and print structured lab data for debugging
+* 🚀 Improve **efficiency**, especially for records with large data
 
-* **Before:** Parameters were fetched for each `LabResults` record using individual DB calls inside a loop.
-* **After:** Extracted all unique `testDetailId`s and fetched all related parameters in **one batch query**, improving efficiency.
+---
+
+## 🆚 Before vs After
+
+| Feature                  | Before Refactor                                                                           | After Refactor                                                                                    |
+| ------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Parameter Fetching**   | Called `labResultDAO.getParameterList(testId)` **for each lab result** (multiple DB hits) | Fetched **all lab parameters at once** using `getAllParametersByTestDetailIds()` (single DB call) |
+| **Debug Output**         | Structured using `labDataMap`, printed lab data rows for each test                        | Same logic maintained with structured output using `HashMap`                                      |
+| **Lab Result Rendering** | Built HTML table row by row, conditionally for `parameters` or fallback data              | Same row-building logic retained                                                                  |
+| **Performance**          | Inefficient for large lab result sets (O(n) DB calls)                                     | Optimized using O(1) lookups from pre-fetched map                                                 |
+
+---
+
+## 🔍 Key Improvements
+
+### ✅ **HashMap Integration**
 
 ```java
-// Before: One DB call per lab result
-labResultList.get(labCount).setParameters(labResultDAO.getParameterList(testId, config.getDbUtils()));
-
-// After: Single DB call
-Map<String, List<LabParameters>> parameterMap = labResultDAO.getAllParametersByTestDetailIds(testDetailIds, dbUtils);
+HashMap<String, List<List<String>>> labDataMap = new HashMap<>();
 ```
 
-#### 🧠 Cached Results in a HashMap for Debugging
-
-* Constructed a `labDataMap` to capture all rows grouped by test ID and lab name.
-* Outputted the map for debug verification using `System.out.println()` at the end of the method.
+Used to collect all row-wise data (LOINC, Date, Value, etc.) per test+lab combo, and print for verification.
 
 ---
 
-### 🆚 Difference Between Old and New Implementation
+### ✅ **Bulk Parameter Fetch**
 
-| Feature                | Old Method                        | New Method (Optimized)                      |
-| ---------------------- | --------------------------------- | ------------------------------------------- |
-| **Parameter Fetching** | Inside loop, 1 DB call per result | Single bulk query outside loop              |
-| **Performance**        | Slower with larger datasets       | Faster, fewer DB round-trips                |
-| **Debug Output**       | Added manually                    | Stored in `labDataMap` and printed once     |
-| **Code Clarity**       | Traditional, verbose              | Modern Java (streams, lambdas, clean scope) |
-| **String Safety**      | `.contentEquals()` (prone to NPE) | Safer `.equals()` usage                     |
+```java
+Map<String, List<LabParameters>> parameterMap =
+    labResultDAO.getAllParametersByTestDetailIds(testDetailIds, dbUtils);
+```
+
+Fetched all lab parameters at once using a list of unique `testDetailIds`, drastically reducing DB roundtrips.
 
 ---
 
-### 📌 Summary
+## 🧪 Validation
 
-The refactored method:
+* ✅ Manually verified that the **HTML output before and after** the refactor is **identical**
+* ✅ Verified `labDataMap` debug prints match across both implementations
+* ✅ Ensured no missing rows or incorrect values in the rendered `HtmlTableDisplayBean`
 
-* Minimizes database load
-* Improves performance significantly
-* Enhances code readability
-* Makes debugging easier with structured log output
+---
+
+## 🧾 File Changes
+
+* `getNarativeBlock()` in `LabSummaryHelper.java`
+
+---
+
+## 📸 Sample Debug Output (Same for Both)
+
+```
+=================================
+LAB RESULTS MAP - DEBUG OUTPUT
+=================================
+Test: 1234 - Complete Blood Count
+  -> 12345-6 | Hemoglobin | 06/01/2025 | 13.5 | g/dL | 12-16
+  -> 23456-7 | Hematocrit | 06/01/2025 | 41.2 | %    | 36-46
+---------------------------------
+...
+END OF LAB RESULTS
+=================================
+```
+
+---
+
+## 🧠 Conclusion
+
+The refactor preserves the existing logic and UI, **eliminates redundant DB calls**, and enhances debuggability. This sets a good foundation for future improvements like pagination, lazy loading, or real-time data validation.
 
 ---
