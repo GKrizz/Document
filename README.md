@@ -50,16 +50,11 @@
 
 |     📆 Day | Date          | Day of Week | 🚀 Highlights   | 📄 Link                         |
 | ---------: | ------------- | ----------- | --------------- | ------------------------------- |
-| **Day 22** | June 9, 2025  | Monday      | (To be updated) | [View →](Week4/Day22-README.md) |
+| **Day 22** | June 9, 2025 | Monday      | 🔁 **Refactored `getNarativeBlock()` Method** to optimize lab data rendering <br>⚙️ Replaced repetitive DB calls with bulk fetch using `testDetailId` <br>📦 Stored and printed lab rows in a structured `HashMap` for debugging | [View →](Week4/Day22-README.md) |
 | **Day 23** | June 10, 2025 | Tuesday     | (To be updated) | [View →](Week4/Day23-README.md) |
 | **Day 24** | June 11, 2025 | Wednesday   | (To be updated) | [View →](Week4/Day24-README.md) |
 | **Day 25** | June 12, 2025 | Thursday    | (To be updated) | [View →](Week4/Day25-README.md) |
 | **Day 26** | June 13, 2025 | Friday      | (To be updated) | [View →](Week4/Day26-README.md) |
 
 ---
-
-
-
-
-
 
