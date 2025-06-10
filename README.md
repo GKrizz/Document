@@ -51,10 +51,13 @@
 |     📆 Day | Date          | Day of Week | 🚀 Highlights   | 📄 Link                         |
 | ---------: | ------------- | ----------- | --------------- | ------------------------------- |
 | **Day 22** | June 9, 2025 | Monday      | 🔁 **Refactored `getNarativeBlock()` Method** to optimize lab data rendering <br>⚙️ Replaced repetitive DB calls with bulk fetch using `testDetailId` <br>📦 Stored and printed lab rows in a structured `HashMap` for debugging | [View →](Week4/Day22-README.md) |
-| **Day 23** | June 10, 2025 | Tuesday     | (To be updated) | [View →](Week4/Day23-README.md) |
+| **Day 23** | June 10, 2025 | Tuesday     | 🩺 **Fixed Referral Letter Generation Issue:** <br>🔧 Updated backend logic in `updateReferrals()` to ensure **"Referred By"** field shows the **referring doctor (encounter owner)** instead of the logged-in employee <br>✅ Correctly mapped encounter’s service doctor to referral details | [View →](Week4/Day23-README.md) |
 | **Day 24** | June 11, 2025 | Wednesday   | (To be updated) | [View →](Week4/Day24-README.md) |
 | **Day 25** | June 12, 2025 | Thursday    | (To be updated) | [View →](Week4/Day25-README.md) |
 | **Day 26** | June 13, 2025 | Friday      | (To be updated) | [View →](Week4/Day26-README.md) |
+
+---
+Here’s the updated **Week 4 Summary** with your Day 23 update included, focusing on the referral letter fix:
 
 ---
 
