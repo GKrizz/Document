@@ -57,7 +57,5 @@
 | **Day 26** | June 13, 2025 | Friday      | (To be updated) | [View →](Week4/Day26-README.md) |
 
 ---
-Here’s the updated **Week 4 Summary** with your Day 23 update included, focusing on the referral letter fix:
 
----
 
