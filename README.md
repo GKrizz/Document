@@ -48,11 +48,31 @@
 
 ## 📅 **Week 4 Summary**
 
-|     📆 Day | Date          | Day of Week | 🚀 Highlights   | 📄 Link                         |
-| ---------: | ------------- | ----------- | --------------- | ------------------------------- |
+|     📆 Day | Date          | Day of Week | 🚀 Highlights                                                                                                                                                                                                                                                        | 📄 Link                         |
+| ---------: | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | **Day 22** | June 9, 2025 | Monday      | 🔁 **Refactored `getNarativeBlock()` Method** to optimize lab data rendering <br>⚙️ Replaced repetitive DB calls with bulk fetch using `testDetailId` <br>📦 Stored and printed lab rows in a structured `HashMap` for debugging | [View →](Week4/Day22-README.md) |
 | **Day 23** | June 10, 2025 | Tuesday     | 🩺 **Fixed Referral Letter Generation Issue:** <br>🔧 Updated backend logic in `updateReferrals()` to ensure **"Referred By"** field shows the **referring doctor (encounter owner)** instead of the logged-in employee <br>✅ Correctly mapped encounter’s service doctor to referral details | [View →](Week4/Day23-README.md) |
 | **Day 24** | June 11, 2025 | Wednesday   | 📜 **Completed Audit Log in Legacy System** <br>🧠 Studied Drools Rule Syntax <br>📚 Deep Dive into MIPS: CMS Structure, Performance Categories, Eligibility Rules, DB Schema, and Reporting Layers                                                                                           | [View →](Week4/Day24-README.md) |
 | **Day 25** | June 12, 2025 | Thursday    | **MIPS Performance Flow** (`MUPerformanceRateController`) | [View →](Week4/Day25-README.md) |
 | **Day 26** | June 13, 2025 | Friday      | **📂 Main Controller:** `MUPerformanceRateController` deep insight | [View →](Week4/Day26-README.md) |
-       
+| **Day 27** | June 14, 2025  | Saturday    | Leave           | -                               |
+| **Day 28** | June 15, 2025  | Sunday      | Leave           | -                               |
+
+
+
+---
+
+## 📅 **Week 5 Summary**
+
+|     📆 Day | Date          | Day of Week | 🚀 Highlights                                                                                               | 📄 Link                         |
+| ---------: | ------------- | ----------- | --------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Day 29** | June 16, 2025 | Monday      | 🔍 **Explored `getPatientsSeen(...)` API:** Backend tracing and mode-based logic analysis                   | [View →](Week5/Day29-README.md) |
+| **Day 30** | June 17, 2025 | Tuesday     | *(To be updated)*                                                                                           | [View →](Week5/Day30-README.md) |
+| **Day 31** | June 18, 2025 | Wednesday   | *(To be updated)*                                                                                           | [View →](Week5/Day31-README.md) |
+| **Day 32** | June 19, 2025 | Thursday    | *(To be updated)*                                                                                           | [View →](Week5/Day32-README.md) |
+| **Day 33** | June 20, 2025 | Friday      | *(To be updated)*                                                                                           | [View →](Week5/Day33-README.md) |
+| **Day 34** | June 21, 2025 | Saturday    | Leave                                                                                                      | -                               |
+| **Day 35** | June 22, 2025 | Sunday      | Leave                                                                                                      | -                               |
+
+---
+
