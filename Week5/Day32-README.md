@@ -72,9 +72,19 @@ if (event.getMode() == XMLEvent.GetXML) {
 
 ## ✅ Result
 
-* ❌ No more stale data flash when switching templates.
-* ✅ UI remains clean and only displays correct, updated content.
-* ✅ View logic is now safe against rapid template switching or back-to-back navigation events.
+* ✅ **No more stale data flash** when switching templates.
+* ✅ UI now shows **only the correct, updated template content**.
+* ✅ Rendering logic is now **robust** against rapid navigation or back-to-back template loading.
+
+
+### ✅ After Fix
+
+> Clean template load with loading state — no flash of stale data.
+
+> ![After Fix – Correct Data Load](https://github.com/user-attachments/assets/5868d9bd-b84a-4b0f-a59c-c13104db2de8)
+
+> ![After Fix – Correct Data Load](https://github.com/user-attachments/assets/c9ed99f0-b101-4b3b-8df9-5afa7acfc779)
+
 
 ---
 
