@@ -64,15 +64,15 @@
 
 ## 📅 **Week 5 Summary**
 
-|     📆 Day | Date          | Day of Week | 🚀 Highlights                                                                                               | 📄 Link                         |
-| ---------: | ------------- | ----------- | --------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| **Day 29** | June 16, 2025 | Monday      | 🔍 **Explored `getPatientsSeen(...)` API:** Backend tracing and mode-based logic analysis                   | [View →](Week5/Day29-README.md) |
-| **Day 30** | June 17, 2025 | Tuesday     | *(To be updated)*                                                                                           | [View →](Week5/Day30-README.md) |
-| **Day 31** | June 18, 2025 | Wednesday   | 🧠 **GWT + Spring MVC flow:** Learned structured end-to-end interaction between GWT UI and Spring backend   | [View →](Week5/Day31-README.md) |
-| **Day 32** | June 19, 2025 | Thursday    | *(To be updated)*                                                                                           | [View →](Week5/Day32-README.md) |
-| **Day 33** | June 20, 2025 | Friday      | Took Leave for TC                                                                                          | - |
-| **Day 34** | June 21, 2025 | Saturday    | Leave                                                                                                      | - |
-| **Day 35** | June 22, 2025 | Sunday      | Leave                                                                                                      | - |
+|     📆 Day | Date          | Day of Week | 🚀 Highlights                                                                                                                          | 📄 Link                         |
+| ---------: | ------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Day 29** | June 16, 2025 | Monday      | 🔍 **Explored `getPatientsSeen(...)` API:** Backend tracing and mode-based logic analysis                                              | [View →](Week5/Day29-README.md) |
+| **Day 30** | June 17, 2025 | Tuesday     | *(To be updated)*                                                                                                                      | [View →](Week5/Day30-README.md) |
+| **Day 31** | June 18, 2025 | Wednesday   | 🧠 **GWT + Spring MVC flow:** Learned structured end-to-end interaction between GWT UI and Spring backend                              | [View →](Week5/Day31-README.md) |
+| **Day 32** | June 19, 2025 | Thursday    | 🐞 **Fixed UI bug:** Resolved issue where old template data briefly flashed by resetting the view in `start()` before XML fetch        | [View →](Week5/Day32-README.md) |
+| **Day 33** | June 20, 2025 | Friday      | *(To be updated)*                                                                                                                      | [View →](Week5/Day33-README.md) |
+| **Day 34** | June 21, 2025 | Saturday    | Leave                                                                                                                                   | -                               |
+| **Day 35** | June 22, 2025 | Sunday      | Leave                                                                                                                                   | -                               |
 
 ---
 
