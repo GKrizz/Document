@@ -76,14 +76,6 @@
 
 ---
 
-Sure! Please confirm the **current week** you want the summary for — do you mean **Week 6 (June 23–June 29, 2025)**?
-
-If yes, could you provide a quick summary of what you worked on each day (or the README links, if available)? That way, I can create a table in the exact same format.
-
-If you're continuing from where Week 5 ended (June 22, 2025, Sunday), here's a template for **Week 6 (June 23–June 29, 2025)** that you can fill in:
-
----
-
 ## 📅 **Week 6 Summary**
 
 |     📆 Day | Date          | Day of Week | 🚀 Highlights | 📄 Link                         |
