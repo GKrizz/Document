@@ -70,10 +70,31 @@
 | **Day 30** | June 17, 2025 | Tuesday     | 🔍 **Explored `generateAndValidateQDM(...)` API** <br> **Explored `calculateMIPSPerformance(...)` API**                                                                                                                     | [View →](Week5/Day30-README.md) |
 | **Day 31** | June 18, 2025 | Wednesday   | 🧠 **GWT + Spring MVC flow:** Learned structured end-to-end interaction between GWT UI and Spring backend                              | [View →](Week5/Day31-README.md) |
 | **Day 32** | June 19, 2025 | Thursday    | 🐞 **Fixed UI bug:** Resolved issue where old template data briefly flashed by resetting the view in `start()` before XML fetch        | [View →](Week5/Day32-README.md) |
-| **Day 33** | June 20, 2025 | Friday      | *(To be updated)*                                                                                                                      | [View →](Week5/Day33-README.md) |
+| **Day 33** | June 20, 2025 | Friday      | Took Leave for TC                                                                                                                     | [View →](Week5/Day33-README.md) |
 | **Day 34** | June 21, 2025 | Saturday    | Leave                                                                                                                                   | -                               |
 | **Day 35** | June 22, 2025 | Sunday      | Leave                                                                                                                                   | -                               |
 
 ---
 
+Sure! Please confirm the **current week** you want the summary for — do you mean **Week 6 (June 23–June 29, 2025)**?
+
+If yes, could you provide a quick summary of what you worked on each day (or the README links, if available)? That way, I can create a table in the exact same format.
+
+If you're continuing from where Week 5 ended (June 22, 2025, Sunday), here's a template for **Week 6 (June 23–June 29, 2025)** that you can fill in:
+
+---
+
+## 📅 **Week 6 Summary**
+
+|     📆 Day | Date          | Day of Week | 🚀 Highlights | 📄 Link                         |
+| ---------: | ------------- | ----------- | ------------- | ------------------------------- |
+| **Day 36** | June 23, 2025 | Monday      |               | [View →](Week6/Day36-README.md) |
+| **Day 37** | June 24, 2025 | Tuesday     |               | [View →](Week6/Day37-README.md) |
+| **Day 38** | June 25, 2025 | Wednesday   |               | [View →](Week6/Day38-README.md) |
+| **Day 39** | June 26, 2025 | Thursday    |               | [View →](Week6/Day39-README.md) |
+| **Day 40** | June 27, 2025 | Friday      |               | [View →](Week6/Day40-README.md) |
+| **Day 41** | June 28, 2025 | Saturday    | Leave         | -                               |
+| **Day 42** | June 29, 2025 | Sunday      | Leave         | -                               |
+
+---
 
