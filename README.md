@@ -80,7 +80,8 @@
 
 |     📆 Day | Date          | Day of Week | 🚀 Highlights | 📄 Link                         |
 | ---------: | ------------- | ----------- | ------------- | ------------------------------- |
-| **Day 36** | June 23, 2025 | Monday      | 📑 **MIPS spec** : Analyzed CMS139v13 'Falls: Screening for Future Fall Risk' specification in MIPS | [View →](Week6/Day36-README.md) || **Day 37** | June 24, 2025 | Tuesday     |               | [View →](Week6/Day37-README.md) |
+| **Day 36** | June 23, 2025 | Monday      | 📑 **MIPS spec** : Analyzed CMS139v13 'Falls: Screening for Future Fall Risk' specification in MIPS | [View →](Week6/Day36-README.md) |
+| **Day 37** | June 24, 2025 | Tuesday     |               | [View →](Week6/Day37-README.md) |
 | **Day 38** | June 25, 2025 | Wednesday   |               | [View →](Week6/Day38-README.md) |
 | **Day 39** | June 26, 2025 | Thursday    |               | [View →](Week6/Day39-README.md) |
 | **Day 40** | June 27, 2025 | Friday      |               | [View →](Week6/Day40-README.md) |
