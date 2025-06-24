@@ -4,6 +4,31 @@
 
 ---
 
+## 📋 Measure Details Reference
+
+The `measure_details` table contains metadata about various MIPS measures tracked in our system. For example, the **Falls: Screening for Future Fall Risk** measure is stored as follows:
+
+| Column       | Sample Value                          | Description                       |
+| ------------ | ------------------------------------- | --------------------------------- |
+| `id`         | 165                                   | Internal table ID for the measure |
+| `measure_id` | 318                                   | Numeric measure identifier        |
+| `cms_id`     | CMS139v5                              | CMS measure code and version      |
+| `title`      | Falls: Screening for Future Fall Risk | Full measure name                 |
+
+### Query to locate the Falls Screening measure
+
+```sql
+SELECT * FROM measure_details WHERE title ILIKE '%fall%';
+```
+
+Result:
+
+| id  | measure\_id | cms\_id  | title                                 |
+| --- | ----------- | -------- | ------------------------------------- |
+| 165 | 318         | CMS139v5 | Falls: Screening for Future Fall Risk |
+
+---
+
 ## 📋 Overview
 
 This document provides an analysis and breakdown of the eCQM measure **CMS139v13**, titled **"Falls: Screening for Future Fall Risk"** for the MIPS 2025 reporting year. The measure evaluates whether patients aged 65 years and older have been screened for their risk of future falls during qualifying clinical encounters within the measurement period.
