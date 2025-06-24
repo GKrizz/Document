@@ -156,22 +156,3 @@ Learn and validate how a patient qualifies for:
 | **NOT MET**                  | Screening **not documented** or **not marked as Completed**            |
 
 ---
-
-## 📌 Quick Summary Table
-
-| **Status**    | **Requirement**                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| ❌ **NOT MET** | Patient qualifies by age + visit, but **Fall Risk Screening** not documented or not marked completed |
-| ✅ **MET**     | Age ≥ 65 + CPT 99203 + **Fall Risk Screening** marked as **Completed** in Screening tab              |
-
----
-
-## 📥 Export Options
-
-This document is ready for:
-
-* ✅ Markdown (.md)
-* ✅ PDF
-* ✅ Word (.docx)
-
-Let me know which format you’d like, and I’ll generate it for you right away.
