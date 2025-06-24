@@ -117,9 +117,12 @@ Otherwise → Numerator = **Not Met**
 
 * None
 
----
 
-### 🚫 Denominator Exceptions
+### ❌ Denominator Exceptions
+
+* None
+
+### ❌ Stratification
 
 * None
 
