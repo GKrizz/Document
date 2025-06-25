@@ -78,15 +78,14 @@
 
 ## 📅 **Week 6 Summary**
 
-|     📆 Day | Date          | Day of Week | 🚀 Highlights | 📄 Link                         |
-| ---------: | ------------- | ----------- | ------------- | ------------------------------- |
-| **Day 36** | June 23, 2025 | Monday      | 📑 **MIPS spec** : Analyzed CMS139v13 'Falls: Screening for Future Fall Risk' specification in MIPS | [View →](Week6/Day36-README.md) |
-| **Day 37** | June 24, 2025 | Tuesday     |               | [View →](Week6/Day37-README.md) |
-| **Day 38** | June 25, 2025 | Wednesday   |               | [View →](Week6/Day38-README.md) |
-| **Day 39** | June 26, 2025 | Thursday    |               | [View →](Week6/Day39-README.md) |
-| **Day 40** | June 27, 2025 | Friday      |               | [View →](Week6/Day40-README.md) |
-| **Day 41** | June 28, 2025 | Saturday    | Leave         | -                               |
-| **Day 42** | June 29, 2025 | Sunday      | Leave         | -                               |
+|     📆 Day | Date          | Day of Week | 🚀 Highlights                                                                                                                                                                      | 📄 Link                         |
+| ---------: | ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Day 36** | June 23, 2025 | Monday      | 📑 **MIPS Spec Analysis**: CMS139v13 – *Falls: Screening for Future Fall Risk*                                                                                                     | [View →](Week6/Day36-README.md) |
+| **Day 37** | June 24, 2025 | Tuesday     | ✅ Completed **AuditTrail** for Spring & Legacy repos <br><br>📊 Practiced MIPS logic on **CMS139v13:** moved test patient from **❌ NOT MET** ➡️ **✅ MET** via MIPS dashboard walkthrough       | [View →](Week6/Day37-README.md) |
+| **Day 38** | June 25, 2025 | Wednesday   | 🩺 **CMS138v13 – Tobacco Use Screening & Cessation Intervention** <br>🔍 Explored population logic (IPP, Denominator, Exclusions) <br>📈 Broke down screening + intervention paths | [View →](Week6/Day38-README.md) |
+| **Day 39** | June 26, 2025 | Thursday    |                                                                                                                                                                                    | [View →](Week6/Day39-README.md) |
+| **Day 40** | June 27, 2025 | Friday      |                                                                                                                                                                                    | [View →](Week6/Day40-README.md) |
+| **Day 41** | June 28, 2025 | Saturday    | Leave                                                                                                                                                                              | -                               |
+| **Day 42** | June 29, 2025 | Sunday      | Leave                                                                                                                                                                              | -                               |
 
----
 
