@@ -1,8 +1,8 @@
 # 🧠 **Daily Progress Log**
 
 > Welcome to my daily journal as a **Software Engineer** — tracking my setup, learning, and development journey.
-> This log captures key milestones, technical insights, and hands-on progress in real time.
-
+> This log captures key milestones, technical insights, and hands-on progress in real time.<br>
+> **MIPS Documentation** | [View →](Week6/MIPS_Doc.md) 
 ---
 
 ## 📅 **Week 1 Summary**
