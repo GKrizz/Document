@@ -1,6 +1,4 @@
 # 📄 Case #233445 – Referrals to 3 Fax Numbers (Dr. Gaffney)
-
-
 ---
 
 <table>
@@ -44,8 +42,6 @@
 ### 🎯 **Subject**
 
 > **Referrals to be sent to 3 fax numbers at a time**
-
----
 
 ### 🧾 **Summary**
 
@@ -133,47 +129,25 @@ This caused an **HTTP 500 – Internal Server Error** on saving the referring do
 
 ---
 
-### 🧪 QA / Verification Steps
-
-1. Navigate to Referral Setup screen.
-2. Add three fax numbers using the UI inputs.
-3. Save the referral.
-4. Query DB:
-
-   ```sql
-   SELECT referring_doctor_fax_number FROM referring_doctor
-   WHERE referring_doctor_uniqueid = 1411;
-   ```
-
-   Ensure all 3 fax numbers are stored correctly, separated by `$$`.
+# 🔍 Technical Breakdown
 
 ---
-
-### ✅ Status
-
-* **Database Fix Done**
-* **Code Verified**
-* **Ready for Testing / UAT**
-
----
-## Referring Physician Data Flow
+## 1️⃣ Referring Physician Data Flow
 
 ### 🔍 **1. Locate How 'Referring Physician' Is Drawn and Handled (Add / Update / Delete)**
 
 #### 🔹 Where to Look:
 
 * **Page:** `Configure > General Practice Settings > Referring Physician`
-* Check which **JSP/HTML file** loads this view.
-* Open corresponding **JavaScript** (like `assignElements`, `Saverefdoc`) and **controller servlet**.
+![Screenshot from 2025-06-30 10-02-18](https://github.com/user-attachments/assets/f1970bb5-4df8-4510-ac4d-3169b80d01ca)
+![Screenshot from 2025-06-30 10-02-48](https://github.com/user-attachments/assets/ba3ad749-d4ef-42fa-ab0d-0541be126b4c)
 
-#### 🔹 Flow Analysis:
+| Operation    | Description                                            | Table              |
+| ------------ | ------------------------------------------------------ | ------------------ |
+| Add / Update | Via `Saverefdoc()` → backend INSERT/UPDATE             | `referring_doctor` |
+| Delete       | Soft delete (sets `referring_doctor_isactive = false`) | `referring_doctor` |
+| Fetch        | Via `assignElements()` → populate UI fields            | `referring_doctor` |
 
-| Operation                       | Where to Look                                                                                       | Table                           |
-| ------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------- |
-| **Display Referring Physician** | Likely an AJAX call on page load (`fetchRefDocs()` or similar)                                      | `referring_doctor`              |
-| **Add New**                     | JS function like `Saverefdoc()` → servlet call                                                      | Inserts into `referring_doctor` |
-| **Edit Existing**               | Preload values into form (via `assignElements()`)                                                   | Updates `referring_doctor`      |
-| **Delete**                      | Look for `deleteRefDoc()` or similar → servlet method → DELETE or soft delete in `referring_doctor` |                                 |
 
 #### 🔹 Key DB Table:
 
@@ -283,6 +257,7 @@ for(String fax : faxList){
 ### 🔹 Storage Table:
 
 * **Table:** `referring_doctor`
+![Screenshot from 2025-06-30 10-01-55](https://github.com/user-attachments/assets/aff7656a-04dd-4c85-b808-1edbf139323b)
 
 ### 🔹 Add / Update / Delete:
 
@@ -762,5 +737,111 @@ if (faxNumbers.length > 1) {
 | Add Buttons (`addcon`, `addfax`) | Appended to the last respective row only           |
 
 ---
+### 🧪 QA / Verification Steps
+
+1. Navigate to Referral Setup screen.
+2. Add three fax numbers using the UI inputs.
+3. Save the referral.
+4. Query DB:
+
+   ```sql
+   SELECT referring_doctor_fax_number FROM referring_doctor
+   WHERE referring_doctor_uniqueid = 1411;
+   ```
+
+   Ensure all 3 fax numbers are stored correctly, separated by `$$`.
+
+---
+
+### ✅ Status
+
+* **Database Fix Done**
+* **Code Verified**
+* **Ready for Testing / UAT**
+
+---
+
+
+
+## ✅ Steps with Screenshots
+
+---
+
+### 🔹 **Step 1: Navigate to Referring Physician Settings**
+
+> **Menu Path:**
+> `Configure → General Practice Settings → Referring Physician`
+
+📸 **Screenshot:**
+
+![Step 1](https://github.com/user-attachments/assets/2c01540e-180a-4785-94b4-aa894735f888)
+![Step 1-UI](https://github.com/user-attachments/assets/1a469a93-c440-46ca-ac64-fe11b72771a2)
+
+---
+
+### 🔹 **Step 2: Click the Picker Icon**
+
+> Click the picker (magnifying glass) to browse the list of existing referring physicians.
+
+📸 **Screenshot:**
+
+![Step 2](https://github.com/user-attachments/assets/3da261f1-8636-402d-86db-aa9540c79a08)
+
+---
+
+### 🔹 **Step 3: Select a Referring Physician**
+
+> Choose a referring physician to view/edit their details.
+
+📸 **Screenshot:**
+
+![Step 3](https://github.com/user-attachments/assets/e6f51e81-090c-4f25-ad08-960547fa71d0)
+
+---
+
+### 🔹 **Step 4: View DB Data Before Editing**
+
+> Corresponding **database entry** for selected physician before adding phone/fax values.
+
+📸 **Screenshot:**
+
+![Step 4-1](https://github.com/user-attachments/assets/4a8aacf9-9d5c-4e65-be94-8824e06c3097)
+![Step 4-2](https://github.com/user-attachments/assets/be301d19-7636-4fc0-8e01-7856469864ab)
+
+---
+
+### 🔹 **Step 5: Add Phone and Fax Numbers**
+
+> Input up to **3-part segmented phone and fax numbers**, then **click Save**.
+
+📸 **Screenshot:**
+
+![Step 5](https://github.com/user-attachments/assets/130fede8-04ab-45f2-8866-825f970c3516)
+
+---
+
+### 🔹 **Step 6: Verify DB After Save**
+
+> Check that the phone and fax values are **stored correctly** in DB, separated by `$$`.
+
+📸 **Screenshot:**
+
+![Step 6](https://github.com/user-attachments/assets/c2e9026c-0835-4a85-8aa3-9bda1e590bbb)
+
+---
+
+### 🔹 **Step 7: Delete One Entry, Save, and Verify**
+
+> Remove one fax or phone number using ❌ icon, then save the form again.
+> Confirm the DB update reflects the deleted value.
+
+📸 **Screenshots:**
+
+![Step 7-1](https://github.com/user-attachments/assets/b628302b-4713-459a-903b-49cd02558d59)
+![Step 7-2](https://github.com/user-attachments/assets/e408874d-0e50-46fd-81b5-822102b24f48)
+![Step 7-3](https://github.com/user-attachments/assets/dceadb90-d1e6-4cc1-bf7b-8217957c2fb5)
+
+---
+
 
 
