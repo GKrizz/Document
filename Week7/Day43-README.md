@@ -164,4 +164,16 @@ Analyzing how **fax** and **referral numbers** are passed in the system.
 
 * The issue where **multiple fax numbers** weren’t properly displayed or passed was fixed. Now, **all fax numbers** are processed and displayed correctly. ✅
 
+### **Fixed Images:**
+
+Below are the screenshots that demonstrate the fixed issue:
+
+![Screenshot 1](https://github.com/user-attachments/assets/f885a0f6-7c7c-410b-a462-b1cdc9ef9f76)
+
+![Screenshot 2](https://github.com/user-attachments/assets/2dd3270a-c26e-48e9-b607-d9be5c92434e)
+
+![Screenshot 3](https://github.com/user-attachments/assets/f0f1c086-1515-45dd-943c-3640c1a19e98)
+
+
+
 
