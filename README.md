@@ -98,7 +98,7 @@
 | **Day 45** | July 2, 2025  | Wednesday | *(To be filled)* | [View →](Week7/Day45-README.md) |
 | **Day 46** | July 3, 2025  | Thursday  | *(To be filled)* | [View →](Week7/Day46-README.md) |
 | **Day 47** | July 4, 2025  | Friday    | *(To be filled)* | [View →](Week7/Day47-README.md) |
-| **Day 48** | July 5, 2025  | Saturday  | 🌴 **🌴 **Leave****        | -                               |
+| **Day 48** | July 5, 2025  | Saturday  | **🌴 **Leave****        | -                               |
 | **Day 49** | July 6, 2025  | Sunday    | **🌴 **Leave****        | -                               |
 
 ---
