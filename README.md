@@ -94,7 +94,7 @@
 |     📆 Day | Date          | Day       | 🚀 Highlights    | 📄 Link                         |
 | ---------: | ------------- | --------- | ---------------- | ------------------------------- |
 | **Day 43** | June 30, 2025 | Monday    | 🛠️ **Configuration Page Bug Fixes** & 🩺 **Referring Physician Search Picker Updates** | [View →](Week7/Day43-README.md) |
-| **Day 44** | July 1, 2025  | Tuesday   | *(To be filled)* | [View →](Week7/Day44-README.md) |
+| **Day 44** | July 1, 2025  | Tuesday   | 🧱 **Master** <br> ⚙️ **Legacy** Project Setup,<br> 🔨 **Spring** Backend Configuration,<br> 🎨 **UI** Dev Mode Execution| [View →](Week7/Day44-README.md) |
 | **Day 45** | July 2, 2025  | Wednesday | *(To be filled)* | [View →](Week7/Day45-README.md) |
 | **Day 46** | July 3, 2025  | Thursday  | *(To be filled)* | [View →](Week7/Day46-README.md) |
 | **Day 47** | July 4, 2025  | Friday    | *(To be filled)* | [View →](Week7/Day47-README.md) |
