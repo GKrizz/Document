@@ -97,7 +97,7 @@
 | **Day 44** | July 1, 2025  | Tuesday   | 🧱 **Master** <br> ⚙️ **Legacy** Project Setup,<br> 🔨 **Spring** Backend Configuration,<br> 🎨 **UI** Dev Mode Execution| [View →](Week7/Day44-README.md) |
 | **Day 45** | July 2, 2025  | Wednesday | 🛠️ **Assigned Chart Page/Desktop Issues**: Release of Records Toolbar, Progress Notes, TeleHealth Failures, New Encounter Import, and More | [View →](Week7/Day45-README.md) |
 | **Day 46** | July 3, 2025  | Thursday  | 	🧩 **Referring Doctor Fax Format Fix** <br> 🔍 Audit Trail Prep <br> 🛠️ LeafModel Chart Call Review m <br> 🔐 SFTP File Transfer Setup | [View →](Week7/Day46-README.md) |
-| **Day 47** | July 4, 2025  | Friday    | *(To be filled)* | [View →](Week7/Day47-README.md) |
+| **Day 47** | July 4, 2025  | Friday    | 🧠**SOAP Tab Load Flow Analysis:** LeafModelFrame → NotesPreview → TabDetail | [View →](Week7/Day47-README.md) |
 | **Day 48** | July 5, 2025  | Saturday  | **🌴 **Leave****        | -                               |
 | **Day 49** | July 6, 2025  | Sunday    | **🌴 **Leave****        | -                               |
 
