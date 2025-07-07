@@ -103,7 +103,7 @@ referring_doctor_description as col7");
 * **Server**: `ftp.glaceemr.com`
 * **Port**: `8444`
 * **User**: `glenwood`
-* **Remote Directory**: `/Temp/Mounika`
+* **Remote Directory**: `/Temp/Gobala_Krishnan`
 * **Password**:
 
   ```
