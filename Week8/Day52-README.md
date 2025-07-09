@@ -327,3 +327,187 @@ WHERE
 
 ---
 
+
+
+## **JSP page**. Based on the structure, you're working with a **dynamic settings configuration UI**
+
+---
+
+### ✅ **Objective**
+
+This JSP dynamically renders a table of general settings (like checkboxes, dropdowns, textboxes) from the database using the `initial_settings` and `billing_config_table`.
+
+---
+
+## 🔁 **Full Flow: From DB to UI**
+
+---
+
+### 1. **Backend (Java Action)**
+
+* Runs a **query** like this:
+
+```sql
+SELECT
+  billing_config_table_lookup_desc,
+  initial_settings_option_id AS optionid,
+  initial_settings_option_type AS optiontype,
+  initial_settings_option_name_desc AS optionname,
+  initial_settings_option_value AS optionvalue,
+  initial_settings_table_row_no AS rowno,
+  initial_settings_table_col_no AS colno,
+  initial_settings_table_colspan AS colspan,
+  initial_settings_textbox_size AS txtsize,
+  initial_settings_view_type AS viewtype,
+  initial_settings_option_source AS optionsource
+FROM billing_config_table
+JOIN initial_settings
+  ON billing_config_table_config_id = initial_settings_option_type
+WHERE billing_config_table_lookup_id = 105
+  AND initial_settings_visible IS TRUE
+  AND initial_settings_option_type = 2
+ORDER BY initial_settings_option_type, initial_settings_table_row_no, initial_settings_table_col_no;
+```
+
+* The result is stored in a `Vector` called:
+
+  ```java
+  Vector VecGeneral = (Vector) request.getAttribute("SelectQuery");
+  ```
+
+---
+
+### 2. **UI (JSP Page)**
+
+* Iterates over `VecGeneral`:
+
+  ```jsp
+  for (int Index = 0; Index <VecGeneral.size(); Index++) {
+      Hashtable HashGeneral = (Hashtable) VecGeneral.get(Index);
+      ...
+  }
+  ```
+
+* Renders each item as per `viewtype`:
+
+| `viewType` | Input Type Rendered | Method Called             |
+| ---------- | ------------------- | ------------------------- |
+| `text`     | TextBox             | `Input.drawTextBox(...)`  |
+| `combo`    | Select/Dropdown     | `Select.draw(...)`        |
+| `check`    | Checkbox            | `Input.drawCheckBox(...)` |
+| `number`   | Number TextBox      | `Input.drawTextBox(...)`  |
+| `image`    | Image Picker Link   | Custom HTML + JS          |
+
+* For each control, event like `onChange` or `onClick` triggers:
+
+  ```js
+  addIdList("chk123") or addIdList("txt123")
+  ```
+
+---
+
+### 3. **JavaScript Interaction**
+
+#### ✅ Track Changes
+
+Each time a control changes:
+
+```js
+addIdList("controlId")
+→ adds controlId to `ids`
+→ sets `FormChanged = true`
+```
+
+#### ✅ Combine Selected Data
+
+Before submitting:
+
+```js
+combine()
+→ prepares a formatted string from multi-selects
+→ updates `selectedDrs` hidden input
+```
+
+---
+
+### 4. **Submit Flow**
+
+When clicking the **Save** icon (image button):
+
+```html
+<img ... onClick="javascript:saveGeneral();patientbookLink();">
+```
+
+#### `patientbookLink()` function:
+
+* Confirms update
+* Sets `updatePOS` and `insVerify` values
+* If `FormChanged == true`, submits form with:
+
+  * `recsToUpdate`
+  * `insuranceNameId`
+  * `selectedDrs`
+  * `selectMultiple`
+
+The form is submitted to:
+
+```jsp
+PractiseGeneral.Action?flagLink=1...
+```
+
+---
+
+## ✅ **Summary Flow Chart**
+
+```
+initial_settings + billing_config_table (SQL)
+        ↓
+     Java Action
+        ↓
+  request.setAttribute("SelectQuery", result)
+        ↓
+       JSP
+        ↓
+ Iterate Vector<VecGeneral>
+        ↓
+  Dynamically draw controls (textbox, combo, checkbox)
+        ↓
+User interacts → JS tracks → FormChanged = true
+        ↓
+User clicks Save (img button)
+        ↓
+JS function → collects values → sets hidden inputs
+        ↓
+Form submits to PractiseGeneral.Action
+        ↓
+Server processes updated values
+```
+
+---
+
+## ✅ **Next Steps: Show the Two Checkbox Options**
+
+If you're not seeing:
+
+* ✅ **"Do you want to enable default custom xml desktop view?"**
+* ✅ **"Do you want to enable custom xml desktop switch link?"**
+
+### Do This:
+
+1. ✅ Confirm they exist in `initial_settings` table.
+
+   ```sql
+   SELECT * FROM initial_settings 
+   WHERE initial_settings_option_name_desc ILIKE '%custom xml%';
+   ```
+
+2. ✅ Ensure:
+
+   * `initial_settings_option_type = 2`
+   * `initial_settings_view_type = 'check'`
+   * `initial_settings_visible = true`
+   * `billing_config_table_lookup_id = 105`
+
+3. ✅ Restart the page.
+
+---
