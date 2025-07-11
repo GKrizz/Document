@@ -106,7 +106,7 @@
 | ---------: | ------------- | --------- | ---------------- | ------------------------------- |
 | **Day 50** | July 7, 2025  | Monday    | 🔍 Exploring Tab Load Mechanism → **Custom1 Tab** | [View →](Week8/Day50-README.md) |
 | **Day 51** | July 8, 2025  | Tuesday   | *🛠️ **Fax** logic fix, **Fax Pages List** , DB schema patch | [View →](Week8/Day51-README.md) |
-| **Day 52** | July 9, 2025  | Wednesday |⚙️ Enabled custom XML desktop settings & DB validation | [View →](Week8/Day52-README.md) |
+| **Day 52** | July 9, 2025  | Wednesday |⚙️ **Practice Settings** – Enable Custom XML Desktop View & Switch Link | [View →](Week8/Day52-README.md) |
 | **Day 53** | July 10, 2025 | Thursday  | *(To be filled)* | [View →](Week8/Day53-README.md) |
 | **Day 54** | July 11, 2025 | Friday    | *(To be filled)* | [View →](Week8/Day54-README.md) |
 | **Day 55** | July 12, 2025 | Saturday  | 🌴 **Leave**     | -                               |
