@@ -1,3 +1,7 @@
+## 📄 Day 52 – July 9, 2025 – Wednesday
+
+### 🔧 Feature: Practice Settings – Enable Custom XML Desktop View & Switch Link
+
 
 #### 📌 Before Saving (GET Request)
 
