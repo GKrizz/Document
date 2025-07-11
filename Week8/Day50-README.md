@@ -1,3 +1,167 @@
+End-to-end process when the **“Aero Allergy Skin Test”** form is opened and the **Custom1 tab** is clicked — including how `tabId` is fetched, how XML is loaded, and where data is coming from/stored.
+
+---
+
+# 🩺 Aero Allergy Skin Test – Custom1 Tab Load Flow
+
+This document explains the internal logic and flow that occurs when a user clicks the **"Aero Allergy Skin Test"** form and then navigates to the **Custom1 tab**. It outlines how the UI is generated dynamically using tab metadata, XML, and XSLT.
+
+---
+
+## 🔁 Flow Overview
+
+```
+User Clicks: "Aero Allergy Skin Test"
+         ↓
+1. LeafModelFrame.Action         (GET)
+2. SoapNotes.Action              (GET)
+3. NotesPreviewAction.Action    (POST) 🔥 TabIds are resolved here
+4. SoapAjax.Action              (POST) → parent tab (like Custom = 10)
+5. TabDetail.Action             (GET) → actual tabId = 932
+```
+
+---
+
+## 🧠 tabId Discovery
+
+The **Custom1** tab has:
+
+* `tabId = 932`
+* `tabType = 10` (Custom1)
+* Mapped during `NotesPreviewAction.Action`
+
+> **Key Action:**
+> `NotesPreviewAction.Action` (Step 3) dynamically maps `formId = 1833` to tab metadata.
+
+```sql
+-- DB joins behind the scenes:
+SELECT tl.tab_library_id, tl.tab_library_displayname, tl.tab_library_actionurl, tl.tab_library_isxml,
+       lxv.leaf_xml_version_version, lxv.leaf_xml_version_xmlurl, lxv.leaf_xml_version_xslurl
+FROM tab_library tl
+LEFT JOIN leaf_version lv ON lv.leaf_version_tab_id = tl.tab_library_id
+LEFT JOIN leaf_xml_version lxv ON lv.leaf_version_xml_version_id = lxv.leaf_xml_version_id
+WHERE tl.tab_library_id = 932;
+```
+
+---
+
+## 📦 Tab Metadata
+
+| Field                      | Value                                 |
+| -------------------------- | ------------------------------------- |
+| `tab_library_id`           | 932                                   |
+| `tab_library_displayname`  | PreOpHeader                           |
+| `tab_library_actionurl`    | (usually blank for XML tabs)          |
+| `tab_library_isxml`        | 1 → Uses XML/XSLT                     |
+| `leaf_xml_version_version` | PreOpHeader\_1.0                      |
+| `leaf_xml_version_xmlurl`  | `/jsp/chart/LeafTool/PreOpHeader.xml` |
+| `leaf_xml_version_xslurl`  | `/jsp/chart/LeafTool/LeafParser1.xsl` |
+
+---
+
+## 🔧 Tab Load: `TabDetail.Action`
+
+When user clicks the **Custom1** tab:
+
+```http
+GET /GlaceMaster/jsp/chart/leafmodel/TabDetail.Action
+```
+
+### Query Params:
+
+| Param       | Value  |
+| ----------- | ------ |
+| tabId       | 932    |
+| formId      | 1833   |
+| leafId      | 57595  |
+| encounterId | 152839 |
+| patientId   | 376638 |
+| chartId     | 376973 |
+| fromSoap    | Soap   |
+| parentTabId | 10     |
+| isNewLeaf   | 0      |
+
+---
+
+## 🛠 `TabDetail.Action` Processing Flow
+
+| Step | Description                                                                 |
+| ---- | --------------------------------------------------------------------------- |
+| 1    | Parse request parameters (`tabId`, `formId`, etc.)                          |
+| 2    | Lookup tab metadata (`tab_library`, `leaf_version`, `leaf_xml_version`)     |
+| 3    | Decide view: XML vs codified                                                |
+| 4    | If XML-based: load `.xml` and `.xsl` from configured URLs                   |
+| 5    | Apply transformation via `LeafParser1.xsl`                                  |
+| 6    | Return final UI screen → `TabDetail.Screen` or `ClinicalElementView.Screen` |
+
+---
+
+## 🗃️ Related Database Tables
+
+| Table Name         | Description                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `tab_library`      | Defines tab metadata (id, name, type, actionURL, XML flag) |
+| `leaf_version`     | Links `tab_library` to `leaf_xml_version`                  |
+| `leaf_xml_version` | Provides XML and XSLT URLs for rendering                   |
+| `leaf_library`     | Form-level metadata, including `soaptemplate_id`, `type`   |
+| `leaf_patient`     | Tracks active/completed form status                        |
+| `encounter`        | Links patient to medical episode                           |
+| `emp_profile`      | For session/role context of user                           |
+
+---
+
+## 🧪 Reference Queries
+
+### Check if leaf is active and incomplete
+
+```sql
+SELECT leaf_patient_iscomplete 
+FROM leaf_patient 
+WHERE leaf_patient_id = 57595 
+AND leaf_patient_isactive = 't';
+```
+
+### Get encounter episodeId
+
+```sql
+SELECT encounter_patient_episodeid  
+FROM encounter 
+WHERE encounter_id = 152839;
+```
+
+### Get template ID for form
+
+```sql
+SELECT leaf_library_soaptemplate_id, leaf_library_type 
+FROM leaf_library 
+WHERE leaf_library_id = 1833;
+```
+
+---
+
+## 📄 XML + XSLT Rendering
+
+* XML: `/jsp/chart/LeafTool/PreOpHeader.xml`
+* XSLT: `/jsp/chart/LeafTool/LeafParser1.xsl`
+
+These files define:
+
+* Layout
+* Form elements
+* Labels/fields
+* Binding logic (for SOAP entry)
+
+---
+
+## 🔄 Example: Get XML URL for Version
+
+```sql
+SELECT leaf_xml_version_xmlurl
+FROM leaf_xml_version
+WHERE leaf_xml_version_version ILIKE 'PreOpHeader_1.0';
+```
+
+---
 
 ## 🔁 `TabDetailAction.performAction()` – Step-by-Step Execution
 
