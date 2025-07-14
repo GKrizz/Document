@@ -1,8 +1,6 @@
 # ✅ ISSUE 1: Progress Note Confidential--Notes--While click shortcut, initially showing shortcut code then only description showing.
 
-Understand the flow for:
-
-Great diagnostic work so far! The issue you're describing:
+## 🧠 Problem
 
 > **"When clicking a shortcut in Progress Note, it first shows the shortcut code (e.g., `.test_1`) and only *later* shows the description (`Test Bug Fix – For Testing Only`)."**
 
@@ -279,6 +277,9 @@ Absolutely! Here's a **combined, clean version** of your **Component Map** and *
 
 # ✅ ISSUE 2: For New Encounter--import--Old encounter data not showing in drop down.
 
+## 🧠 Problem
+    On creating a new encounter, clicking Import does not show data from old encounters in the dropdown.
+    
 ## ✅ **Step-by-Step Debug Flow: Trace "Import Previous Data"**
 
 ---
