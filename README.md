@@ -116,8 +116,6 @@
 | **Day 55** | July 12, 2025 | Saturday  | 🌴 **Leave**     | -                               |
 | **Day 56** | July 13, 2025 | Sunday    | 🌴 **Leave**     | -                               |
 
----
-Here’s a structured **Week 9 Summary** for your Daily Progress Log. You can copy and edit the Highlights and Links once you’ve filled in the actual accomplishments and file paths:
 
 ---
 
