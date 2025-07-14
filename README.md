@@ -102,6 +102,10 @@
 | **Day 49** | July 6, 2025  | Sunday    | **🌴 **Leave****        | -                               |
 
 ---
+
+## 📅 **Week 8 Summary**
+
+
 |     📆 Day | Date          | Day       | 🚀 Highlights    | 📄 Link                         |
 | ---------: | ------------- | --------- | ---------------- | ------------------------------- |
 | **Day 50** | July 7, 2025  | Monday    | 🔍 Exploring Tab Load Mechanism → **Custom1 Tab** | [View →](Week8/Day50-README.md) |
@@ -111,6 +115,24 @@
 | **Day 54** | July 11, 2025 | Friday    | 🛠️ Fixed Progress Note **shortcut code display bug** | [View →](Week8/Day54-README.md) |
 | **Day 55** | July 12, 2025 | Saturday  | 🌴 **Leave**     | -                               |
 | **Day 56** | July 13, 2025 | Sunday    | 🌴 **Leave**     | -                               |
+
+---
+Here’s a structured **Week 9 Summary** for your Daily Progress Log. You can copy and edit the Highlights and Links once you’ve filled in the actual accomplishments and file paths:
+
+---
+
+## 📅 **Week 9 Summary**
+
+|     📆 Day | Date          | Day       | 🚀 Highlights       | 📄 Link                         |
+| ---------: | ------------- | --------- | ------------------- | ------------------------------- |
+| **Day 57** | July 14, 2025 | Monday    | 🚧 To be updated... | [View →](Week9/Day57-README.md) |
+| **Day 58** | July 15, 2025 | Tuesday   | 🚧 To be updated... | [View →](Week9/Day58-README.md) |
+| **Day 59** | July 16, 2025 | Wednesday | 🚧 To be updated... | [View →](Week9/Day59-README.md) |
+| **Day 60** | July 17, 2025 | Thursday  | 🚧 To be updated... | [View →](Week9/Day60-README.md) |
+| **Day 61** | July 18, 2025 | Friday    | 🚧 To be updated... | [View →](Week9/Day61-README.md) |
+| **Day 62** | July 19, 2025 | Saturday  | 🌴 **Leave**        | -                               |
+| **Day 63** | July 20, 2025 | Sunday    | 🌴 **Leave**        | -                               |
+                            |
 
 ---
 
