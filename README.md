@@ -123,7 +123,7 @@
 
 |     📆 Day | Date          | Day       | 🚀 Highlights       | 📄 Link                         |
 | ---------: | ------------- | --------- | ------------------- | ------------------------------- |
-| **Day 57** | July 14, 2025 | Monday    | 🛠️ Fixed Progress Note **shortcut code display bug** | [View →](Week9/Day57-README.md) |
+| **Day 57** | July 14, 2025 | Monday    | 🛠️ Worked on issues in Tandon Stage (Chart/Desktop):<br>✅ Fixed Progress Note **shortcut display bug**<br>✅ Debugged **Import dropdown issue** | [View →](Week9/Day57-README.md) |
 | **Day 58** | July 15, 2025 | Tuesday   | 🚧 To be updated... | [View →](Week9/Day58-README.md) |
 | **Day 59** | July 16, 2025 | Wednesday | 🚧 To be updated... | [View →](Week9/Day59-README.md) |
 | **Day 60** | July 17, 2025 | Thursday  | 🚧 To be updated... | [View →](Week9/Day60-README.md) |
@@ -133,4 +133,3 @@
                       
 
 ---
-
