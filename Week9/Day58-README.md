@@ -1,5 +1,5 @@
 
-# README: Multi-Fax Number Broadcast Feature
+# Case :  Multi-Fax Number Broadcast Feature
 
 ### **Bug ID:** 233445  
 ### **Time Spent:** 3 Days 0 Hrs 0 Mins  
