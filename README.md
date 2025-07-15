@@ -124,8 +124,7 @@
 |     📆 Day | Date          | Day       | 🚀 Highlights       | 📄 Link                         |
 | ---------: | ------------- | --------- | ------------------- | ------------------------------- |
 | **Day 57** | July 14, 2025 | Monday    | 🛠️ Worked on issues in Tandon Stage (Chart/Desktop):<br>✅ Fixed Progress Note **shortcut code display bug**<br>✅ Debugged **Import dropdown issue** | [View →](Week9/Day57-README.md) |
-| **Day 58** | July 15, 2025 | Tuesday   | 🚧 To be updated... | [View →](Week9/Day58-README.md) |
-| **Day 59** | July 16, 2025 | Wednesday | 🚧 To be updated... | [View →](Week9/Day59-README.md) |
+| **Day 58** | July 15, 2025 | Tuesday   | 🐞 **Case Completed** => **Case Number**: **233445**<br>✴️ Implemented multi-fax broadcast feature for referring physicians<br>✴️ Updated UI and backend to support multiple fax numbers<br>✴️ Tested and verified fax dispatch functionality | [View →](Week9/Day58-README.md) | **Day 59** | July 16, 2025 | Wednesday | 🚧 To be updated... | [View →](Week9/Day59-README.md) |
 | **Day 60** | July 17, 2025 | Thursday  | 🚧 To be updated... | [View →](Week9/Day60-README.md) |
 | **Day 61** | July 18, 2025 | Friday    | 🚧 To be updated... | [View →](Week9/Day61-README.md) |
 | **Day 62** | July 19, 2025 | Saturday  | 🌴 **Leave**        | -                               |
