@@ -7,13 +7,13 @@
 
   * [ ] "Show / Hide Toolbar" option not showing (missing compared to legacy view)
 
-    * See details → [Release of Records Issue](Week9/Day57-README.md#release-of-records)
+    * See details → *(Add file/section link here when ready)*
 
 * [ ] **Progress Note Confidential (Notes)**
 
   * [ ] While clicking shortcut, initially showing shortcut code, then only description showing.
 
-    * See details → [Progress Note Confidential Issue](Week9/Day57-README.md#issue-1-progress-note-confidential-notes-while-click-shortcut-initially-showing-shortcut-code-then-only-description-showing)
+    * See details → [Progress Note Confidential Issue](Day57-README.md#issue-1-progress-note-confidential-notes-while-click-shortcut-initially-showing-shortcut-code-then-only-description-showing)
 
 
 * [ ] **IM Progress Notes**
@@ -36,4 +36,4 @@
 
   * [ ] Old encounter data not showing in the drop-down.
 
-    * See details → [New Encounter Import Issue](Week9/Day57-README.md#issue-2-for-new-encounter--import--old-encounter-data-not-showing-in-drop-down)
+    * See details → [New Encounter Import Issue](Day57-README.md#issue-2-for-new-encounter--import--old-encounter-data-not-showing-in-drop-down)
