@@ -123,6 +123,7 @@
 
 |     📆 Day | Date          | Day       | 🚀 Highlights       | 📄 Link                         |
 | ---------: | ------------- | --------- | ------------------- | ------------------------------- |
+|         |               |         | **Chart Page/Desktop Issues**| [Issues →](Week9/Chat_and_desktop_Issues-README.md) |
 | **Day 57** | July 14, 2025 | Monday    | 🛠️ Worked on issues in Tandon Stage (Chart/Desktop):<br>✅ Fixed Progress Note **shortcut code display bug**<br>✅ Debugged **Import dropdown issue** | [View →](Week9/Day57-README.md) |
 | **Day 58** | July 15, 2025 | Tuesday   | 🐞 **Case Completed** => **Case Number**: **233445**<br>✴️ Implemented multi-fax broadcast feature for referring physicians<br>✴️ Updated UI and backend to support multiple fax numbers<br>✴️ Tested and verified fax dispatch functionality | [View →](Week9/Day58-README.md)|
 | **Day 59** | July 16, 2025 | Wednesday | 🛠️ Worked on issues in Tandon Stage (Chart/Desktop): <br>🚧 To be updated... | [View →](Week9/Day59-README.md) |
