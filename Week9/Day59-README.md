@@ -13,7 +13,8 @@
 
   * [ ] While clicking shortcut, initially showing shortcut code, then only description showing.
 
-    * See details → [Progress Note Confidential Issue](Week9/Day57-README.md#issue-1-progress-note-confidential--notes--while-click-shortcut-initially-showing-shortcut-code-then-only-description-showing)
+    * See details → [Progress Note Confidential Issue](Week9/Day57-README.md#issue-1-progress-note-confidential-notes-while-click-shortcut-initially-showing-shortcut-code-then-only-description-showing)
+
 
 * [ ] **IM Progress Notes**
 
