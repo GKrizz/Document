@@ -1,4 +1,4 @@
-# ✅ ISSUE 1: Progress Note Confidential--Notes--While click shortcut, initially showing shortcut code then only description showing.
+# Issue 1: Progress Note Confidential--Notes--While click shortcut, initially showing shortcut code then only description showing.
 
 ## 🧠 Problem
 
@@ -275,7 +275,7 @@ Absolutely! Here's a **combined, clean version** of your **Component Map** and *
 
 
 
-# ✅ ISSUE 2: For New Encounter--import--Old encounter data not showing in drop down.
+# Issue 2: For New Encounter--import--Old encounter data not showing in drop down.
 
 ## 🧠 Problem
     On creating a new encounter, clicking Import does not show data from old encounters in the dropdown.
