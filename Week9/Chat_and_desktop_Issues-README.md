@@ -99,7 +99,7 @@
 
 * [ ] **Consultation Report**
 
- * [ ] Added data not showing in SOAP
- * [ ] Scratch Area – data not showing compared to legacy
+     * [ ] Added data not showing in SOAP
+     * [ ] Scratch Area – data not showing compared to legacy
 
 
