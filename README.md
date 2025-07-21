@@ -128,9 +128,21 @@
 | **Day 58** | July 15, 2025 | Tuesday   | 🐞 **Case Completed** => **Case Number**: **233445**<br>✴️ Implemented multi-fax broadcast feature for referring physicians<br>✴️ Updated UI and backend to support multiple fax numbers<br>✴️ Tested and verified fax dispatch functionality | [View →](Week9/Day58-README.md)|
 | **Day 59** | July 16, 2025 | Wednesday | ✅ Refactored referral logic to show **Service Doctor** as "Referred By"<br>✅ Debug/debug print statements for legacy CNM view | [View →](Week9/Day59-README.md) |
 | **Day 60** | July 17, 2025 | Thursday  | 🧠 **Case**# **234293** (Assigned)<br>✅ Identified and fixed bug showing **staff name instead of Service Doctor** in legacy view referrals<br>🛠️ Updated Java logic in `PlanElements.java`, verified debug logs | [View →](Week9/Day60-README.md) |
-| **Day 61** | July 18, 2025 | Friday    | 🚧 Updated the assigned **Case**# **234293** in Testing | [View →](Week9/Day61-README.md) |
+| **Day 61** | July 18, 2025 | Friday    | ✅ Updated the assigned **Case**# **234293** in Testing | [View →](Week9/Day61-README.md) |
 | **Day 62** | July 19, 2025 | Saturday  | 🌴 **Leave**        | -                               |
 | **Day 63** | July 20, 2025 | Sunday    | 🌴 **Leave**        | -                               |
                       
 
 ---
+
+## 📅 Week 10 Summary
+
+|     📆 Day | Date          | Day       | 🚀 Highlights                        | 📄 Link                                                |
+| ---------: | ------------- | --------- | ------------------------------------ | ------------------------------------------------------ |
+| **Day 64** | July 21, 2025 | Monday    | 🔄 Content to be updated             | [View →](Week10/Day64-README.md)                       |
+| **Day 65** | July 22, 2025 | Tuesday   | 🔄 Content to be updated             | [View →](Week10/Day65-README.md)                       |
+| **Day 66** | July 23, 2025 | Wednesday | 🔄 Content to be updated             | [View →](Week10/Day66-README.md)                       |
+| **Day 67** | July 24, 2025 | Thursday  | 🔄 Content to be updated             | [View →](Week10/Day67-README.md)                       |
+| **Day 68** | July 25, 2025 | Friday    | 🔄 Content to be updated             | [View →](Week10/Day68-README.md)                       |
+| **Day 69** | July 26, 2025 | Saturday  | 🌴 **Leave**                         | -                                                      |
+| **Day 70** | July 27, 2025 | Sunday    | 🌴 **Leave**                         | -                                                      |
