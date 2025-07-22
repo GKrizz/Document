@@ -28,17 +28,7 @@
          
    * [ ] Pediatric Progress Notes – Same issue as above
          
-   * [ ] Male – SOAP View:
-   
-     * [ ] ROS data not showing
-           
-     * [ ] PE data not showing
-           
-     * [ ] Plan data not saved
-   
-        🔗 See details →
-        [IM Progress Notes Issue](Day57-README.md#im-progress-notes-issue)
-        [Pediatric Progress Notes Issue](Day57-README.md#pediatric-progress-notes-issue)
+       🔗 See details → [IM Progress Notes Issue](Day57-README.md#im-progress-notes-issue)
 
 
 
@@ -57,20 +47,39 @@
     🔗 See details → [New Encounter Import Issue](Day57-README.md#issue-2-for-new-encounter--import--old-encounter-data-not-showing-in-drop-down)
 
 
-
-* [ ] **New Window Chart View**
+# New Window Chart View
   
-  * [ ] Tabs show "Failed to load" in most templates:
+ * [ ] **Tabs show "Failed to load" in most templates:**
   
     * Visit Screening
     * Procedure
-  * [ ] Page not supported:
+
+
+ * [ ] **Page not supported:**
   
     * Aftercare
     * Subjective
     * MU
+      
+* [ ] **Release of Records**
 
+   * [ ] Bottom date picker not opening in the proper place
+      
+   * [ ] Clicking SOAP tab shows "fail to save data" alert
 
+        🔗 See details → [Release of Records Issue](Day57-README.md#release-of-records-issue)
+
+* [ ] **IM Progress Notes**
+         
+   * [ ] Male – SOAP View:
+   
+     * [ ] ROS data not showing
+           
+     * [ ] PE data not showing
+           
+     * [ ] Plan data not saved
+   
+        🔗 See details → [Pediatric Progress Notes Issue](Day57-README.md#pediatric-progress-notes-issue)
 
 * [ ] **Developmental Checklist**
 
