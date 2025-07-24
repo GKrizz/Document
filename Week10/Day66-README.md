@@ -102,7 +102,7 @@ Connection closed.
 
 ---
 
-### ✅ Step 2: Analyze Medication Section via API Trace
+### ✅ Step 2: Analyze Medication Section via API Trace (LEGACY Project)
 
 To identify why **invalid characters** were present in the CDA, I reviewed the backend code responsible for generating the **Medication Section** of the CCDA.
 
