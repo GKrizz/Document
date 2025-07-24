@@ -6,17 +6,13 @@
 
    * [ ] "Show / Hide Toolbar" option not showing (missing compared to legacy view)
 
-   * [ ] Bottom date picker not opening in the proper place
-      
-   * [ ] Clicking SOAP tab shows "fail to save data" alert
-
         🔗 See details → [Release of Records Issue](Day57-README.md#release-of-records-issue)
 
 
 
-* [ ] **Progress Note Confidential (Notes)**
+* [x] **Progress Note Confidential (Notes)**
   
-  * [ ] While clicking shortcut, initially showing shortcut code, then only description showing.
+  * [x] While clicking shortcut, initially showing shortcut code, then only description showing.
   
     🔗 See details → [Progress Note Confidential Issue](Day57-README.md#issue-1-progress-note-confidential--notes--while-click-shortcut-initially-showing-shortcut-code-then-only-description-showing)
 
