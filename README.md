@@ -153,7 +153,7 @@
 
 |     📆 Day | Date          | Day       | 🚀 Highlights                        | 📄 Link                                                |
 | ---------: | ------------- | --------- | ------------------------------------ | ------------------------------------------------------ |
-| **Day 71** | July 28, 2025 | Monday    | 🛠️ **New Window Chart View - IM Progress Notes** - Plan data not saved         | [View →](Week11/Day71-README.md)                       |
+| **Day 71** | July 28, 2025 | Monday    | 🛠️ **New Window Chart View - IM Progress Notes** <br> Plan data not saved         | [View →](Week11/Day71-README.md)                       |
 | **Day 72** | July 29, 2025 | Tuesday   | 🔄 Content to be updated             | [View →](Week11/Day72-README.md)                       |
 | **Day 73** | July 30, 2025 | Wednesday | 🔄 Content to be updated             | [View →](Week11/Day73-README.md)                       |
 | **Day 74** | July 31, 2025 | Thursday  | 🔄 Content to be updated             | [View →](Week11/Day74-README.md)                       |
