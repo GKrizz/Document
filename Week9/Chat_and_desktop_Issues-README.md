@@ -74,8 +74,8 @@
      * [ ] PE data not showing
            
      * [ ] Plan data not saved
-   
-               🔗 See details → [IM Progress Notes - Plan data not saved](../Week11/Day71-README.md#im-progress-notes---plan-data-not-saved)
+     
+         🔗 See details → [IM Progress Notes - Plan data not saved](../Week11/Day71-README.md#im-progress-notes---plan-data-not-saved)
 
 * [ ] **Developmental Checklist**
 
