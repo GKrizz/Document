@@ -1,8 +1,4 @@
-Based on the detailed logs and code you've shared, here's a **clear flow of how saving works in the XML tab (like GENERALPLAN)**, and **why your "Plan data not saved" issue** is occurring.
-
----
-
-## ✅ FLOW: What Happens When You Click **Save / Save & Close**
+## IM Progress Notes - Plan data not saved
 
 ### 🔁 From `TopBarDesktopView.java`
 
