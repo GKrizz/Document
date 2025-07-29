@@ -92,9 +92,9 @@
 * [ ] **Headache Questionnaire**
 
   * [ ] SOAP bottom page cropped
-  * [ ] Bottom date picker partially hidden
+  * [x] Bottom date picker partially hidden
     
-      🔗 See details → [Headache Questionnaire – Date Picker Positioning Fix](Day67-README.md#headache-questionnaire---date-picker-positioning-fix)
+      🔗 See details → [Headache Questionnaire – Date Picker Positioning Fix](Week10/Day67-README.md#headache-questionnaire---date-picker-positioning-fix)
 
 
 
