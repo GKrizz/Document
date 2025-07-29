@@ -146,3 +146,20 @@
 | **Day 68** | July 25, 2025 | Friday    | **Flow of Working** — Saving Data on Tab Click (e.g., Plan Tab)             | [View →](Week10/Day68-README.md)                       |
 | **Day 69** | July 26, 2025 | Saturday  | 🌴 **Leave**                         | -                                                      |
 | **Day 70** | July 27, 2025 | Sunday    | 🌴 **Leave**                         | -                                                      |
+
+---
+
+## 📅 Week 11 Summary
+
+|     📆 Day | Date          | Day       | 🚀 Highlights                        | 📄 Link                                                |
+| ---------: | ------------- | --------- | ------------------------------------ | ------------------------------------------------------ |
+| **Day 71** | July 28, 2025 | Monday    | 🔄 Content to be updated             | [View →](Week11/Day71-README.md)                       |
+| **Day 72** | July 29, 2025 | Tuesday   | 🔄 Content to be updated             | [View →](Week11/Day72-README.md)                       |
+| **Day 73** | July 30, 2025 | Wednesday | 🔄 Content to be updated             | [View →](Week11/Day73-README.md)                       |
+| **Day 74** | July 31, 2025 | Thursday  | 🔄 Content to be updated             | [View →](Week11/Day74-README.md)                       |
+| **Day 75** | August 1, 2025 | Friday   | 🔄 Content to be updated             | [View →](Week11/Day75-README.md)                       |
+| **Day 76** | August 2, 2025 | Saturday | 🌴 **Leave**                         | -                                                      |
+| **Day 77** | August 3, 2025 | Sunday   | 🌴 **Leave**                         | -                                                      |
+
+---
+
