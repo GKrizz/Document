@@ -123,7 +123,7 @@
 
 |     📆 Day | Date          | Day       | 🚀 Highlights       | 📄 Link                         |
 | ---------: | ------------- | --------- | ------------------- | ------------------------------- |
-|         |               |         | **Chart Page/Desktop Issues**| [Issues →](Week9/Chat_and_desktop_Issues-README.md) |
+|         |               |         | **Chart Page/Desktop Issues__and__New Window Chart View**| [Issues →](Week9/Chat_and_desktop_Issues-README.md) |
 | **Day 57** | July 14, 2025 | Monday    | 🛠️ Worked on issues in Tandon Stage (Chart/Desktop):<br>✅ Fixed Progress Note **shortcut code display bug**<br>✅ Debugged **Import dropdown issue** | [View →](Week9/Day57-README.md) |
 | **Day 58** | July 15, 2025 | Tuesday   | 🐞 **Case Completed** => **Case Number**: **233445**<br>✴️ Implemented multi-fax broadcast feature for referring physicians<br>✴️ Updated UI and backend to support multiple fax numbers<br>✴️ Tested and verified fax dispatch functionality | [View →](Week9/Day58-README.md)|
 | **Day 59** | July 16, 2025 | Wednesday | ✅ Refactored referral logic to show **Service Doctor** as "Referred By"<br>✅ Debug/debug print statements for legacy CNM view | [View →](Week9/Day59-README.md) |
@@ -153,7 +153,7 @@
 
 |     📆 Day | Date          | Day       | 🚀 Highlights                        | 📄 Link                                                |
 | ---------: | ------------- | --------- | ------------------------------------ | ------------------------------------------------------ |
-| **Day 71** | July 28, 2025 | Monday    | 🔄 Content to be updated             | [View →](Week11/Day71-README.md)                       |
+| **Day 71** | July 28, 2025 | Monday    | 🛠️ **New Window Chart View - IM Progress Notes** - Plan data not saved         | [View →](Week11/Day71-README.md)                       |
 | **Day 72** | July 29, 2025 | Tuesday   | 🔄 Content to be updated             | [View →](Week11/Day72-README.md)                       |
 | **Day 73** | July 30, 2025 | Wednesday | 🔄 Content to be updated             | [View →](Week11/Day73-README.md)                       |
 | **Day 74** | July 31, 2025 | Thursday  | 🔄 Content to be updated             | [View →](Week11/Day74-README.md)                       |
