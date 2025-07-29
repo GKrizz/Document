@@ -172,4 +172,93 @@ saveTemplate() → TopBarActivity → saveCurrentTab()
 
 ---
 
+## 🔍 PSQL --> Query Breakdown
+
+### ✅ 1. **Raw XML Data Retrieval**
+
+```sql
+SELECT leaf_tab_patient_data 
+FROM leaf_tab_patient
+WHERE leaf_tab_patient_patient_id = 376798
+  AND leaf_tab_patient_encounter_id = 153255
+  AND leaf_tab_patient_tab_library_id = 210
+  AND leaf_tab_patient_isactive = 't';
+```
+
+* **Purpose**: Returns the raw XML stored for this patient and encounter.
+* **Use case**: Inspect structure before applying `xpath()`.
+
+---
+
+### ✅ 2. **Top-Level Node Extraction**
+
+```sql
+SELECT xpath('/leaf', leaf_tab_patient_data::xml)
+FROM leaf_tab_patient
+WHERE leaf_tab_patient_patient_id = 376798
+  AND leaf_tab_patient_encounter_id = 153255
+  AND leaf_tab_patient_tab_library_id = 210
+  AND leaf_tab_patient_isactive = 't';
+```
+
+* **Purpose**: Extracts the top-level `<leaf>` node from the XML.
+* **Use case**: Verifies if root node is `<leaf>` and accessible.
+
+---
+
+### ✅ 3. **Plan Data Extraction from Specific Node**
+
+```sql
+SELECT xpath('/leaf/xml_element2_GENERALPLAN/text()', leaf_tab_patient_data::xml)
+FROM leaf_tab_patient
+WHERE leaf_tab_patient_patient_id = 376798
+  AND leaf_tab_patient_encounter_id = 153255
+  AND leaf_tab_patient_tab_library_id = 210
+  AND leaf_tab_patient_isactive = 't';
+```
+
+* **Purpose**: Extracts the text value inside `<xml_element2_GENERALPLAN>` under `<leaf>`.
+* **Output**: Returns a PostgreSQL array with the extracted text (or empty if not found).
+
+---
+
+### ✅ 4. **Raw XML for Different Encounter**
+
+```sql
+SELECT leaf_tab_patient_data
+FROM leaf_tab_patient
+WHERE leaf_tab_patient_patient_id = 376671
+  AND leaf_tab_patient_encounter_id = 153264
+  AND leaf_tab_patient_tab_library_id = 210
+  AND leaf_tab_patient_isactive = 't';
+```
+
+* **Purpose**: Same as Query 1, for a different encounter.
+* **Use case**: View raw XML to identify nodes like `xml_element2_GENERALPLAN`.
+
+---
+
+### ✅ 5. **Extract Plan and Aftercare Instructions Simultaneously**
+
+```sql
+SELECT 
+  xpath('//xml_element2_GENERALPLAN/text()', leaf_tab_patient_data::xml) AS plan,
+  xpath('//xml_element4_GENERALPLAN/text()', leaf_tab_patient_data::xml) AS aftercare_instructions
+FROM leaf_tab_patient
+WHERE leaf_tab_patient_patient_id = 376835
+  AND leaf_tab_patient_encounter_id = 152987
+  AND leaf_tab_patient_tab_library_id = 210
+  AND leaf_tab_patient_isactive = 't';
+```
+
+* **Purpose**: Extracts both `<xml_element2_GENERALPLAN>` and `<xml_element4_GENERALPLAN>` text content.
+* `//` = anywhere in the document (not just directly under `<leaf>`)
+* **Output**:
+
+  * `plan`: contains the plan text
+  * `aftercare_instructions`: contains aftercare info
+
+---
+
+
 
