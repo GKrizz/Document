@@ -75,7 +75,7 @@
            
      * [ ] Plan data not saved
    
-        🔗 See details → [Pediatric Progress Notes Issue](Day57-README.md#pediatric-progress-notes-issue)
+               🔗 See details → [IM Progress Notes - Plan data not saved](../Week11/Day71-README.md#im-progress-notes---plan-data-not-saved)
 
 * [ ] **Developmental Checklist**
 
