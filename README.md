@@ -155,8 +155,8 @@
 | ---------: | ------------- | --------- | ------------------------------------ | ------------------------------------------------------ |
 | **Day 71** | July 28, 2025 | Monday    | 🛠️ **New Window Chart View - IM Progress Notes** <br> Plan data not saved         | [View →](Week11/Day71-README.md)                       |
 | **Day 72** | July 29, 2025 | Tuesday   |  🔹 **Case# 234691** (Assigned) <br>   🛠️ **Faxing Labs** - Referring Doctor Info Not Auto-Populating   <br> Bug fixed by properly encoding URL parameters      | [View →](Week11/Day72-README.md)                       |
-| **Day 73** | July 30, 2025 | Wednesday | 🔄 Content to be updated             | [View →](Week11/Day73-README.md)                       |
-| **Day 74** | July 31, 2025 | Thursday  | 🔄 Content to be updated             | **OpenFaxPickerAction.java** and **OpenFaxPicker.jsp** [View →](Week11/Day74-README.md)                       |
+| **Day 73** | July 30, 2025 | Wednesday | 🛠️ **New Window Chart View** -  **Doctor Incident** <br>  Data not saved            | [View →](Week11/Day73-README.md)                       |
+| **Day 74** | July 31, 2025 | Thursday  | **OpenFaxPickerAction.java** and **OpenFaxPicker.jsp**             |  [View →](Week11/Day74-README.md)                       |
 | **Day 75** | August 1, 2025 | Friday   | 🔄 Content to be updated             | [View →](Week11/Day75-README.md)                       |
 | **Day 76** | August 2, 2025 | Saturday | 🌴 **Leave**                         | -                                                      |
 | **Day 77** | August 3, 2025 | Sunday   | 🌴 **Leave**                         | -                                                      |
