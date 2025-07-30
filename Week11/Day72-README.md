@@ -1,5 +1,8 @@
 
-# 📝 Case README: Referring Doctor Info Not Auto-Populating While Faxing
+# 📝 Referring Doctor Info Not Auto-Populating While Faxing
+
+<img width="668" height="349" alt="image" src="https://github.com/user-attachments/assets/3e699770-18d9-45b7-8f3e-a0304707a560" />
+
 
 ### 📌 Case Details
 
@@ -111,6 +114,17 @@ private String encode(String input) throws UnsupportedEncodingException {
 * Chart ID used during testing: `377063`
 * Encounter ID: `153271`
 * Patient ID: `376714`
+
+---
+
+### Before
+<img width="1293" height="740" alt="image" src="https://github.com/user-attachments/assets/42bf66e8-d63a-474b-86a5-3d009c726482" />
+
+
+### After
+
+<img width="1294" height="703" alt="image" src="https://github.com/user-attachments/assets/76a866f4-8407-4e7f-81d9-e8ae444b8701" />
+
 
 ---
 
