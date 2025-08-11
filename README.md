@@ -163,3 +163,30 @@
 
 ---
 
+## 📅 Week 12 Summary
+
+|     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
+| ---------: | --------------- | --------- | ---------------- | -------------------------------- |
+| **Day 78** | August 4, 2025  | Monday    | 🔄 To be updated | [View →](Week12/Day78-README.md) |
+| **Day 79** | August 5, 2025  | Tuesday   | 🔄 To be updated | [View →](Week12/Day79-README.md) |
+| **Day 80** | August 6, 2025  | Wednesday | 🔄 To be updated | [View →](Week12/Day80-README.md) |
+| **Day 81** | August 7, 2025  | Thursday  | 🔄 To be updated | [View →](Week12/Day81-README.md) |
+| **Day 82** | August 8, 2025  | Friday    | 🔄 To be updated | [View →](Week12/Day82-README.md) |
+| **Day 83** | August 9, 2025  | Saturday  | 🌴 **Leave**     | -                                |
+| **Day 84** | August 10, 2025 | Sunday    | 🌴 **Leave**     | -                                |
+
+---
+
+## 📅 Week 13 Summary
+
+|     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
+| ---------: | --------------- | --------- | ---------------- | -------------------------------- |
+| **Day 85** | August 11, 2025 | Monday    | 🔄 To be updated | [View →](Week13/Day85-README.md) |
+| **Day 86** | August 12, 2025 | Tuesday   | 🔄 To be updated | [View →](Week13/Day86-README.md) |
+| **Day 87** | August 13, 2025 | Wednesday | 🔄 To be updated | [View →](Week13/Day87-README.md) |
+| **Day 88** | August 14, 2025 | Thursday  | 🔄 To be updated | [View →](Week13/Day88-README.md) |
+| **Day 89** | August 15, 2025 | Friday    | 🔄 To be updated | [View →](Week13/Day89-README.md) |
+| **Day 90** | August 16, 2025 | Saturday  | 🌴 **Leave**     | -                                |
+| **Day 91** | August 17, 2025 | Sunday    | 🌴 **Leave**     | -                                |
+
+---
