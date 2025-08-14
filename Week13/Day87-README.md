@@ -25,7 +25,7 @@
 
 * Women with **≥1 mammogram** between **October 1 two years prior to measurement period** and end of measurement period
 
-**5. Numerator Exclusions**
+**5. Numerator Exclusions / Denominator Exceptions / Stratification**
 
 * None
 
