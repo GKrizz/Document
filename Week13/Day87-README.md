@@ -54,3 +54,27 @@ We will have separate rules for:
 ---
 
 
+
+ 
+| Encounter Description                                        | OID                                      |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| Office Visit                                                 | 2.16.840.1.113883.3.464.1003.101.12.1001 |
+| Annual Wellness Visit                                        | 2.16.840.1.113883.3.526.3.1240           |
+| Preventive Care Services Established Office Visit, 18 and Up | 2.16.840.1.113883.3.464.1003.101.12.1025 |
+| Preventive Care Services Initial Office Visit, 18 and Up     | 2.16.840.1.113883.3.464.1003.101.12.1023 |
+| Home Healthcare Services                                     | 2.16.840.1.113883.3.464.1003.101.12.1016 |
+| Virtual Encounter                                            | 2.16.840.1.113883.3.464.1003.101.12.1089 |
+| Telephone Visits                                             | 2.16.840.1.113883.3.464.1003.101.12.1080 |
+
+ 
+
+| Clinical Concept                         | OID / Code System                                              | Description / Usage                                         |
+| ---------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Encounter Inpatient**                  | `2.16.840.1.113883.3.666.5.307`                                | Value Set for inpatient encounters                          |
+| Discharge Disposition - Home Hospice     | `2.16.840.1.113883.3.117.1.7.1.209`                            | Code for discharged to home for hospice care                |
+| Discharge Disposition - Facility Hospice | `2.16.840.1.113883.3.117.1.7.1.207`                            | Code for discharged to healthcare facility for hospice care |
+| **Hospice Care Ambulatory**              | `2.16.840.1.113883.3.526.3.1584`                               | Value set for hospice care interventions                    |
+| **Hospice Encounter**                    | `2.16.840.1.113883.3.464.1003.1003`                            | Value set for hospice encounters                            |
+| **Hospice care \[Minimum Data Set]**     | LOINC Code: `45755-6` (OID `2.16.840.1.113883.3.225.2001.142`) | Assessment code for hospice care                            |
+| "Yes" qualifier value for result         | `2.16.840.1.113883.3.225.2001.123`                             | Code indicating "Yes" result qualifier                      |
+| **Hospice Diagnosis**                    | `2.16.840.1.113883.3.464.1003.1165`                            | Value set for hospice diagnoses                             |
