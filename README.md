@@ -185,8 +185,22 @@
 | **Day 86** | August 12, 2025 | Tuesday   | 🔄 To be updated | [View →](Week13/Day86-README.md) |
 | **Day 87** | August 13, 2025 | Wednesday | 🔄 To be updated | [View →](Week13/Day87-README.md) |
 | **Day 88** | August 14, 2025 | Thursday  | 🔄 To be updated | [View →](Week13/Day88-README.md) |
-| **Day 89** | August 15, 2025 | Friday    | 🔄 To be updated | [View →](Week13/Day89-README.md) |
+| **Day 89** | August 15, 2025 | Friday    | 🌴 **Leave**     | -                                |
 | **Day 90** | August 16, 2025 | Saturday  | 🌴 **Leave**     | -                                |
 | **Day 91** | August 17, 2025 | Sunday    | 🌴 **Leave**     | -                                |
+
+---
+
+## 📅 Week 14 Summary
+
+|     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
+| ---------: | --------------- | --------- | ---------------- | -------------------------------- |
+| **Day 92** | August 18, 2025 | Monday    | 🔄 To be updated | [View →](Week14/Day92-README.md) |
+| **Day 93** | August 19, 2025 | Tuesday   | 🔄 To be updated | [View →](Week14/Day93-README.md) |
+| **Day 94** | August 20, 2025 | Wednesday | 🔄 To be updated | [View →](Week14/Day94-README.md) |
+| **Day 95** | August 21, 2025 | Thursday  | 🔄 To be updated | [View →](Week14/Day95-README.md) |
+| **Day 96** | August 22, 2025 | Friday    | 🔄 To be updated | [View →](Week14/Day96-README.md) |
+| **Day 97** | August 23, 2025 | Saturday  | 🌴 **Leave**     | -                                |
+| **Day 98** | August 24, 2025 | Sunday    | 🌴 **Leave**     | -                                |
 
 ---
