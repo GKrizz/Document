@@ -1,31 +1,44 @@
-CMS125v13 
+# ✅ CMS125v13 – Denominator Exclusion (Advanced Illness Diagnosis)
 
-CMS125v13 Measure Test
-Measure: Breast Cancer Screening
-Measurement Period: 01/01/2025 - 12/31/2025
-HQMF ID: 2C928083-8907-CE68-0189-2BC3939006EC
-CMS ID: CMS125v13 (eCQM Specification)
+**Measure:** Breast Cancer Screening
+**CMS ID:** CMS125v13 (eCQM Specification)
+**Measurement Period:** 01/01/2025 – 12/31/2025
+**HQMF ID:** 2C928083-8907-CE68-0189-2BC3939006EC
+
+📄 **Specification References**:
+
+* [CMS125v13 HTML Spec →](https://static.glaceemr.com/ECQM/2025/CMS125v13.html)
+* [Glace eCQM API Info →](https://datagateway.glaceemr.com/DataGatewayMediSpan/eCQMServices/getECQMInfoById?ids=112&reportingYear=2025)
+
+---
 
 
+## ❌ Why the Original Rule Was Incorrect
 
+1. **Wrong Object Type**
 
+```java
+encounter1: Encounter()
+```
+   * ❌  You’re looping through encounters instead of diagnoses.
+   * CMS specification calls for : `["Diagnosis": "Advanced Illness"] AdvancedIllnessDiagnosis`.so we must use `Diagnosis()` objects.
 
-https://static.glaceemr.com/ECQM/2025/CMS125v13.html
-https://datagateway.glaceemr.com/DataGatewayMediSpan/eCQMServices/getECQMInfoById?ids=112&reportingYear=2025
+2. **Diagnosis code check**
 
+```java
+"2.16.840.1.113883.3.464.1003.110.12.1082"
+```
 
-Here’s why the current rule is **incorrect**:
-
-1. **`encounter1: Encounter()`**
-
-   * You’re looping through encounters instead of diagnoses.
-   * CMS says: `["Diagnosis": "Advanced Illness"] AdvancedIllnessDiagnosis`. So you need `Diagnosis()` objects.
-
-2. **Diagnosis code check** is correct (`2.16.840.1.113883.3.464.1003.110.12.1082`) — that’s the Advanced Illness ValueSet.
+* ✅ Correctly uses the **Advanced Illness ValueSet** OID.
 
 3. **Time window**:
 
-   * You correctly need **2 years before the end of the measurement period**, but using `encounter1.getStartDate()` is wrong. Use the diagnosis start/end date.
+```java
+encounter1.getStartDate()
+```
+
+   * You correctly need **2 years before the end of the measurement period**, but using `encounter1.getStartDate()` is wrong.
+   * ✅ Should use diagnosis `startDate`/`endDate` or `recordedDate`
 
 ---
 
