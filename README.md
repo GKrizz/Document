@@ -195,7 +195,7 @@
 
 |     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
 | ---------: | --------------- | --------- | ---------------- | -------------------------------- |
-| **Day 92** | August 18, 2025 | Monday    | 🔄 To be updated | [View →](Week14/Day92-README.md) |
+| **Day 92** | August 18, 2025 | Monday    | ✅**CMS125v13** — Denominator Exclusion (Advanced Illness) | [View →](Week14/Day92-README.md) |
 | **Day 93** | August 19, 2025 | Tuesday   | 🔄 To be updated | [View →](Week14/Day93-README.md) |
 | **Day 94** | August 20, 2025 | Wednesday | 🔄 To be updated | [View →](Week14/Day94-README.md) |
 | **Day 95** | August 21, 2025 | Thursday  | 🔄 To be updated | [View →](Week14/Day95-README.md) |
