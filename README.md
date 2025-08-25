@@ -168,10 +168,10 @@
 |     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
 | ---------: | --------------- | --------- | ---------------- | -------------------------------- |
 | **Day 78** | August 4, 2025  | Monday    | 🛠️ **IM Progress Notes** – PE Data Missing in Modern View | [View →](Week12/Day78-README.md) |
-| **Day 79** | August 5, 2025  | Tuesday   | 🔄 To be updated | [View →](Week12/Day79-README.md) |
-| **Day 80** | August 6, 2025  | Wednesday | 🔄 To be updated | [View →](Week12/Day80-README.md) |
-| **Day 81** | August 7, 2025  | Thursday  | 🔄 To be updated | [View →](Week12/Day81-README.md) |
-| **Day 82** | August 8, 2025  | Friday    | 🔄 To be updated | [View →](Week12/Day82-README.md) |
+| **Day 79** | August 5, 2025  | Tuesday   | 🧾 **Legacy XML to HTML Transformation** via XSLT | [View →](Week12/Day79-README.md) |
+| **Day 80** | August 6, 2025  | Wednesday | 🧾 **Lab Investigation Utility** – `getDiscreteInvestigationDetail` | [View →](Week12/Day80-README.md) |
+| **Day 81** | August 7, 2025  | Thursday  | 🧾 **XML → HTML Transformation Flow** (Legacy, with Debugging Guide) | [View →](Week12/Day81-README.md) |
+| **Day 82** | August 8, 2025  | Friday    |  **Clinical Data Debugging** – QDM, Lab, Assessment, Procedure Trace Logs | [View →](Week12/Day82-README.md) |
 | **Day 83** | August 9, 2025  | Saturday  | 🌴 **Leave**     | -                                |
 | **Day 84** | August 10, 2025 | Sunday    | 🌴 **Leave**     | -                                |
 
