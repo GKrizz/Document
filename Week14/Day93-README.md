@@ -1,9 +1,9 @@
 # Colorectal Cancer Screening Measure
 
-**Date:** August 19, 2025
-**Day:** Tuesday
-**Status:** ✅ Completed
-**Focus:** Spec Difference Analysis (2024 vs 2025)
+**Date:** August 19, 2025 <br>
+**Day:** Tuesday <br>
+**Status:** ✅ Completed <br>
+**Focus:** Spec Difference Analysis (2024 vs 2025) <br>
 
 ---
 
