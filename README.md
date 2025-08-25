@@ -193,15 +193,15 @@
 
 ## 📅 Week 14 Summary
 
-|     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
-| ---------: | --------------- | --------- | ---------------- | -------------------------------- |
-| **Day 92** | August 18, 2025 | Monday    | ✅**CMS125v13** — Denominator Exclusion (Advanced Illness) | [View →](Week14/Day92-README.md) |
-| **Day 93** | August 19, 2025 | Tuesday   | 🔄 To be updated | [View →](Week14/Day93-README.md) |
-| **Day 94** | August 20, 2025 | Wednesday | 🔄 To be updated | [View →](Week14/Day94-README.md) |
-| **Day 95** | August 21, 2025 | Thursday  | 🔄 To be updated | [View →](Week14/Day95-README.md) |
-| **Day 96** | August 22, 2025 | Friday    | ✅**Cypress** MIPS Provider Config & CMS2v14 Validation | [View →](Week14/Day96-README.md) |
-| **Day 97** | August 23, 2025 | Saturday  | 🌴 **Leave**     | -                                |
-| **Day 98** | August 24, 2025 | Sunday    | 🌴 **Leave**     | -                                |
+|     📆 Day | Date            | Day       | 🚀 Highlights                                                         | 📄 Link                          |
+| ---------: | --------------- | --------- | --------------------------------------------------------------------- | -------------------------------- |
+| **Day 92** | August 18, 2025 | Monday    | ✅ **CMS125v13** — Denominator Exclusion (Advanced Illness)            | [View →](Week14/Day92-README.md) |
+| **Day 93** | August 19, 2025 | Tuesday   | ✅ **Colorectal Cancer Screening** — Spec Diff Analysis (2024 vs 2025) | [View →](Week14/Day93-README.md) |
+| **Day 94** | August 20, 2025 | Wednesday | ✅ **Breast Cancer Screening (CMS125v13)** — Drools Rule Fix           | [View →](Week14/Day94-README.md) |
+| **Day 95** | August 21, 2025 | Thursday  | ✅ **Tandon XML Issues (ROS & PE)** — SOAP Rendering Fix               | [View →](Week14/Day95-README.md) |
+| **Day 96** | August 22, 2025 | Friday    | ✅ **Cypress** — MIPS Provider Config & CMS2v14 Validation             | [View →](Week14/Day96-README.md) |
+| **Day 97** | August 23, 2025 | Saturday  | 🌴 **Leave**                                                          | -                                |
+| **Day 98** | August 24, 2025 | Sunday    | 🌴 **Leave**                                                          | -                                |
 
 ---
 
