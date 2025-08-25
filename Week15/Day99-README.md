@@ -21,27 +21,57 @@
    Example: `CMS125v13 - Breast Cancer Screening`
 
 ---
+
 ## 👤 Registering the Provider
 
-> **Note:** We don’t have access to register via UI. UI validation must be bypassed.
+> **Note:** UI registration access may be restricted. You may need to bypass access validation.
 
-1. Open:
-   [http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp](http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp)
+### 🔹 Step 1: Open the Employee Registration Page
 
-3. **Bypass Access Restriction**
-   Modify `EmployeeList.jsp`:
+Open the following URL in your browser:
 
-   ```jsp
-   <%-- 
-   	if(!<%=INSTALL_LOGIN_USER_ACCESS%>){
-   		if(!existeduser){
-   			alert("Access denied. Please Contact Glenwood Administrator");
-   			return false;
-   		}
-   	} 
-   --%>
-   ```
-3.Register the employee/provider.
+```
+http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp
+```
+
+---
+
+### 🔹 Step 2: Bypass Access Restriction (if needed)
+
+Modify `EmployeeList.jsp` and **comment out** the following block to bypass the restriction:
+
+```jsp
+<%-- 
+	if(!<%=INSTALL_LOGIN_USER_ACCESS%>){
+		if(!existeduser){
+			alert("Access denied. Please Contact Glenwood Administrator");
+			return false;
+		}
+	} 
+--%>
+```
+
+---
+
+### 🔹 Step 3: Register the Employee
+
+Fill out the required fields and register the provider manually.
+
+---
+
+### 🔹 Step 4: **Back Up the Employee ID**
+
+After registering, make sure to **note down the Employee ID** for future use.
+
+> Example: `2428`
+
+You can verify or search for the registered employee using this URL:
+
+```
+http://localhost:8080/GlaceStageNew/jsp/configure/EmployeeIndex.Action?empType=0&lastname=&firstname=&staffid=SteveCollier&username=
+```
+
+Use this **Employee ID** later during patient import verification (e.g., via the `getPatientsSeen` API).
 
 ---
 
@@ -99,6 +129,109 @@ INSERT INTO quality_measures_provider_mapping (
    > These commands recursively give full read/write/execute permissions to the shared and QRDA directories.
 
 ---
+
+## 🔍 Post-Import: Patient Verification, Cleanup & Re-Import
+
+### ✅ Step 1: Verify Patient Data
+
+After importing the QRDA ZIP file, use the following API to verify whether patient data has been successfully inserted:
+
+```http
+GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/getPatientsSeen?dbname=glace&accountID=glace&mode=3&reportingYear=2025
+```
+
+---
+
+### 🧑‍⚕️ Step 2: Lookup Employee ID (Optional Filter)
+
+If you want to verify data for a specific provider (e.g., `Steve Collier`), search using their **staff ID**:
+
+```http
+GET http://localhost:8080/GlaceStageNew/jsp/configure/EmployeeIndex.Action?empType=0&lastname=&firstname=&staffid=SteveCollier&username=
+```
+
+> Example Employee ID: `2428`
+
+Use this ID to filter results from the `getPatientsSeen` API if needed.
+
+---
+
+### ⚠️ Step 3: Clean Up Duplicate Entries (If Needed)
+
+If **duplicate patient data** is found after import, delete the related entries from all relevant tables using the following SQL script.
+
+> **Note:** Replace `3249153` with the actual `patient_id` you want to clean up.
+
+```sql
+DELETE FROM lab_entries 
+WHERE lab_entries_chartid IN (
+  SELECT chart_id FROM chart WHERE chart_patientid IN (3249153)
+);
+
+DELETE FROM lab_entries_parameter 
+WHERE lab_entries_parameter_chartid IN (
+  SELECT chart_id FROM chart WHERE chart_patientid IN (3249153)
+);
+
+DELETE FROM patient_assessments 
+WHERE patient_assessments_patientid IN (3249153);
+
+DELETE FROM careplan_intervention 
+WHERE careplan_intervention_patient_id IN (3249153);
+
+DELETE FROM problem_list 
+WHERE problem_list_patient_id IN (3249153);
+
+DELETE FROM doc_presc 
+WHERE doc_presc_patient_id IN (3249153);
+
+DELETE FROM current_medication 
+WHERE current_medication_patient_id IN (3249153);
+
+DELETE FROM encounter 
+WHERE encounter_chartid IN (
+  SELECT chart_id FROM chart WHERE chart_patientid IN (3249153)
+);
+
+DELETE FROM patient_ins_detail 
+WHERE patient_ins_detail_patientid IN (3249153);
+
+DELETE FROM chart 
+WHERE chart_patientid IN (3249153);
+
+DELETE FROM patient_registration 
+WHERE patient_registration_id IN (3249153);
+
+DELETE FROM quality_measures_patient_entries 
+WHERE quality_measures_patient_entries_patient_id IN (3249153);
+
+DELETE FROM not_done_details 
+WHERE not_done_patientid IN (3249153);
+
+DELETE FROM patient_allergies 
+WHERE patallerg_chartid IN (
+  SELECT chart_id FROM chart WHERE chart_patientid IN (3249153)
+);
+```
+
+---
+
+### 🔁 Step 4: Re-Import the QRDA ZIP
+
+After deleting the duplicate data:
+
+1. Re-import the **ZIP file** through the **QRDA section** in Glace.
+2. Call the `getPatientsSeen` API again.
+3. Optionally, filter using the **employee ID** (`2428`) to confirm correct association.
+
+---
+
+
+
+
+
+
+
 
 ## ⚙️ Project Configuration
 
