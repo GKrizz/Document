@@ -82,7 +82,10 @@ INSERT INTO quality_measures_provider_mapping (
 ## 📦 Import QRDA-III File
 
 1. Download the **ZIP file** from Cypress.
-2. Import it into the **QRDM Configuration** under **General Practice** in the Glace system.
+<img width="1287" height="635" alt="image" src="https://github.com/user-attachments/assets/4fc9ead3-ca7e-4d50-b22a-ed5943f213f3" />
+
+2. Import it into the **QRDA** under **General Practice** in the Glace system.
+<img width="1286" height="628" alt="image" src="https://github.com/user-attachments/assets/decf9341-652c-44d6-a611-928c4695bec8" />
 
 ---
 
