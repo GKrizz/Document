@@ -181,8 +181,8 @@
 
 |     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
 | ---------: | --------------- | --------- | ---------------- | -------------------------------- |
-| **Day 85** | August 11, 2025 | Monday    | 🔄 To be updated | [View →](Week13/Day85-README.md) |
-| **Day 86** | August 12, 2025 | Tuesday   | **CMS125v13 Rule Validation** – Frailty, AIFrailLTCF, and LTCF Exclusion Logic | [View →](Week13/Day86-README.md) |
+| **Day 85** | August 11, 2025 | Monday    | 📄 CMS**130**v13 – README Draft for Colorectal Cancer Screening Measure | [View →](Week13/Day85-README.md) |
+| **Day 86** | August 12, 2025 | Tuesday   | CMS**125**v13 Rule Validation – Frailty, AIFrailLTCF, and LTCF Exclusion Logic | [View →](Week13/Day86-README.md) |
 | **Day 87** | August 13, 2025 | Wednesday | **CMS125v13 — Breast Cancer** Screening Logic & Drools Rules | [View →](Week13/Day87-README.md) |
 | **Day 88** | August 14, 2025 | Thursday  | **API Analysis:** Generate and Validate QDM | [View →](Week13/Day88-README.md) |
 | **Day 89** | August 15, 2025 | Friday    | 🌴 **Leave**     | -                                |
