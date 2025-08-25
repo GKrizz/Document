@@ -89,6 +89,15 @@ INSERT INTO quality_measures_provider_mapping (
 
    ![Import QRDA](https://github.com/user-attachments/assets/decf9341-652c-44d6-a611-928c4695bec8)
 
+3. **If you encounter a permission error during the import**, run the following commands to grant the required file permissions:
+
+   ```bash
+   sudo chmod -Rf 777 /home/software/Documents/shared
+   sudo chmod -Rf 777 /home/software/Documents/shared/QRDA/
+   ```
+
+   > These commands recursively give full read/write/execute permissions to the shared and QRDA directories.
+
 ---
 
 ## ⚙️ Project Configuration
@@ -133,4 +142,5 @@ String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
    ```
 
 ---
+
 
