@@ -184,7 +184,7 @@
 | **Day 85** | August 11, 2025 | Monday    | 🔄 To be updated | [View →](Week13/Day85-README.md) |
 | **Day 86** | August 12, 2025 | Tuesday   | 🔄 To be updated | [View →](Week13/Day86-README.md) |
 | **Day 87** | August 13, 2025 | Wednesday | 🔄 To be updated | [View →](Week13/Day87-README.md) |
-| **Day 88** | August 14, 2025 | Thursday  | 🔄 To be updated | [View →](Week13/Day88-README.md) |
+| **Day 88** | August 14, 2025 | Thursday  | **API Analysis:** Generate and Validate QDM | [View →](Week13/Day88-README.md) |
 | **Day 89** | August 15, 2025 | Friday    | 🌴 **Leave**     | -                                |
 | **Day 90** | August 16, 2025 | Saturday  | 🌴 **Leave**     | -                                |
 | **Day 91** | August 17, 2025 | Sunday    | 🌴 **Leave**     | -                                |
