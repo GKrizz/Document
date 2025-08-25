@@ -1,7 +1,4 @@
 
-Here is your content converted into a clear, structured `README.md` format for **Day 78 – August 4, 2025**:
-
----
 
 # 📘 Day 78 – IM Progress Notes (August 4, 2025)
 
