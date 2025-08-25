@@ -134,7 +134,7 @@ INSERT INTO quality_measures_provider_mapping (
 
 ### ✅ Step 1: Verify Patient Data
 
-After importing the QRDA ZIP file, use the following API to verify whether patient data has been successfully inserted:
+After importing the QRDA ZIP file, use the following **1st API** to verify whether patient data has been successfully inserted:
 
 ```http
 GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/getPatientsSeen?dbname=glace&accountID=glace&mode=3&reportingYear=2025
@@ -226,6 +226,83 @@ After deleting the duplicate data:
 
 ---
 
+## 📊 MIPS QDM Validation & Final Reporting
+
+
+### 📌 Step 5: Run QDM Validation API for Single Patient
+
+After verifying the patient and provider entries:
+
+Use the following **2nd API** to validate QDM measures for a single patient:
+
+```http
+GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3274625&providerId=2419&reportingYear=2025
+```
+
+> Replace:
+>
+> * `patientID` → with the actual patient ID
+> * `providerId` → with the actual provider ID
+
+---
+
+### ⚙️ Step 6: Bulk QDM Validation using `MIPSSlave.java`
+
+To **validate QDM for multiple patients** in bulk:
+
+1. Open `MIPSSlave.java`
+2. Update the file with correct:
+
+   * `patientID`
+   * `providerID`
+3. Run the class to trigger QDM validation for all configured patients.
+
+---
+
+### 🧹 Step 7: Clean Up Existing Measure Data (Optional)
+
+If duplicate or outdated measure results exist, delete them before re-calculation:
+
+```sql
+DELETE FROM macra_measures_rate 
+WHERE macra_measures_rate_reporting_year = 2025;
+```
+
+---
+
+### 📌 Step 8: Calculate MIPS Performance (Final API)
+
+Call the **3rd API** to calculate the overall MIPS performance:
+
+```http
+GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/calculateMIPSPerformance?reportingYear=2025&accountID=glace&isMonthlyReport=false&dbname=glace
+```
+
+---
+
+### 📄 Step 9: View MIPS Performance Report in UI
+
+1. Go to the **Glace Web UI**
+2. Navigate to:
+   `Reports → MIPS Performance Report`
+3. Choose the **Provider**
+   Example: `Steve Collier`
+
+---
+
+### 🧪 Step 10: Compare with Cypress Measures
+
+Compare the **calculated measures** from the Glace report with the **Cypress test results**.
+
+> 🔎 If there is **any deviation**, do the following:
+
+* Identify the affected **patients**
+* Re-run the **QDM Validation API** (Step 5) for those specific patients
+* Investigate the cause (data mismatch, missing elements, timing, etc.)
+
+---
+
+
 
 
 
@@ -277,3 +354,11 @@ String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
 ---
 
 
+Thanks for the detailed continuation! Here's your updated **README.md** section that seamlessly follows from the previous **Post-Import** steps. It includes:
+
+* Calling the **second** and **third** APIs
+* Running `MIPSSlave.java` for bulk validation
+* Cleaning up duplicate measure data
+* Final report comparison instructions
+
+---
