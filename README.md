@@ -199,7 +199,7 @@
 | **Day 93** | August 19, 2025 | Tuesday   | 🔄 To be updated | [View →](Week14/Day93-README.md) |
 | **Day 94** | August 20, 2025 | Wednesday | 🔄 To be updated | [View →](Week14/Day94-README.md) |
 | **Day 95** | August 21, 2025 | Thursday  | 🔄 To be updated | [View →](Week14/Day95-README.md) |
-| **Day 96** | August 22, 2025 | Friday    | 🔄 To be updated | [View →](Week14/Day96-README.md) |
+| **Day 96** | August 22, 2025 | Friday    | ✅**Cypress** MIPS Provider Config & CMS2v14 Validation | [View →](Week14/Day96-README.md) |
 | **Day 97** | August 23, 2025 | Saturday  | 🌴 **Leave**     | -                                |
 | **Day 98** | August 24, 2025 | Sunday    | 🌴 **Leave**     | -                                |
 
