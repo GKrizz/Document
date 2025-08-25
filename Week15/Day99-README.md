@@ -26,7 +26,6 @@
 > **Note:** We don’t have access to register via UI. UI validation must be bypassed.
 
 1. Open:
-   ```http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp```
    [http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp](http://localhost:8080/Glace/jsp/configure/EmployeeList.jsp)
 
 3. **Bypass Access Restriction**
