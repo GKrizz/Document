@@ -167,7 +167,7 @@
 
 |     📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                          |
 | ---------: | --------------- | --------- | ---------------- | -------------------------------- |
-| **Day 78** | August 4, 2025  | Monday    | 🔄 To be updated | [View →](Week12/Day78-README.md) |
+| **Day 78** | August 4, 2025  | Monday    | 🛠️ **IM Progress Notes** – PE Data Missing in Modern View | [View →](Week12/Day78-README.md) |
 | **Day 79** | August 5, 2025  | Tuesday   | 🔄 To be updated | [View →](Week12/Day79-README.md) |
 | **Day 80** | August 6, 2025  | Wednesday | 🔄 To be updated | [View →](Week12/Day80-README.md) |
 | **Day 81** | August 7, 2025  | Thursday  | 🔄 To be updated | [View →](Week12/Day81-README.md) |
