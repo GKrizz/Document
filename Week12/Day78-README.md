@@ -1,5 +1,3 @@
-
-
 # 📘 Day 78 – IM Progress Notes (August 4, 2025)
 
 ## 📝 Issue Summary
