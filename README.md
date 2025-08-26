@@ -210,8 +210,8 @@
 
 |      📆 Day | Date            | Day       | 🚀 Highlights    | 📄 Link                           |
 | ----------: | --------------- | --------- | ---------------- | --------------------------------- |
-|  **Day 99** | August 25, 2025 | Monday    | 🔄 To be updated | [View →](Week15/Day99-README.md)  |
-| **Day 100** | August 26, 2025 | Tuesday   | 🔄 To be updated | [View →](Week15/Day100-README.md) |
+|  **Day 99** | August 25, 2025 | Monday    | ✅ **Cypress**  | [View →](Week15/Day99-README.md)  |
+| **Day 100** | August 26, 2025 | Tuesday   | ✅ Validated QDM data, backend QRDA logic & Cypress comparison completed | [View →](Week15/Day100-README.md) |
 | **Day 101** | August 27, 2025 | Wednesday | 🔄 To be updated | [View →](Week15/Day101-README.md) |
 | **Day 102** | August 28, 2025 | Thursday  | 🔄 To be updated | [View →](Week15/Day102-README.md) |
 | **Day 103** | August 29, 2025 | Friday    | 🔄 To be updated | [View →](Week15/Day103-README.md) |
