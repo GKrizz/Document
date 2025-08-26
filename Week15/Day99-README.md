@@ -357,18 +357,32 @@ For each patient:
 
 ---
 
+
 ### 📤 Step 13: QRDA Submission
 
-Once the **Glace MIPS report exactly matches** the **Cypress result**:
+Once the **Glace MIPS Performance Report** matches the **Cypress expected results exactly**:
 
-1. Go to `Reports → MIPS Performance Report`
-2. Download:
+1. Navigate to:
+   `Reports → MIPS Performance Report`
+
+2. Download the following files:
 
    * **QRDA-III XML**
+
+     *Downloaded File:* <img width="1281" height="545" alt="QRDA-III Downloaded" src="https://github.com/user-attachments/assets/1a67e0f6-b7ff-48cc-90ba-96fd55721c33" />
+
+     *Cypress Validation Result:*
+     ![QRDA-III Passing](https://github.com/user-attachments/assets/d9f49790-ba18-40ff-835d-b5a77757619a)
+
    * **QRDA-I XML**
-3. Upload the downloaded XML files to Cypress for final validation.
+
+     *Downloaded File:*
+     ![QRDA-I Passing](https://github.com/user-attachments/assets/your-uploaded-qrda1-screenshot.png)
+
+     > *(Note: Replace this placeholder link with the actual image URL if available.)*
 
 ---
+
 
 
 
