@@ -420,10 +420,9 @@ Once the **Glace MIPS Performance Report** matches the **Cypress expected result
 
    * **QRDA-I XML**
 
-     *Downloaded File:*
-     ![QRDA-I Passing](https://github.com/user-attachments/assets/your-uploaded-qrda1-screenshot.png)
+     **Cypress Validation Result:** <img width="1215" height="619" alt="image" src="https://github.com/user-attachments/assets/06bf1610-fd34-4935-8795-7013a563978e" />
 
-     > *(Note: Replace this placeholder link with the actual image URL if available.)*
+     
 
 ---
 
