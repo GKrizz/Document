@@ -290,18 +290,85 @@ GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperforma
 
 ---
 
-### 🧪 Step 10: Compare with Cypress Measures
+### 🔍 Step 10: Compare with Cypress Results
 
-Compare the **calculated measures** from the Glace report with the **Cypress test results**.
-
-> 🔎 If there is **any deviation**, do the following:
-
-* Identify the affected **patients**
-* Re-run the **QDM Validation API** (Step 5) for those specific patients
-* Investigate the cause (data mismatch, missing elements, timing, etc.)
+* Compare the **measures** shown in the **MIPS Performance Report** with the **Cypress expected values**.
+* If there is **any deviation**, proceed with the following investigation:
 
 ---
 
+### 🚨 Step 11: Investigate Deviation Using 2nd API
+
+If deviations exist between the Cypress and Glace MIPS report:
+
+1. Identify the **patients** contributing to the incorrect measure.
+
+   > Example patients:
+   >
+   > * Ida (`patientID = 3275873`)
+   > * Theresa (`patientID = 3275849`)
+
+2. Call the **QDM Validation API (2nd API)** for those specific patients:
+
+```http
+GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3275873&providerId=2428&reportingYear=2025
+```
+
+---
+
+### 🧪 Step 12: Validation & Troubleshooting Steps
+
+For each patient:
+
+1. **Check if the request is correctly framed**
+
+   * Inspect the JSON request body returned by the 2nd API.
+   * Compare with the corresponding Cypress **QRDA-I XML** structure to validate content consistency.
+
+2. **Check if data exists in the database**
+
+   * Validate the presence of QDM-relevant data in:
+
+     * `investigationQDM`
+     * `clinicalDataQDM`
+
+    * Run the following SQL queries:
+
+   ```sql
+   -- Check lab entries for the patient
+   SELECT * FROM lab_entries 
+   WHERE lab_entries_chartid IN (
+     SELECT chart_id FROM chart WHERE chart_patientid IN (3275873)
+   );
+   ```
+
+   ```sql
+   -- Check all patients under the provider (e.g., 2428)
+   SELECT 
+     patient_registration_id, 
+     patient_registration_last_name AS ln,
+     patient_registration_first_name AS fn,
+     patient_registration_address1 AS add1,
+     patient_registration_address2 AS add2,
+     patient_registration_city AS city
+   FROM patient_registration 
+   WHERE patient_registration_principal_doctor = '2428';
+   ```
+
+---
+
+### 📤 Step 13: QRDA Submission
+
+Once the **Glace MIPS report exactly matches** the **Cypress result**:
+
+1. Go to `Reports → MIPS Performance Report`
+2. Download:
+
+   * **QRDA-III XML**
+   * **QRDA-I XML**
+3. Upload the downloaded XML files to Cypress for final validation.
+
+---
 
 
 
@@ -354,11 +421,5 @@ String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
 ---
 
 
-Thanks for the detailed continuation! Here's your updated **README.md** section that seamlessly follows from the previous **Post-Import** steps. It includes:
 
-* Calling the **second** and **third** APIs
-* Running `MIPSSlave.java` for bulk validation
-* Cleaning up duplicate measure data
-* Final report comparison instructions
 
----
