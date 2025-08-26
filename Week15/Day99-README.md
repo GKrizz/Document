@@ -1,5 +1,49 @@
 # Cypress QRDA-III Testing with Glace EHR System
 
+## ⚙️ Project Configuration
+
+### 🔹 Database
+
+* `macra_test`
+
+### 🔹 Legacy Frontend: `EmployeeList.jsp`
+
+Comment out the access restriction code:
+
+```jsp
+<%-- 
+	if(!<%=INSTALL_LOGIN_USER_ACCESS%>){
+		if(!existeduser){
+			alert("Access denied. Please Contact Glenwood Administrator");
+			return false;
+		}
+	} 
+--%>
+```
+
+### 🔹 Backend: `MUPerformanceRateController.java`
+
+Update the `/generateAndValidateQDM` API:
+
+```java
+String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
+```
+
+## ⚙️ CDS Configuration
+
+> **Note:** Every time a change is made in **Drools**, follow these steps:
+
+1. **Give execution permission** for the rule files.
+2. Run:
+
+   ```bash
+   mvn clean
+   mvn install
+   ```
+
+---
+
+
 ## 🔗 Cypress Access
 
 * **URL:** [http://cypress.glaceemr.com:444/](http://cypress.glaceemr.com:444/)
@@ -390,49 +434,6 @@ Once the **Glace MIPS Performance Report** matches the **Cypress expected result
 
 
 
-
-## ⚙️ Project Configuration
-
-### 🔹 Database
-
-* `macra_test`
-
-### 🔹 Legacy Frontend: `EmployeeList.jsp`
-
-Comment out the access restriction code:
-
-```jsp
-<%-- 
-	if(!<%=INSTALL_LOGIN_USER_ACCESS%>){
-		if(!existeduser){
-			alert("Access denied. Please Contact Glenwood Administrator");
-			return false;
-		}
-	} 
---%>
-```
-
-### 🔹 Backend: `MUPerformanceRateController.java`
-
-Update the `/generateAndValidateQDM` API:
-
-```java
-String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
-```
-
-## ⚙️ CDS Configuration
-
-> **Note:** Every time a change is made in **Drools**, follow these steps:
-
-1. **Give execution permission** for the rule files.
-2. Run:
-
-   ```bash
-   mvn clean
-   mvn install
-   ```
-
----
 
 
 
