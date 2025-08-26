@@ -6,7 +6,6 @@
 
 ## **Project:** Cypress QRDA-III Testing with Glace EHR System
 
-## **Prepared by:** \[Your Name]
 
 ---
 
