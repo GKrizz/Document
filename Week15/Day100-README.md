@@ -4,6 +4,18 @@
 
 ---
 
+### ✅ **CMS125v13 Measure Test – Passed**
+
+* **Measure:** Breast Cancer Screening
+* **CMS ID:** CMS125v13
+* **Measurement Period:** 01/01/2025 – 12/31/2025
+* **Provider:** Steve Collier
+* **NPI:** 1390894560
+* **TIN:** 273979098
+* **CCN:** 616687
+
+---
+
 ## **Project:** Cypress QRDA-III Testing with Glace EHR System
 
 
@@ -82,3 +94,13 @@
 
 
 
+
+
+### **Validation Status**
+
+| Validation Type | Status   | Errors | Warnings | Execution Time           |
+| --------------- | -------- | ------ | -------- | ------------------------ |
+| **C1**          | ✅ Passed | --     | --       | August 26, 2025 – 1:28pm |
+| **C2 + C3**     | ✅ Passed | --     | --       | August 26, 2025 – 9:45am |
+
+---
