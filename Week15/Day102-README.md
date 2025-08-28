@@ -94,4 +94,47 @@ sftp> put localfile.txt
 
 ---
 
-Let me know if you want this saved as a file or formatted differently!
+
+## 📊 Querying the Database (`datastore_local`)
+
+After working with SFTP files, you may want to verify or inspect data within the `datastore_local` PostgreSQL database.
+
+### 1. Connect to the local PostgreSQL database
+
+In the terminal:
+
+switch to the `datastore_local` database:
+
+```sql
+psql datastore_local
+```
+
+### 2. Query the `ecqm_specifications_2025` table
+
+To identify CMS IDs where the `code` column contains scientific notation (i.e., strings like `'E+00'`), run:
+
+```sql
+SELECT cms_id, COUNT(*) 
+FROM ecqm_specifications_2025 
+WHERE code ILIKE '%E+%' 
+GROUP BY cms_id 
+ORDER BY COUNT(*) DESC;
+```
+
+### ✅ Sample Output:
+
+```
+  cms_id   | count 
+-----------+-------
+ CMS125v13 |    57
+ CMS136v14 |    37
+ CMS159v13 |     9
+ CMS177v13 |     9
+ CMS646v5  |     3
+ CMS771v6  |     1
+ CMS2v14   |     1
+ CMS124v13 |     1
+(8 rows)
+```
+
+
