@@ -178,8 +178,10 @@ if (orderDateNodeList.item(i) != null
 
 ---
 
-### QRDA I:
+### QRDA I: Passed
 
-*Pending screenshots or notes here*
+<img width="1238" height="522" alt="image" src="https://github.com/user-attachments/assets/3d2c5f0f-7ef8-4796-87e4-c6d0d9cea2a6" />
+<img width="1267" height="599" alt="image" src="https://github.com/user-attachments/assets/66b4d015-c9e6-4b91-b292-18db44751a42" />
+
 
 ---
