@@ -213,7 +213,7 @@
 |  **Day 99** | August 25, 2025 | Monday    | ✅ **Cypress** - **Breast Cancer Screening (CMS125v13)** | [View →](Week15/Day99-README.md)  |
 | **Day 100** | August 26, 2025 | Tuesday   | ✅ Validated QDM data, backend QRDA logic & Cypress comparison completed | [View →](Week15/Day100-README.md) |
 | **Day 101** | August 27, 2025 | Wednesday | 🌴 **Leave** | [View →](Week15/Day101-README.md) |
-| **Day 102** | August 28, 2025 | Thursday  | 🔄 To be updated | [View →](Week15/Day102-README.md) |
+| **Day 102** | August 28, 2025 | Thursday  | 🗂️ **SFTP File Transfers** & Scientific Notation Audit in ECQM Data | [View →](Week15/Day102-README.md) |
 | **Day 103** | August 29, 2025 | Friday    | Passing the **CMS154v13 (Appropriate Treatment for URI)** eCQM measure test in **2025** | [View →](Week15/Day103-README.md) |
 | **Day 104** | August 30, 2025 | Saturday  | 🌴 **Leave**     | -                                 |
 | **Day 105** | August 31, 2025 | Sunday    | 🌴 **Leave**     | -                                 |
