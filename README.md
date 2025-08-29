@@ -217,3 +217,20 @@
 | **Day 103** | August 29, 2025 | Friday    | ✅ **CMS154v13** – *Passed 2025 eCQM <br>Test: Appropriate Treatment for URI*     | [View →](Week15/Day103-README.md) |
 | **Day 104** | August 30, 2025 | Saturday  | 🌴 **Leave**                                                                 | -                                 |
 | **Day 105** | August 31, 2025 | Sunday    | 🌴 **Leave**                                                                 | -                                 |
+
+
+---
+
+## 📅 Week 16 Summary
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights      | 📄 Link                           |
+| ----------- | ----------------- | --------- | ------------------ | --------------------------------- |
+| **Day 106** | September 1, 2025 | Monday    | 🔄 *To be updated* | [View →](Week16/Day106-README.md) |
+| **Day 107** | September 2, 2025 | Tuesday   | 🔄 *To be updated* | [View →](Week16/Day107-README.md) |
+| **Day 108** | September 3, 2025 | Wednesday | 🔄 *To be updated* | [View →](Week16/Day108-README.md) |
+| **Day 109** | September 4, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week16/Day109-README.md) |
+| **Day 110** | September 5, 2025 | Friday    | 🔄 *To be updated* | [View →](Week16/Day110-README.md) |
+| **Day 111** | September 6, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
+| **Day 112** | September 7, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
+
+---
