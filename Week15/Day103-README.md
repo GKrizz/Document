@@ -1,8 +1,7 @@
 # CMS154v13 – Appropriate Treatment for Upper Respiratory Infection (URI)
 
-**Reporting Year: 2025**
-**Provider: Betty Poole (ID: 2431)**
-
+**Reporting Year:** 2025
+**Provider:** Betty Poole (ID: 2431)
 
 ---
 
@@ -10,13 +9,13 @@
 
 ### 1. Qualifying Encounters
 
-* **Removed (2025)**:
+* **Removed (2025):**
 
   * Initial Hospital Observation Care
   * Observation
   * Online Assessments
 
-* **Renamed**:
+* **Renamed:**
 
   * Value set `Payer` → `Payer Type`
 
@@ -24,23 +23,24 @@
 
 ### 2. Diagnosis Logic
 
-* **2024**:
+* **2024:**
   Exclusion was only `"Competing Conditions for Respiratory Conditions"`
 
-* **2025**:
+* **2025:**
   Expanded to include unions:
 
-  * `Competing Conditions for Respiratory Conditions` → `2.16.840.1.113883.3.464.1003.102.12.1017`
-  * `Acute Pharyngitis` → `2.16.840.1.113883.3.464.1003.102.12.1011`
-  * `Acute Tonsillitis` → `2.16.840.1.113883.3.464.1003.102.12.1012`
+  | Condition                                       | OID                                        |
+  | ----------------------------------------------- | ------------------------------------------ |
+  | Competing Conditions for Respiratory Conditions | `2.16.840.1.113883.3.464.1003.102.12.1017` |
+  | Acute Pharyngitis                               | `2.16.840.1.113883.3.464.1003.102.12.1011` |
+  | Acute Tonsillitis                               | `2.16.840.1.113883.3.464.1003.102.12.1012` |
 
 ---
 
 ### 3. Supplemental Data Elements (SDE)
 
-* **2024**: `Payer`
-* **2025**: `Payer Type`
-  *(Terminology aligned with standards)*
+* **2024:** `Payer`
+* **2025:** `Payer Type` *(Terminology aligned with standards)*
 
 ---
 
@@ -83,14 +83,14 @@ INSERT INTO quality_measures_provider_mapping (
 ### ❌ Issue 1: Patients Missing from DENEX
 
 * Patients: `3275977`, `3275970`
-* **Cause**: `IntervalUtilities.getIntervalByMillis(...)` strict match on milliseconds excluded valid cases
-* **Fix**: Commented millisecond check and replaced with **day-based check**:
+* **Cause:** `IntervalUtilities.getIntervalByMillis(...)` strict millisecond comparison excluded valid cases
+* **Fix:** Commented millisecond check and replaced with day-based check:
 
 ```java
 eval(IntervalUtilities.getIntervalByDays(occuranceA_encounter,
-    (diagnosis.getStartDate()==null?diagnosis.getRecordedDate():diagnosis.getStartDate()))<=3
+    (diagnosis.getStartDate() == null ? diagnosis.getRecordedDate() : diagnosis.getStartDate())) <= 3
  && IntervalUtilities.getIntervalByDays(occuranceA_encounter,
-    (diagnosis.getStartDate()==null?diagnosis.getRecordedDate():diagnosis.getStartDate()))>=0)
+    (diagnosis.getStartDate() == null ? diagnosis.getRecordedDate() : diagnosis.getStartDate())) >= 0)
 ```
 
 ---
@@ -98,24 +98,24 @@ eval(IntervalUtilities.getIntervalByDays(occuranceA_encounter,
 ### ❌ Issue 2: Extra Patients in Numerator
 
 * Patients: `3275960`, `3275975`
-* **Cause**: Numerator rule didn’t properly exclude **antibiotic orders within 3 days of URI encounter**
-* **Fix**: Added explicit suppression rule:
+* **Cause:** Numerator rule didn’t properly exclude antibiotic orders within 3 days of URI encounter
+* **Fix:** Added explicit suppression rule:
 
 ```java
 rule "Measure 65 - Numeratorv13 - 1"
     agenda-group "ecqm_numerator"
 when
-    request:Request($patient:patient)
+    request: Request($patient: patient)
     ...
-    medicationOrder:MedicationOrder() from $patient.getMedicationOrderList()
-    eval(QDMUtilities.checkCodeAvailablity(measure,QDMCategory.MEDICATION,
+    medicationOrder: MedicationOrder() from $patient.getMedicationOrderList()
+    eval(QDMUtilities.checkCodeAvailablity(measure, QDMCategory.MEDICATION,
          "2.16.840.1.113883.3.464.1003.1190",
-         medicationOrder.getCode(),medicationOrder.getCodeSystemOID()))
-    eval(IntervalUtilities.getIntervalByDays(occuranceA_encounter,medicationOrder.getStartDate())<=3
-     && IntervalUtilities.getIntervalByDays(occuranceA_encounter,medicationOrder.getStartDate())>=0)
+         medicationOrder.getCode(), medicationOrder.getCodeSystemOID()))
+    eval(IntervalUtilities.getIntervalByDays(occuranceA_encounter, medicationOrder.getStartDate()) <= 3
+     && IntervalUtilities.getIntervalByDays(occuranceA_encounter, medicationOrder.getStartDate()) >= 0)
 then
     $measureStatus.setNumerator(0);
-    modify(response) {getMeasureStatus().put("65",$measureStatus)}
+    modify(response) { getMeasureStatus().put("65", $measureStatus) }
 end
 ```
 
@@ -123,13 +123,14 @@ end
 
 ### ❌ Issue 3: Medication Order Dates Not Parsed
 
-* **Problem**: `orderDateNodeList.item(i).hasChildNodes()` check failed because nodes had attributes but no child nodes.
-* **Fix**: Removed `hasChildNodes()` checks. Example:
+* **Problem:** `orderDateNodeList.item(i).hasChildNodes()` check failed because nodes had attributes but no child nodes.
+* **Fix:** Removed `hasChildNodes()` checks. Example:
 
 ```java
-if(orderDateNodeList.item(i)!=null 
-   && orderDateNodeList.item(i).getAttributes().getNamedItem("value").getNodeValue()!=null)
+if (orderDateNodeList.item(i) != null
+    && orderDateNodeList.item(i).getAttributes().getNamedItem("value").getNodeValue() != null) {
     medication.setOrderDate(getDateObject(orderDateNodeList.item(i).getAttributes().getNamedItem("value").getNodeValue()));
+}
 ```
 
 ---
@@ -147,17 +148,19 @@ if(orderDateNodeList.item(i)!=null
 
 ## 🔗 Useful Endpoints
 
-* Get Patients Seen
+* **Get Patients Seen**
 
   ```
   /api/emr/glacemonitor/mipsperformance/getPatientsSeen?dbname=glace&accountID=glace&mode=3&reportingYear=2025
   ```
-* Calculate MIPS Performance
+
+* **Calculate MIPS Performance**
 
   ```
   /api/emr/glacemonitor/mipsperformance/calculateMIPSPerformance?reportingYear=2025&accountID=glace&isMonthlyReport=false&dbname=glace
   ```
-* Generate & Validate QDM for Patient
+
+* **Generate & Validate QDM for Patient**
 
   ```
   /api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=<PATIENT_ID>&providerId=2431&reportingYear=2025
@@ -165,10 +168,18 @@ if(orderDateNodeList.item(i)!=null
 
 ---
 
-QRDA III:
-  Passed :
-  <img width="1285" height="522" alt="image" src="https://github.com/user-attachments/assets/d9070ed1-3622-44f8-9391-9a98a7f3ecca" />
-<img width="1253" height="584" alt="image" src="https://github.com/user-attachments/assets/f94df518-a035-4ffb-844a-0424e7e39dbf" />
+## 📝 QRDA Validation
 
-QRDA I :
-    
+### QRDA III: Passed
+
+![QRDA III Screenshot](https://github.com/user-attachments/assets/d9070ed1-3622-44f8-9391-9a98a7f3ecca)
+
+![QRDA III Screenshot](https://github.com/user-attachments/assets/f94df518-a035-4ffb-844a-0424e7e39dbf)
+
+---
+
+### QRDA I:
+
+*Pending screenshots or notes here*
+
+---
