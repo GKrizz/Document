@@ -181,7 +181,7 @@ INSERT INTO quality_measures_provider_mapping (
 After importing the QRDA ZIP file, use the following **1st API** to verify whether patient data has been successfully inserted:
 
 ```http
-GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/getPatientsSeen?dbname=glace&accountID=glace&mode=3&reportingYear=2025
+http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/getPatientsSeen?dbname=glace&accountID=glace&mode=3&reportingYear=2025
 ```
 
 ---
@@ -191,7 +191,7 @@ GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperforma
 If you want to verify data for a specific provider (e.g., `Steve Collier`), search using their **staff ID**:
 
 ```http
-GET http://localhost:8080/GlaceStageNew/jsp/configure/EmployeeIndex.Action?empType=0&lastname=&firstname=&staffid=SteveCollier&username=
+http://localhost:8080/GlaceStageNew/jsp/configure/EmployeeIndex.Action?empType=0&lastname=&firstname=&staffid=SteveCollier&username=
 ```
 
 > Example Employee ID: `2428`
@@ -280,7 +280,7 @@ After verifying the patient and provider entries:
 Use the following **2nd API** to validate QDM measures for a single patient:
 
 ```http
-GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3274625&providerId=2419&reportingYear=2025
+http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3274625&providerId=2419&reportingYear=2025
 ```
 
 > Replace:
@@ -319,7 +319,7 @@ WHERE macra_measures_rate_reporting_year = 2025;
 Call the **3rd API** to calculate the overall MIPS performance:
 
 ```http
-GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/calculateMIPSPerformance?reportingYear=2025&accountID=glace&isMonthlyReport=false&dbname=glace
+http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/calculateMIPSPerformance?reportingYear=2025&accountID=glace&isMonthlyReport=false&dbname=glace
 ```
 
 ---
@@ -355,7 +355,7 @@ If deviations exist between the Cypress and Glace MIPS report:
 2. Call the **QDM Validation API (2nd API)** for those specific patients:
 
 ```http
-GET http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3275873&providerId=2428&reportingYear=2025
+http://192.168.2.241:9090/glaceemr_backend/api/emr/glacemonitor/mipsperformance/generateAndValidateQDM?dbname=glace&accountId=glace&patientID=3275873&providerId=2428&reportingYear=2025
 ```
 
 ---
