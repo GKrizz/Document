@@ -119,6 +119,33 @@ UPDATE risk_assessment SET risk_assessment_status=3 WHERE risk_assessment_id=512
 
 ---
 
+## ⚙️ Careplan Intervention Queries & Updates
+
+### Query interventions for a patient with date range filter
+
+```sql
+SELECT *
+FROM careplan_intervention
+WHERE careplan_intervention_patient_id = 3276213
+  AND (
+    careplan_intervention_ordered_on BETWEEN '2015-12-31' AND '2025-12-31'
+    OR careplan_intervention_performed_on BETWEEN '2015-12-31' AND '2025-12-31'
+  );
+```
+
+### Update careplan intervention with problem code and code system
+
+```sql
+UPDATE careplan_intervention 
+SET 
+  careplan_intervention_problem_code = '113024001',
+  careplan_intervention_problem_code_system = '2.16.840.1.113883.6.96'
+WHERE careplan_intervention_id = 8620;
+```
+
+> **Note:** Update multiple IDs by using `IN (id1, id2, ...)` if needed.
+
+---
 ## ✅ QRDA Validation Status
 
 * QRDA III: Passed
