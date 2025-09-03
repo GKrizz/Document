@@ -126,3 +126,4 @@ UPDATE risk_assessment SET risk_assessment_status=3 WHERE risk_assessment_id=512
  <img width="1288" height="577" alt="image" src="https://github.com/user-attachments/assets/c30a6008-e0ba-4829-a180-b6f4678924bb" />
 
 * QRDA I: Passed
+<img width="1289" height="497" alt="image" src="https://github.com/user-attachments/assets/280c6dbf-b27d-4254-be38-dd05d87adf3b" />
