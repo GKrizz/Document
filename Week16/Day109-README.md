@@ -87,3 +87,9 @@ WHERE emp_profile_empid = 223;
 **Result:** Doctor's full name (e.g., Saranya Saranya).
 
 ---
+
+
+
+
+
+<img width="1279" height="500" alt="image" src="https://github.com/user-attachments/assets/369581fa-14cd-487c-b1e5-488667bea1e2" />
