@@ -162,3 +162,178 @@ if (emrResponseBean != null) {
 * Makes it easier for providers to stay compliant with reporting standards.
 
 ---
+
+
+
+
+# 🏥 Superbill – Add CPT II Codes [MODERN VIEW]
+
+## 📌 Overview
+
+This module provides functionality to **add CPT II codes** to a patient encounter from the Superbill desktop view.
+It is implemented using **MVP (UI layer in GWT)** and **MVC (backend layer in Spring)**.
+
+---
+
+## 🏗️ Architecture
+
+### UI Layer (MVP pattern)
+
+* **`SuperbillSummaryDesktopView.ui.xml`**
+  GWT UI XML with the **Add CPT** button.
+
+* **`SuperbillSummaryDesktopView.java`**
+  Concrete implementation of the desktop view; wires UI elements with logic.
+
+* **`SuperbillSummaryView.java`**
+  View interface, defines what the Presenter can call on the view.
+
+* **`SuperbillSummaryActivity.java`**
+  Presenter/Activity:
+
+  * Handles UI events (e.g. Add CPT button click).
+  * Calls the client service.
+  * Updates the view with success/error notifications.
+
+* **`SuperBillClient.java`**
+  GWT client service to call backend REST endpoints.
+
+---
+
+### Backend Layer (MVC pattern)
+
+* **`ChargesController.java`**
+  Spring REST controller exposing `/Charges/addCptIiCodes`.
+
+* **`ChargesServices.java`**
+  Service interface for charges logic.
+
+* **`ChargesServicesImpl.java`**
+  Service implementation:
+
+  * Validates `patientId` and `encounterId`.
+  * Loads encounter details from `encounterRepository`.
+  * Checks HEDIS measure configuration.
+  * Builds performed date & context info.
+  * Calls `saveServicesBasedOnHedisMeasuresConfig(...)`.
+  * Returns success/failure.
+
+---
+
+## ⚙️ Flow – Add CPT II Codes
+
+### 1. UI
+
+```xml
+<b:Button ui:field="addCptButton"
+          b:id="addCptButton"
+          text="Add CPT"
+          type="DEFAULT"
+          size="SMALL"
+          title="Add CPT Code" />
+```
+
+### 2. Presenter
+
+```java
+@UiHandler("addCptButton")
+public void onAddCptClicked(ClickEvent event) {
+    if (presenter != null) {
+        presenter.onAddCptClicked(presenter.getActionServletURL().getaccountId());
+    }
+}
+```
+
+* Retrieves `patientId` and `encounterId`.
+* Shows a loading notification.
+* Calls `superBillClient.addCptIiCodes(...)`.
+
+### 3. Client → Controller
+
+```java
+@POST
+@Path("/Charges/addCptIiCodes?dbname={dbname}&patientId={patientId}&encounterId={encounterId}")
+void addCptIiCodes(@PathParam("dbname") String dbname,
+                   @PathParam("patientId") Integer patientId,
+                   @PathParam("encounterId") Integer encounterId,
+                   MethodCallback<Boolean> callback);
+```
+
+### 4. Controller
+
+```java
+@RequestMapping(value = "/addCptIiCodes", method = RequestMethod.POST)
+@ResponseBody
+public Boolean addCptIiCodes(@RequestParam("dbname") String dbname,
+                             @RequestParam("patientId") Integer patientId,
+                             @RequestParam("encounterId") Integer encounterId) throws Exception {
+    return chargesServices.addCptIiCodes(dbname, patientId, encounterId);
+}
+```
+
+### 5. Service Implementation
+
+```java
+@Override
+@Transactional
+public boolean addCptIiCodes(String dbname, Integer patientId, Integer encounterId) throws Exception {
+    if (patientId == null || encounterId == null) return false;
+
+    Encounter encounter = encounterRepository.findbyEncounterId(encounterId);
+    if (encounter == null) return false;
+
+    Integer chartId = (encounter.getEncounterChartid() != null) ? encounter.getEncounterChartid() : -1;
+    String measureIds = measureCalculationService.checkHedisConfiguration(encounterId);
+    if (measureIds == null || measureIds.isEmpty()) return false;
+
+    Timestamp encounterTs = encounter.getEncounterDate();
+    String performedDate = (encounterTs != null)
+            ? new SimpleDateFormat("yyyy-MM-dd").format(encounterTs)
+            : new SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date());
+
+    String username = TennantContextHolder.getRequestcontext().getUserName();
+    String responseMsg = saveServicesBasedOnHedisMeasuresConfig(
+            encounterId, patientId, chartId, measureIds, performedDate, "", username
+    );
+
+    return (responseMsg != null && !responseMsg.isEmpty());
+}
+```
+
+---
+
+## 🔑 Endpoint Summary
+
+### Add CPT II Codes
+
+```
+POST /Charges/addCptIiCodes
+Params:
+  - dbname (String, required by signature, not used internally)
+  - patientId (Integer)
+  - encounterId (Integer)
+Returns:
+  - Boolean (success/failure)
+```
+
+---
+
+## 📂 File Reference
+
+```
+UI
+ ├── SuperbillSummaryDesktopView.ui.xml   (UI definition – Add CPT button)
+ ├── SuperbillSummaryDesktopView.java     (UI implementation)
+ ├── SuperbillSummaryView.java            (View interface)
+ ├── SuperbillSummaryActivity.java        (Presenter handling logic)
+ └── SuperBillClient.java                 (Client-side REST calls)
+
+Backend
+ ├── ChargesController.java               (REST endpoints)
+ ├── ChargesServices.java                 (Service interface)
+ └── ChargesServicesImpl.java             (Service implementation logic)
+```
+
+---
+
+
