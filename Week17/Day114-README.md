@@ -336,4 +336,10 @@ Backend
 
 ---
 
+## Outcome :
+
+<img width="1263" height="558" alt="image" src="https://github.com/user-attachments/assets/fd8a8e9c-6e4b-4dee-b911-c2fed90ac02f" />
+<img width="1266" height="550" alt="image" src="https://github.com/user-attachments/assets/f4a083ad-2d60-4bee-8151-cb2fb8ece858" />
+<img width="1268" height="552" alt="image" src="https://github.com/user-attachments/assets/55c3c64a-fcda-44a0-8328-ad08097cb9a8" />
+
 
