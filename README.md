@@ -237,6 +237,9 @@
 
 ---
 
+## 📅 Week 17 Summary
+
+
 | 📆 Day      | Date               | Day       | 🚀 Highlights      | 📄 Link                           |
 | ----------- | ------------------ | --------- | ------------------ | --------------------------------- |
 | **Day 113** | September 8, 2025  | Monday    | *CMS145* | [View →](Week17/Day113-README.md) |
@@ -247,4 +250,19 @@
 | **Day 118** | September 13, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
 | **Day 119** | September 14, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
 
+---
 
+## 📅 Week 18 Summary
+
+
+| 📆 Day      | Date               | Day       | 🚀 Highlights      | 📄 Link                           |
+| ----------- | ------------------ | --------- | ------------------ | --------------------------------- |
+| **Day 120** | September 15, 2025 | Monday    | 🔄 *To be updated* | [View →](Week18/Day120-README.md) |
+| **Day 121** | September 16, 2025 | Tuesday   | 🔄 *To be updated* | [View →](Week18/Day121-README.md) |
+| **Day 122** | September 17, 2025 | Wednesday | 🔄 *To be updated* | [View →](Week18/Day122-README.md) |
+| **Day 123** | September 18, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week18/Day123-README.md) |
+| **Day 124** | September 19, 2025 | Friday    | 🔄 *To be updated* | [View →](Week18/Day124-README.md) |
+| **Day 125** | September 20, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
+| **Day 126** | September 21, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
+
+---
