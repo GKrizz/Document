@@ -127,11 +127,35 @@ WHERE sd.service_detail_patientid = 3276829;
 
 ---
 
-## 🛠️ SQL Queries Reference
+Perfect — that’s a key fix! Here's how you can document that update in your README clearly and professionally:
 
-* Patients under provider `2436`
-* Chart & encounter filtering
-* Procedure validation based on DOS
-* Adding new `lab_entries_richtext` column
+---
+
+## ✅ Update: IPOP Fix via `getProceduresPerformed()` Restoration
+
+### 🛠️ Fix Summary
+
+* The **IPOP count mismatch** was due to procedures missing from the JSON payload.
+* This was traced back to the modified logic in `getProceduresPerformed()` in `GetQDMData.java`.
+* By **reverting to the previous version** of `getProceduresPerformed()`, the missing procedures (e.g., **CABG - 33510** and **PCI - 92920**) were correctly included in the QDM JSON.
+* This allowed the **rules engine to pick them up**, thereby restoring the correct IPOP count.
+
+### 📊 Updated Comparison
+
+| Source        | IPOP | DENOM | NUMER | DENEXCEP |
+| ------------- | ---- | ----- | ----- | -------- |
+| **Cypress**   | 24   | 17    | 2     | 9        |
+| **My Report** | 24   | 15    | 2     | 8        |
+
+✅ **IPOP now matches** Cypress
+⏳ Remaining: DENOM and DENEXCEP differences still under analysis
+
+---
+
+### 📁 Affected File
+
+* `GetQDMData.java`
+
+  * Function restored: `getProceduresPerformed()`
 
 ---
