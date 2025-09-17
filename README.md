@@ -242,7 +242,7 @@
 
 | 📆 Day      | Date               | Day       | 🚀 Highlights      | 📄 Link                           |
 | ----------- | ------------------ | --------- | ------------------ | --------------------------------- |
-| **Day 113** | September 8, 2025  | Monday    | *CMS145* | [View →](Week17/Day113-README.md) |
+| **Day 113** | September 8, 2025  | Monday    | ⏳ **CMS145v13 – Coronary Artery Disease (CAD) (Pending)** | [View →](Week17/Day113-README.md) |
 | **Day 114** | September 9, 2025  | Tuesday   | 🔄 **🏥 Superbill – Add CPT II Codes** | [View →](Week17/Day114-README.md) |
 | **Day 115** | September 10, 2025 | Wednesday | 🔄 *To be updated* | [View →](Week17/Day115-README.md) |
 | **Day 116** | September 11, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week17/Day116-README.md) |
