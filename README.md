@@ -257,7 +257,7 @@
 
 | 📆 Day      | Date               | Day       | 🚀 Highlights      | 📄 Link                           |
 | ----------- | ------------------ | --------- | ------------------ | --------------------------------- |
-| **Day 120** | September 15, 2025 | Monday    | 🔄 *To be updated* | [View →](Week18/Day120-README.md) |
+| **Day 120** | September 15, 2025 | Monday    | ✅ CPT II Auto-Populate committed; CMS145v13 pending QRDA III | [View →](Week18/Day120-README.md) |
 | **Day 121** | September 16, 2025 | Tuesday   | 🌴 **Leave**       | [View →](Week18/Day121-README.md) |
 | **Day 122** | September 17, 2025 | Wednesday | 🔄 *To be updated* | [View →](Week18/Day122-README.md) |
 | **Day 123** | September 18, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week18/Day123-README.md) |
