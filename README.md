@@ -231,7 +231,7 @@
 | **Day 107** | September 2, 2025 | Tuesday   | ✅ **CMS149v13 Dementia: Cognitive Assessment** <br> • Continued Updates and Fixes <br> • QRDA I Validation Passed                          | [View →](Week16/Day107-README.md) |
 | **Day 108** | September 3, 2025 | Wednesday | ✅ **CMS159v13: Depression Remission at Twelve Months**                                                                                                                        | [View →](Week16/Day108-README.md) |
 | **Day 109** | September 4, 2025 | Thursday  | ✅ **CMS159v13: Depression Remission at Twelve Months**                                                                                                                         | [View →](Week16/Day109-README.md) |
-| **Day 110** | September 5, 2025 | Friday    | 🔄 *To be updated*                                                                                                                         | [View →](Week16/Day110-README.md) |
+| **Day 110** | September 5, 2025 | Friday    | ⏳ **CMS145v13 – Coronary Artery Disease (CAD) (Pending)**                                                                                                                         | [View →](Week16/Day110-README.md) |
 | **Day 111** | September 6, 2025 | Saturday  | 🌴 **Leave**                                                                                                                               | -                                 |
 | **Day 112** | September 7, 2025 | Sunday    | 🌴 **Leave**                                                                                                                               | -                                 |
 
