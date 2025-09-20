@@ -262,7 +262,7 @@
 | **Day 122** | September 17, 2025 | Wednesday | ✅**CMS137v13 – Initiation and Engagement of Substance Use Disorder Treatment** | [View →](Week18/Day122-README.md) |
 | **Day 123** | September 18, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week18/Day123-README.md) |
 | **Day 124** | September 19, 2025 | Friday    | ✅**CMS56v13 – Functional Status Assessment for Total Hip Replacement** | [View →](Week18/Day124-README.md) |
-| **Day 125** | September 20, 2025 | Saturday  | 🔄 *To be updated* | -                                 |
+| **Day 125** | September 20, 2025 | Saturday  | 🔄 *To be updated* | [View →](Week18/Day125-README.md)                                  |
 | **Day 126** | September 21, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
 
 ---
