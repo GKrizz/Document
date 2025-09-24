@@ -54,9 +54,12 @@ INSERT INTO quality_measures_provider_mapping (
 
 ### 🧪 Final Output & Validation
 
-* ✅ **QRDA III**: PASSED <img width="586" height="528" alt="QRDA III Passed" src="https://github.com/user-attachments/assets/aa4273fd-953c-4c14-a3e8-f9c92806202b" />
+* ✅ **QRDA III**: PASSED
+  
+  <img width="586" height="528" alt="QRDA III Passed" src="https://github.com/user-attachments/assets/aa4273fd-953c-4c14-a3e8-f9c92806202b" />
 
-* ✅ **QRDA I**: PASSED <img width="556" height="463" alt="QRDA I Passed" src="https://github.com/user-attachments/assets/919e74a9-00da-4525-9aff-da3e6b7e5584" />
+* ✅ **QRDA I**: PASSED
+   <img width="556" height="463" alt="QRDA I Passed" src="https://github.com/user-attachments/assets/919e74a9-00da-4525-9aff-da3e6b7e5584" />
 
 ---
 
