@@ -134,3 +134,5 @@ WHERE hedis_configuration_reporting_year = 2025;
 ```
 
 ---
+## Final UI:
+<img width="1275" height="614" alt="Screenshot" src="https://github.com/user-attachments/assets/833be311-9ba4-455b-b111-7ed711f48b01" />
