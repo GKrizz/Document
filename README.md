@@ -278,3 +278,20 @@
 | **Day 131** | September 26, 2025 | Friday    | 🧭 **Reviewed Generic Exception Handling <br> ✅ CWE-117 (Log Injection)** | [View →](Week19/Day131-README.md) |
 | **Day 132** | September 27, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
 | **Day 133** | September 28, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
+
+---
+
+## 📅 Week 20 Summary
+
+| 📆 Day      | Date               | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ------------------ | --------- | ------------- | --------------------------------- |
+| **Day 134** | September 29, 2025 | Monday    |               | [View →](Week20/Day134-README.md) |
+| **Day 135** | September 30, 2025 | Tuesday   |               | [View →](Week20/Day135-README.md) |
+| **Day 136** | October 1, 2025    | Wednesday |               | [View →](Week20/Day136-README.md) |
+| **Day 137** | October 2, 2025    | Thursday  |               | [View →](Week20/Day137-README.md) |
+| **Day 138** | October 3, 2025    | Friday    |               | [View →](Week20/Day138-README.md) |
+| **Day 139** | October 4, 2025    | Saturday  |               | -                                 |
+| **Day 140** | October 5, 2025    | Sunday    |               | -                                 |
+
+---
+
