@@ -1,85 +1,34 @@
+# 🔍 Amazon CodeGuru Findings
 
-> **"Session closed – Status: display_server_not_supported"**
+**Source:** `aws Findings_Final.xls`  
+**Total Issues Identified:** `577`
 
-This confirms that the problem is on the **Ubuntu side** — the Ubuntu system you're trying to connect to is likely running **Wayland**, which AnyDesk does **not support** for remote control (only viewing in some cases).
+### 🚨 Issues by Category
 
----
-
-### ✅ Solution: Change Ubuntu's display server to Xorg
-
-You’ll need **physical or alternative remote access** to the Ubuntu machine (keyboard, monitor, or SSH) to fix this.
-
----
-
-## 🛠️ Steps (on the Ubuntu machine)
-
-### 🔁 Temporary Fix: Log in with Xorg instead of Wayland
-
-1. **Log out** of the Ubuntu session (click top-right corner > Power icon > Log Out).
-
-2. On the **login screen**:
-
-   * Select the **username**.
-   * Before entering your password, click the **gear icon ⚙️** in the bottom-right.
-   * Choose **“Ubuntu on Xorg”**.
-   * Then log in.
-
-3. Now try connecting from Windows using AnyDesk. It should work.
-
-> This change is temporary — after reboot, Ubuntu might use Wayland again.
+| Issue Type / CWE                                           | Count | Description |
+|------------------------------------------------------------|-------|-------------|
+| **Catching Generic Exceptions**                            | 8     | Use of broad exception types (e.g., `Exception`, `Throwable`) should be avoided for better error control. |
+| **CWE-117, CWE-93 – Log Injection**                        | 2     | User input logged without sanitization, potentially allowing injection into logs. |
+| **CWE-20 – Improper Input Validation**                     | 4     | Input not properly validated, risking unsafe operations. |
+| **CWE-252, CWE-754 – Missing Return Value Checks**         | 3     | Return values from methods are ignored, possibly missing error handling. |
+| **CWE-327, 328, 326, 208, 1240 – Weak Cryptography**       | 9     | Use of outdated or insecure cryptographic algorithms (e.g., MD5, SHA-1). |
+| **CWE-352 – Cross-Site Request Forgery (CSRF)**            | 8     | CSRF protections missing on state-changing endpoints. |
+| **CWE-390 – Catching Exceptions Without Action**           | 112   | Caught exceptions are not logged or properly handled. |
+| **CWE-400, CWE-664 – Resource Exhaustion / Unsafe Dependencies** | 100   | Potential for denial-of-service or race conditions due to improper resource handling. |
+| **CWE-611 – XML External Entity (XXE) Injection**          | 73    | XML parsers are not securely configured, allowing XXE attacks. |
+| **CWE-611 – Insecure DocumentBuilder Configuration**       | 45    | `DocumentBuilderFactory` configured insecurely, enabling XXE or similar risks. |
+| **CWE-755 – Exposure of Stack Traces**                     | 71    | Stack traces exposed to end-users, leaking implementation details. |
+| **CWE-798 – Hardcoded Credentials**                        | 36    | Credentials or secrets found hardcoded in source code. |
+| **Use of `SimpleDateFormat` in Multi-threaded Contexts**   | 96    | `SimpleDateFormat` is not thread-safe and may cause unpredictable results in concurrent applications. |
+| **Miscellaneous Logic / Pattern Issues**                   | 10    | General best-practice violations or minor security/code quality issues. |
 
 ---
 
-### 🔧 Permanent Fix: Make Xorg the default display server
+## 📄 Manual Code Reviews
 
-1. On the Ubuntu machine, open a terminal.
-
-2. Run the following command to edit the display manager config:
-
-   ```bash
-   sudo nano /etc/gdm3/custom.conf
-   ```
-
-3. Look for the line:
-
-   ```ini
-   #WaylandEnable=false
-   ```
-
-4. **Uncomment it** by removing the `#`:
-
-   ```ini
-   WaylandEnable=false
-   ```
-
-5. Save and exit:
-
-   * Press `Ctrl + O` to save
-   * Press `Enter`
-   * Press `Ctrl + X` to exit
-
-6. Reboot Ubuntu:
-
-   ```bash
-   sudo reboot
-   ```
-
-7. After reboot, Ubuntu will use **Xorg** by default, and **AnyDesk will be fully compatible**.
+**Source:** `Code reviews.docx`  
+**Total Issues Identified:** `2,018`
 
 ---
 
-### 🧪 How to confirm it's fixed
-
-On Ubuntu, after logging in:
-
-```bash
-echo $XDG_SESSION_TYPE
-```
-
-* `x11` = ✅ Xorg (AnyDesk will work)
-* `wayland` = ❌ Still using Wayland (AnyDesk won't work)
-
----
-
-Let me know if you can access the Ubuntu machine physically or via SSH, and I can guide you through those steps.
 
