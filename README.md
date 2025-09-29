@@ -274,7 +274,7 @@
 | **Day 127** | September 22, 2025 | Monday    | ✅**CMS90v14 – Functional Status Assessments for Heart Failure** | [View →](Week19/Day127-README.md) |
 | **Day 128** | September 23, 2025 | Tuesday   | ✅**Superbill** - Show "**Auto Populate**" Button Based on HEDIS Configuration| [View →](Week19/Day128-README.md) |
 | **Day 129** | September 24, 2025 | Wednesday | ✅**CMS146v13 - Appropriate Testing for Pharyngitis** | [View →](Week19/Day129-README.md) |
-| **Day 130** | September 25, 2025 | Thursday  | 🔄 *To be updated* | [View →](Week19/Day130-README.md) |
+| **Day 130** | September 25, 2025 | Thursday  | **Amazon code guru** | [View →](Week19/Day130-README.md) |
 | **Day 131** | September 26, 2025 | Friday    | 🔄 *To be updated* | [View →](Week19/Day131-README.md) |
 | **Day 132** | September 27, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
 | **Day 133** | September 28, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
