@@ -287,11 +287,25 @@
 | ----------- | ------------------ | --------- | ------------- | --------------------------------- |
 | **Day 134** | September 29, 2025 | Monday    |  **CWE-20 - Invalid public <br> CWE-252,754 - Missing check [NO CHANGE] <br> CWE-352 - Cross-site <br>CWE-390 - Catching**             | [View →](Week20/Day134-README.md) |
 | **Day 135** | September 30, 2025 | Tuesday   |  **CWE-390 - Catching <br>CWE-400,664**             | [View →](Week20/Day135-README.md) |
-| **Day 136** | October 1, 2025    | Wednesday |               | [View →](Week20/Day136-README.md) |
-| **Day 137** | October 2, 2025    | Thursday  |               | [View →](Week20/Day137-README.md) |
-| **Day 138** | October 3, 2025    | Friday    |               | [View →](Week20/Day138-README.md) |
-| **Day 139** | October 4, 2025    | Saturday  |               | -                                 |
-| **Day 140** | October 5, 2025    | Sunday    |               | -                                 |
+| **Day 136** | October 1, 2025    | Wednesday |  🌴 **Leave**             | -  |
+| **Day 137** | October 2, 2025    | Thursday  |  🌴 **Leave**             | -  |
+| **Day 138** | October 3, 2025    | Friday    |  🌴 **Leave**             | -  |
+| **Day 139** | October 4, 2025    | Saturday  |   🌴 **Leave**            | -  |
+| **Day 140** | October 5, 2025    | Sunday    |  🌴 **Leave**             | -  |
+
+---
+
+## 📅 Week 21 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
+| **Day 141** | October 6, 2025  | Monday    |               | [View →](Week21/Day141-README.md) |
+| **Day 142** | October 7, 2025  | Tuesday   |               | [View →](Week21/Day142-README.md) |
+| **Day 143** | October 8, 2025  | Wednesday |               | [View →](Week21/Day143-README.md) |
+| **Day 144** | October 9, 2025  | Thursday  |               | [View →](Week21/Day144-README.md) |
+| **Day 145** | October 10, 2025 | Friday    |               | [View →](Week21/Day145-README.md) |
+| **Day 146** | October 11, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
+| **Day 147** | October 12, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
 
 ---
 
