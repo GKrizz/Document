@@ -299,8 +299,8 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
-| **Day 141** | October 6, 2025  | Monday    |               | [View →](Week21/Day141-README.md) |
-| **Day 142** | October 7, 2025  | Tuesday   |               | [View →](Week21/Day142-README.md) |
+| **Day 141** | October 6, 2025  | Monday    |**CWE-400,664**               | [View →](Week21/Day141-README.md) |
+| **Day 142** | October 7, 2025  | Tuesday   |**CWE-400,664**               | [View →](Week21/Day142-README.md) |
 | **Day 143** | October 8, 2025  | Wednesday |               | [View →](Week21/Day143-README.md) |
 | **Day 144** | October 9, 2025  | Thursday  |               | [View →](Week21/Day144-README.md) |
 | **Day 145** | October 10, 2025 | Friday    |               | [View →](Week21/Day145-README.md) |
