@@ -302,8 +302,8 @@
 | **Day 141** | October 6, 2025  | Monday    |**CWE-400,664**               | [View →](Week21/Day141-README.md) |
 | **Day 142** | October 7, 2025  | Tuesday   |**CWE-400,664**               | [View →](Week21/Day142-README.md) |
 | **Day 143** | October 8, 2025  | Wednesday |**CWE-400,664** - committed in dev2               | [View →](Week21/Day143-README.md) |
-| **Day 144** | October 9, 2025  | Thursday  |               | [View →](Week21/Day144-README.md) |
-| **Day 145** | October 10, 2025 | Friday    |               | [View →](Week21/Day145-README.md) |
+| **Day 144** | October 9, 2025  | Thursday  |**CWE-755 (Stack Trace Handling)**               | [View →](Week21/Day144-README.md) |
+| **Day 145** | October 10, 2025 | Friday    | **CWE-755 (Stack Trace Handling)** - committed in dev2              | [View →](Week21/Day145-README.md) |
 | **Day 146** | October 11, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
 | **Day 147** | October 12, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
 
