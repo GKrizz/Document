@@ -309,3 +309,17 @@
 
 ---
 
+
+## 📅 Week 22 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
+| **Day 148** | October 13, 2025 | Monday    |               | [View →](Week22/Day148-README.md) |
+| **Day 149** | October 14, 2025 | Tuesday   |               | [View →](Week22/Day149-README.md) |
+| **Day 150** | October 15, 2025 | Wednesday |               | [View →](Week22/Day150-README.md) |
+| **Day 151** | October 16, 2025 | Thursday  |               | [View →](Week22/Day151-README.md) |
+| **Day 152** | October 17, 2025 | Friday    |               | [View →](Week22/Day152-README.md) |
+| **Day 153** | October 18, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
+| **Day 154** | October 19, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
+
+---
