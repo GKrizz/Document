@@ -72,7 +72,7 @@
 | **Day 30** | June 17, 2025 | Tuesday     | 🔍 **Explored `generateAndValidateQDM(...)` API** <br> **Explored `calculateMIPSPerformance(...)` API**                                                                                                                     | [View →](Week5/Day30-README.md) |
 | **Day 31** | June 18, 2025 | Wednesday   | 🧠 **GWT + Spring MVC flow:** Learned structured end-to-end interaction between GWT UI and Spring backend                              | [View →](Week5/Day31-README.md) |
 | **Day 32** | June 19, 2025 | Thursday    | 🐞 **Fixed UI bug:** Resolved issue where old template data briefly flashed by resetting the view in `start()` before XML fetch        | [View →](Week5/Day32-README.md) |
-| **Day 33** | June 20, 2025 | Friday      | Took **Leave** for TC                                                                                                                     | [View →](Week5/Day33-README.md) |
+| **Day 33** | June 20, 2025 | Friday      | 🌴 Took **Leave** for TC                                                                                                                     | [View →](Week5/Day33-README.md) |
 | **Day 34** | June 21, 2025 | Saturday    | 🌴 **Leave**                                                                                                                                   | -                               |
 | **Day 35** | June 22, 2025 | Sunday      | 🌴 **Leave**                                                                                                                                   | -                               |
 
@@ -289,7 +289,7 @@
 | **Day 135** | September 30, 2025 | Tuesday   |  **CWE-390 - Catching <br>CWE-400,664**             | [View →](Week20/Day135-README.md) |
 | **Day 136** | October 1, 2025    | Wednesday |  🌴 **Leave**             | -  |
 | **Day 137** | October 2, 2025    | Thursday  |  🌴 **Leave**             | -  |
-| **Day 138** | October 3, 2025    | Friday    |  🌴 **Leave**             | -  |
+| **Day 138** | October 3, 2025    | Friday    |  🌴 **Took Leave** for saraswathi pooja            | -  |
 | **Day 139** | October 4, 2025    | Saturday  |   🌴 **Leave**            | -  |
 | **Day 140** | October 5, 2025    | Sunday    |  🌴 **Leave**             | -  |
 
@@ -329,7 +329,7 @@
 | 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
 | **Day 155** | October 20, 2025 | Monday    | 🌴 **Leave**  | [View →](Week23/Day155-README.md) |
-| **Day 156** | October 21, 2025 | Tuesday   | 🌴 **Leave**  | [View →](Week23/Day156-README.md) |
+| **Day 156** | October 21, 2025 | Tuesday   | 🌴 **Took Leave** for Diwali  | [View →](Week23/Day156-README.md) |
 | **Day 157** | October 22, 2025 | Wednesday |               | [View →](Week23/Day157-README.md) |
 | **Day 158** | October 23, 2025 | Thursday  |               | [View →](Week23/Day158-README.md) |
 | **Day 159** | October 24, 2025 | Friday    |               | [View →](Week23/Day159-README.md) |
