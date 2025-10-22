@@ -330,7 +330,7 @@
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
 | **Day 155** | October 20, 2025 | Monday    | 🌴 **Leave**  | -                                 |
 | **Day 156** | October 21, 2025 | Tuesday   | 🌴 **Took Leave** for Diwali  | -                                 |
-| **Day 157** | October 22, 2025 | Wednesday |               | [View →](Week23/Day157-README.md) |
+| **Day 157** | October 22, 2025 | Wednesday | **Fix Apache Xalan IllegalArgumentException for accessExternalDTD by forcing JDK TransformerFactory** | [View →](Week23/Day157-README.md) |
 | **Day 158** | October 23, 2025 | Thursday  |               | [View →](Week23/Day158-README.md) |
 | **Day 159** | October 24, 2025 | Friday    |               | [View →](Week23/Day159-README.md) |
 | **Day 160** | October 25, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
