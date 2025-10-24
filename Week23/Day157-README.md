@@ -39,8 +39,6 @@ System.setProperty("javax.xml.transform.TransformerFactory",
 TransformerFactory factory = TransformerFactory.newInstance();
 factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
 factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");
-// continue your processing
+// continue 
 ```
 ---
-
-Would you like me to generate this as a markdown file or add anything else?
