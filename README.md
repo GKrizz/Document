@@ -331,10 +331,23 @@
 | **Day 155** | October 20, 2025 | Monday    | 🌴 **Leave**  | -                                 |
 | **Day 156** | October 21, 2025 | Tuesday   | 🌴 **Took Leave** for Diwali  | -                                 |
 | **Day 157** | October 22, 2025 | Wednesday | Fix **Apache Xalan** IllegalArgumentException for **accessExternalDTD** by forcing JDK TransformerFactory | [View →](Week23/Day157-README.md) |
-| **Day 158** | October 23, 2025 | Thursday  |               | [View →](Week23/Day158-README.md) |
-| **Day 159** | October 24, 2025 | Friday    |               | [View →](Week23/Day159-README.md) |
+| **Day 158** | October 23, 2025 | Thursday  |  **DirectEmail.java** <br> **HtmlTransformer.java** <br> **XmlGenerationServiceImpl.java**            | [View →](Week23/Day158-README.md) |
+| **Day 159** | October 24, 2025 | Friday    | 🧾 Fixed all **XLS issues** (577 total) <br> Reviewed **CWE-20** input validation <br> Ensured safe XML parser config (`disallow-doctype-decl`)   | [View →](Week23/Day159-README.md) |
 | **Day 160** | October 25, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
 | **Day 161** | October 26, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
 
 ---
 
+## 📅 Week 24 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights                                                                                    | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------ | --------------------------------- |
+| **Day 162** | October 27, 2025 | Monday    |     | [View →](Week24/Day162-README.md) |
+| **Day 163** | October 28, 2025 | Tuesday   |     | [View →](Week24/Day163-README.md) |
+| **Day 164** | October 29, 2025 | Wednesday |     | [View →](Week24/Day164-README.md) |
+| **Day 165** | October 30, 2025 | Thursday  |     | [View →](Week24/Day165-README.md) |
+| **Day 166** | October 31, 2025 | Friday    |     | [View →](Week24/Day166-README.md) |
+| **Day 167** | November 1, 2025 | Saturday  | 🌴 **Leave** | -  |
+| **Day 168** | November 2, 2025 | Sunday    | 🌴 **Leave** | -  |
+
+---
