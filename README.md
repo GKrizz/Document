@@ -312,15 +312,16 @@
 
 ## 📅 Week 22 Summary
 
-| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
-| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
-| **Day 148** | October 13, 2025 | Monday    |               | [View →](Week22/Day148-README.md) |
-| **Day 149** | October 14, 2025 | Tuesday   |               | [View →](Week22/Day149-README.md) |
-| **Day 150** | October 15, 2025 | Wednesday |               | [View →](Week22/Day150-README.md) |
-| **Day 151** | October 16, 2025 | Thursday  |               | [View →](Week22/Day151-README.md) |
-| **Day 152** | October 17, 2025 | Friday    |               | [View →](Week22/Day152-README.md) |
-| **Day 153** | October 18, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
-| **Day 154** | October 19, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
+|    📆 Day   | Date             | Day       | 🚀 Highlights                                                                                                                                                                                            | 📄 Link                           |
+| :---------: | :--------------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------- |
+| **Day 148** | October 13, 2025 | Monday    | 🧩 **CWE-611 XML Security Audit** — Hardened XML parsing/generation across 60+ service files, fixed XXE issues, reviewed ClinicalNoteServiceImpl, ClinicalElementsServiceImpl, and XMLGenerator modules. | [View →](Week22/Day148-README.md) |
+| **Day 149** | October 14, 2025 | Tuesday   | ⚙️ Follow-up fixes & regression testing for XML modules · Validated API endpoints · Finalized secure document builder configs.                                                                           | [View →](Week22/Day149-README.md) |
+| **Day 150** | October 15, 2025 | Wednesday | 🧪 QA and integration testing · Verified Tomcat stage deployment · Validated FHIR and QRDA service responses.                                                                                            | [View →](Week22/Day150-README.md) |
+| **Day 151** | October 16, 2025 | Thursday  | 🔧 Code cleanup and documentation · Prepared commit summaries · Synced next-release modules.                                                                                                             | [View →](Week22/Day151-README.md) |
+| **Day 152** | October 17, 2025 | Friday    | 🚀 Release readiness check · Verified pending APIs · Final cross-service XML validation complete.                                                                                                        | [View →](Week22/Day152-README.md) |
+| **Day 153** | October 18, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                                             | -                                 |
+| **Day 154** | October 19, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                                             | -                                 |
+
 
 ---
 
