@@ -352,3 +352,16 @@
 | **Day 168** | November 2, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                          | –                                 |
 
 ---
+
+## 📅 Week 25 Summary
+
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
+| **Day 169** | November 3, 2025 | Monday    |               | [View →](Week25/Day169-README.md) |
+| **Day 170** | November 4, 2025 | Tuesday   |               | [View →](Week25/Day170-README.md) |
+| **Day 171** | November 5, 2025 | Wednesday |               | [View →](Week25/Day171-README.md) |
+| **Day 172** | November 6, 2025 | Thursday  |               | [View →](Week25/Day172-README.md) |
+| **Day 173** | November 7, 2025 | Friday    |               | [View →](Week25/Day173-README.md) |
+| **Day 174** | November 8, 2025 | Saturday  | 🌴 **Leave**  | –                                 |
+| **Day 175** | November 9, 2025 | Sunday    | 🌴 **Leave**  | –                                 |
