@@ -341,14 +341,14 @@
 
 ## 📅 Week 24 Summary
 
-| 📆 Day      | Date             | Day       | 🚀 Highlights                                                                                    | 📄 Link                           |
-| ----------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------ | --------------------------------- |
-| **Day 162** | October 27, 2025 | Monday    |     | [View →](Week24/Day162-README.md) |
-| **Day 163** | October 28, 2025 | Tuesday   |     | [View →](Week24/Day163-README.md) |
-| **Day 164** | October 29, 2025 | Wednesday |     | [View →](Week24/Day164-README.md) |
-| **Day 165** | October 30, 2025 | Thursday  |     | [View →](Week24/Day165-README.md) |
-| **Day 166** | October 31, 2025 | Friday    |     | [View →](Week24/Day166-README.md) |
-| **Day 167** | November 1, 2025 | Saturday  | 🌴 **Leave** | -  |
-| **Day 168** | November 2, 2025 | Sunday    | 🌴 **Leave** | -  |
+| 📆 Day      | Date             | Day       | 🚀 Highlights                                                                                                                                                                         | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| **Day 162** | October 27, 2025 | Monday    | Finalized updates in **EmailDocument** and **XmlGenerationServiceImpl**; moved changes to **testing + master**.                                                                       | [View →](Week24/Day162-README.md) |
+| **Day 163** | October 28, 2025 | Tuesday   | Reviewed and refactored **EmailDocumentServiceImpl** — focused on charset handling, exception logging, and endpoint testing.                                                          | [View →](Week24/Day163-README.md) |
+| **Day 164** | October 29, 2025 | Wednesday | Updated **FHIREncounterServiceImpl**, **SSORequester**, and **RxHistoryServiceImpl** — refined exception handling and reviewed i18n.                                                  | [View →](Week24/Day164-README.md) |
+| **Day 165** | October 30, 2025 | Thursday  | Performed large-scale review in **HealthcareSurveyServiceImpl**, **OrderEntryBean**, **FHIRR4Controller**, and **ExportQDM** for `SimpleDateFormat`, i18n, and exception consistency. | [View →](Week24/Day165-README.md) |
+| **Day 166** | October 31, 2025 | Friday    | 📚 Studied **Playwright** (E2E testing) and **React** fundamentals; explored integration for UI automation.                                                                           | [View →](Week24/Day166-README.md) |
+| **Day 167** | November 1, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                          | –                                 |
+| **Day 168** | November 2, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                          | –                                 |
 
 ---
