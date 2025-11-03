@@ -358,7 +358,7 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
-| **Day 169** | November 3, 2025 | Monday    |               | [View →](Week25/Day169-README.md) |
+| **Day 169** | November 3, 2025 | Monday    | Updated multiple services and utilities: <br>• Fixed string encoding issues in **HttpConnectionUtils.java** and **ExportHTMLAsPdf.java** <br>• Replaced `==` with `.equals()` in **OrdersServiceImpl.java** <br>• Reviewed i18n issues in **BillingConfigServiceImpl.java** <br>• Updated REST `@RequestMapping` in **FHIREncounterServiceImpl**, **HealthcareSurveyServiceImpl**, **OrderEntryBean**, and **ExportQDM** <br>• Improved exception handling and logging across **SSORequester**, **HealthcareSurveyServiceImpl**, and **OrderEntryBean**              | [View →](Week25/Day169-README.md) |
 | **Day 170** | November 4, 2025 | Tuesday   |               | [View →](Week25/Day170-README.md) |
 | **Day 171** | November 5, 2025 | Wednesday |               | [View →](Week25/Day171-README.md) |
 | **Day 172** | November 6, 2025 | Thursday  |               | [View →](Week25/Day172-README.md) |
