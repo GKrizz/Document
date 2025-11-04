@@ -104,5 +104,4 @@ This sets up both GWT and React, with React embedded inside GWT views.
   * Modern React patterns (hooks, container/presenter, axios, router)
 
 ---
-u want me to do that?
 
