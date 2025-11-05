@@ -535,8 +535,266 @@ React side:
 | **UI Rendering + Logic**        | React (JSX + Hooks)    | Handles dynamic rendering and state |
 | **Routing inside React**        | React Router           | Manages subpages like Edit / Search |
 
+
+---
+
+## 🧭 **GWT ↔ React Integration — Architecture Diagram**
+
+```
+┌────────────────────────────────────┐                     ┌────────────────────────────────────┐
+│          🧩 GWT (Java Side)        │                     │           ⚛️ React (JS Side)        │
+│------------------------------------│                     │------------------------------------│
+│                                    │                     │                                    │
+│ 1️⃣ PrescriptionPlaceR.java         │                     │ 1️⃣ routePrescription.jsx           │
+│   - Defines "Prescription" place   │     Navigation ↔    │   - Defines React route(s)          │
+│   - Handles URL token / history    │     (Route mapping) │   - e.g., /prescription/edit        │
+│                                    │                     │                                    │
+│              │                     │                     │              │                     │
+│              ▼                     │                     │              ▼                     │
+│ 2️⃣ PrescriptionActivityR.java      │   JSInterop Bridge  │ 2️⃣ renderPrescription.jsx          │
+│   - start() method called by GWT   │ ───────────────▶▶▶▶▶ │   - Mounts React into #prescription │
+│   - Calls ReactInterop.render()    │                     │   - Root render entry point         │
+│                                    │                     │                                    │
+│              │                     │                     │              │                     │
+│              ▼                     │                     │              ▼                     │
+│ 3️⃣ PrescriptionViewR.ui.xml        │    HTML Container   │ 3️⃣ PrescriptionView.jsx            │
+│   - <div id="prescription"></div>  │ ◀──────────────◀◀◀◀ │   - Main container component        │
+│                                    │                     │   - Calls hooks and subviews        │
+│                                    │                     │                                    │
+│              │                     │                     │              │                     │
+│              ▼                     │                     │              ▼                     │
+│ 4️⃣ PrescriptionViewR.java          │                     │ 4️⃣ usePrescription.js              │
+│   - Binds XML layout               │     Logic / Data ↔  │   - Custom hook for data & state    │
+│   - Connects Activity to View      │     interaction     │   - Fetches data via Axios          │
+│                                    │                     │                                    │
+│              │                     │                     │              │                     │
+│              ▼                     │                     │              ▼                     │
+│ 5️⃣ ReactInterop.java               │   JS <-> Java link  │ 5️⃣ index.js                        │
+│   - @JsMethod renderPrescription() │ ───────────────▶▶▶▶▶ │   - window.renderPrescription()     │
+│   - Calls global JS function       │                     │   - Exposed for GWT call            │
+│                                    │                     │                                    │
+└────────────────────────────────────┘                     └────────────────────────────────────┘
+```
+
+---
+
+## 🔄 **Flow Explanation**
+
+1. **User navigates** to `/prescription` inside GWT.
+2. GWT triggers:
+
+   * `PrescriptionPlaceR` → identifies the “Prescription” page.
+   * `PrescriptionActivityR` → starts the activity lifecycle.
+3. Inside the activity’s `start()` method:
+
+   * GWT loads `PrescriptionViewR.ui.xml` (which has `<div id="prescription">`).
+   * Then calls `ReactInterop.renderPrescription()` (a JSInterop method).
+4. `ReactInterop.renderPrescription()` invokes:
+
+   * `window.renderPrescription()` (defined in React’s `index.js`).
+5. React code (`renderPrescription.jsx`) runs:
+
+   * Mounts the React UI tree into `<div id="prescription">`.
+6. React takes over:
+
+   * `routePrescription.jsx` handles internal routing.
+   * `PrescriptionView.jsx` (container) loads business logic via hooks.
+   * Hooks like `usePrescription.js`, `useEditPrescription.js`, etc., handle API and state.
+7. The user now interacts with the React UI — all updates happen client-side in React.
+
+---
+
+## 🔁 **GWT ↔ React File Mapping (Quick Reference)**
+
+| GWT File                     | React Equivalent         | Purpose                        |
+| ---------------------------- | ------------------------ | ------------------------------ |
+| `PrescriptionPlaceR.java`    | `routePrescription.jsx`  | Defines navigation route       |
+| `PrescriptionActivityR.java` | `renderPrescription.jsx` | Entry point / render trigger   |
+| `PrescriptionViewR.ui.xml`   | `PrescriptionView.jsx`   | Defines UI layout              |
+| `PrescriptionViewR.java`     | `usePrescription.js`     | Handles view logic / data      |
+| `ReactInterop.java`          | `index.js`               | Java ↔ JS communication bridge |
+
+---
+
+## 🧩 **Conceptual Analogy**
+
+| Concept           | GWT                 | React                 |
+| ----------------- | ------------------- | --------------------- |
+| **Routing**       | Place / Activity    | React Router          |
+| **View Layout**   | `.ui.xml` + `.java` | JSX components        |
+| **Logic / State** | Presenter classes   | Custom Hooks          |
+| **Startup**       | Activity start()    | render() / root mount |
+| **Interop Layer** | JSInterop           | window functions      |
+
+---
+
+✅ **In short:**
+
+> GWT controls *when* the Prescription page should load.
+> React controls *how* it looks and behaves once it’s loaded.
+
 ---
 
 
+## 🔁 **GWT ↔ React Data Flow Diagram**
 
+```
+┌────────────────────────────────────────────┐
+│             🧩 GWT (Java Side)             │
+│--------------------------------------------│
+│                                            │
+│ PrescriptionPlaceR.java                    │
+│   → Handles routing (URL, token).          │
+│                                            │
+│ PrescriptionActivityR.java                 │
+│   → start() called when user enters page.  │
+│   → Calls ReactInterop.renderPrescription( data ). ─────┐
+│                                            │             │
+│ PrescriptionViewR.ui.xml                   │             │
+│   → Contains <div id="prescription"></div> │             │
+│                                            │             │
+│ ReactInterop.java                          │             │
+│   → @JsMethod renderPrescription(data)     │             │
+│   → Calls JS: window.renderPrescription(data)            │
+└────────────────────────────────────────────┘             │
+                                                           ▼
+┌────────────────────────────────────────────┐
+│              ⚛️ React (JS Side)             │
+│--------------------------------------------│
+│ index.js                                   │
+│   → window.renderPrescription = (data) => {│
+│        renderPrescription(data);           │
+│     };                                     │
+│                                            │
+│ renderPrescription.jsx                     │
+│   → ReactDOM.render(<RoutePrescription data={data}/>)    │
+│                                            │
+│ RoutePrescription.jsx                      │
+│   → Routes React pages                     │
+│   → Passes props to <PrescriptionView />   │
+│                                            │
+│ PrescriptionView.jsx                       │
+│   → Uses props & hooks (usePrescription)   │
+│   → Fetches or modifies data via Axios     │
+│                                            │
+│ usePrescription.js                         │
+│   → Custom hook for data + business logic  │
+│   → May call back to GWT if needed         │
+│                                            │
+│ Example callback:                          │
+│   window.gwtNotifySave(data)  ◀────────────┘
+│                                            │
+└────────────────────────────────────────────┘
+```
 
+---
+
+## 🧠 **Data Flow Explained**
+
+### 🟩 GWT → React
+
+GWT can *send data to React* when calling the interop function:
+
+```java
+ReactInterop.renderPrescription("{\"patientId\":123, \"mode\":\"edit\"}");
+```
+
+* This passes JSON or simple data.
+* React receives it via `window.renderPrescription(data)` and uses it as props.
+
+Example on React side:
+
+```js
+window.renderPrescription = (data) => {
+  const parsed = JSON.parse(data);
+  renderPrescription(parsed);
+};
+```
+
+### 🟦 React → GWT
+
+React can *call back into GWT* using another JSInterop-exposed method:
+
+```java
+@JsMethod
+public static native void notifySave(String json);
+```
+
+Then React calls:
+
+```js
+window.gwtNotifySave(JSON.stringify(formData));
+```
+
+This way, React can tell GWT things like:
+
+* “Form was submitted”
+* “User clicked back”
+* “Save successful, navigate away”
+
+---
+
+## 🔄 **Bidirectional Communication Summary**
+
+| Direction       | From            | To   | Mechanism                               | Example Use                                      |
+| --------------- | --------------- | ---- | --------------------------------------- | ------------------------------------------------ |
+| **GWT → React** | Java (Activity) | JS   | `ReactInterop.renderPrescription(data)` | Load React UI with context (patient, mode, etc.) |
+| **React → GWT** | JS (React code) | Java | `window.gwtNotifySave(data)`            | Notify GWT about save / navigation events        |
+
+---
+
+## 🔧 **Example Code Integration**
+
+**GWT Side (ReactInterop.java):**
+
+```java
+@JsType(isNative = true, namespace = JsPackage.GLOBAL)
+public class ReactInterop {
+    @JsMethod
+    public static native void renderPrescription(String data);
+
+    @JsMethod
+    public static void gwtNotifySave(String json) {
+        // Handle callback from React
+        System.out.println("React sent: " + json);
+    }
+}
+```
+
+**React Side (index.js):**
+
+```js
+window.renderPrescription = (data) => {
+  const props = JSON.parse(data || "{}");
+  renderPrescription(props);
+};
+
+function renderPrescription(props) {
+  const root = document.getElementById("prescription");
+  ReactDOM.render(<RoutePrescription {...props} />, root);
+}
+
+// Example callback
+function savePrescription(formData) {
+  window.gwtNotifySave(JSON.stringify(formData));
+}
+```
+
+---
+
+## 🧩 **Conceptual Overview**
+
+| Flow               | Description                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
+| 🠖 **GWT → React** | GWT triggers React rendering, optionally sends initial data (like patient info, user context, etc.). |
+| 🠔 **React → GWT** | React sends callbacks or status updates (like form submission) back to GWT via JSInterop.            |
+
+---
+
+## ✅ **End Result**
+
+* GWT manages **navigation**, **permissions**, and **page lifecycle**.
+* React manages **UI rendering**, **form interactions**, and **API calls**.
+* Both communicate **seamlessly via JSInterop** with JSON payloads.
+
+---
