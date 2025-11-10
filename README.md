@@ -365,3 +365,18 @@
 | **Day 173** | November 7, 2025 | Friday    |               | [View →](Week25/Day173-README.md) |
 | **Day 174** | November 8, 2025 | Saturday  | 🌴 **Leave**  | –                                 |
 | **Day 175** | November 9, 2025 | Sunday    | 🌴 **Leave**  | –                                 |
+
+---
+
+## 📅 Week 26 Summary
+
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights                                                                                                                                                                                                                                                                                 | 📄 Link                           |
+| ----------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| **Day 176** | November 10, 2025 | Monday    |                | [View →](Week26/Day176-README.md) |
+| **Day 177** | November 11, 2025 | Tuesday   |                | [View →](Week26/Day177-README.md) |
+| **Day 178** | November 12, 2025 | Wednesday |                | [View →](Week26/Day178-README.md) |
+| **Day 179** | November 13, 2025 | Thursday  |                | [View →](Week26/Day179-README.md) |
+| **Day 180** | November 14, 2025 | Friday    |                | [View →](Week26/Day180-README.md) |
+| **Day 181** | November 15, 2025 | Saturday  | 🌴 **Leave**   | –                                 |
+| **Day 182** | November 16, 2025 | Sunday    | 🌴 **Leave**   | –                                 |
