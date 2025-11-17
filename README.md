@@ -384,7 +384,7 @@
 
 | 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link |
 | ----------- | ----------------- | --------- | ------------- | ------- |
-| **Day 183** | November 17, 2025 | Monday    |               | [View →](Week27/Day183-README.md) |
+| **Day 183** | November 17, 2025 | Monday    |  **Amazon code guru :** <br> 🛠 Reviewed and updated multiple services: <br>• `portalRecoverUserPasswordServiceImpl.java` – verified `InputStreamReader` usage, `Calendar.getInstance` checks, `IOUtils.toString` usage <br>• `PlanSpecification.java` – fixed unsafe `String` comparison (`== / !=`) <br>• `SchedulerConfigServiceImpl.java` – fixed unsafe `String` comparisons, validated cyclomatic complexity <br>• `CareQualityServiceImpl.java` – pending fixes in multiple `catch` blocks, some JSON handling lines, and `String.getBytes`; confirmed `SimpleDateFormat` and static config campaigns      | [View →](Week27/Day183-README.md) |
 | **Day 184** | November 18, 2025 | Tuesday   |               | [View →](Week27/Day184-README.md) |
 | **Day 185** | November 19, 2025 | Wednesday |               | [View →](Week27/Day185-README.md) |
 | **Day 186** | November 20, 2025 | Thursday  |               | [View →](Week27/Day186-README.md) |
