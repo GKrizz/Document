@@ -380,3 +380,14 @@
 | **Day 181** | November 15, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                                                                                              | –                                 |
 | **Day 182** | November 16, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                                                                                              | –                                 |
 
+## 📅 Week 27 Summary
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link |
+| ----------- | ----------------- | --------- | ------------- | ------- |
+| **Day 183** | November 17, 2025 | Monday    |               | [View →](Week27/Day183-README.md) |
+| **Day 184** | November 18, 2025 | Tuesday   |               | [View →](Week27/Day184-README.md) |
+| **Day 185** | November 19, 2025 | Wednesday |               | [View →](Week27/Day185-README.md) |
+| **Day 186** | November 20, 2025 | Thursday  |               | [View →](Week27/Day186-README.md) |
+| **Day 187** | November 21, 2025 | Friday    |               | [View →](Week27/Day187-README.md) |
+| **Day 188** | November 22, 2025 | Saturday  | 🌴 **Leave**  | – |
+| **Day 189** | November 23, 2025 | Sunday    | 🌴 **Leave**  | – |
