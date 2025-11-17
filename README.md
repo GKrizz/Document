@@ -275,7 +275,7 @@
 | **Day 128** | September 23, 2025 | Tuesday   | ✅**Superbill** - Show "**Auto Populate**" Button Based on HEDIS Configuration| [View →](Week19/Day128-README.md) |
 | **Day 129** | September 24, 2025 | Wednesday | ✅**CMS146v13 - Appropriate Testing for Pharyngitis** | [View →](Week19/Day129-README.md) |
 | **Day 130** | September 25, 2025 | Thursday  | **Amazon code guru** | [View →](Week19/Day130-README.md) |
-| **Day 131** | September 26, 2025 | Friday    | 🧭 **Reviewed Generic Exception Handling <br> ✅ CWE-117 (Log Injection)** | [View →](Week19/Day131-README.md) |
+| **Day 131** | September 26, 2025 | Friday    | **Amazon code guru :** <br>🧭 **Reviewed Generic Exception Handling <br> ✅ CWE-117 (Log Injection)** | [View →](Week19/Day131-README.md) |
 | **Day 132** | September 27, 2025 | Saturday  | 🌴 **Leave**       | -                                 |
 | **Day 133** | September 28, 2025 | Sunday    | 🌴 **Leave**       | -                                 |
 
@@ -285,8 +285,8 @@
 
 | 📆 Day      | Date               | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ------------------ | --------- | ------------- | --------------------------------- |
-| **Day 134** | September 29, 2025 | Monday    |  **CWE-20 - Invalid public <br> CWE-252,754 - Missing check [NO CHANGE] <br> CWE-352 - Cross-site <br>CWE-390 - Catching**             | [View →](Week20/Day134-README.md) |
-| **Day 135** | September 30, 2025 | Tuesday   |  **CWE-390 - Catching <br>CWE-400,664**             | [View →](Week20/Day135-README.md) |
+| **Day 134** | September 29, 2025 | Monday    | **Amazon code guru :** <br> **CWE-20 - Invalid public <br> CWE-252,754 - Missing check [NO CHANGE] <br> CWE-352 - Cross-site <br>CWE-390 - Catching**             | [View →](Week20/Day134-README.md) |
+| **Day 135** | September 30, 2025 | Tuesday   | **Amazon code guru :** <br> **CWE-390 - Catching <br>CWE-400,664**             | [View →](Week20/Day135-README.md) |
 | **Day 136** | October 1, 2025    | Wednesday |  🌴 **Leave**             | -  |
 | **Day 137** | October 2, 2025    | Thursday  |  🌴 **Leave**             | -  |
 | **Day 138** | October 3, 2025    | Friday    |  🌴 **Took Leave** for saraswathi pooja            | -  |
@@ -314,7 +314,7 @@
 
 |    📆 Day   | Date             | Day       | 🚀 Highlights                                                                                                                                                                                            | 📄 Link                           |
 | :---------: | :--------------- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------- |
-| **Day 148** | October 13, 2025 | Monday    | 🧩 **CWE-611 XML Security Audit** — Hardened XML parsing/generation across 60+ service files, fixed XXE issues, reviewed ClinicalNoteServiceImpl, ClinicalElementsServiceImpl, and XMLGenerator modules. | [View →](Week22/Day148-README.md) |
+| **Day 148** | October 13, 2025 | Monday    | **Amazon code guru :** <br>🧩 **CWE-611 XML Security Audit** — Hardened XML parsing/generation across 60+ service files, fixed XXE issues, reviewed ClinicalNoteServiceImpl, ClinicalElementsServiceImpl, and XMLGenerator modules. | [View →](Week22/Day148-README.md) |
 | **Day 149** | October 14, 2025 | Tuesday   | ⚙️ Follow-up fixes & regression testing for XML modules · Validated API endpoints · Finalized secure document builder configs.                                                                           | [View →](Week22/Day149-README.md) |
 | **Day 150** | October 15, 2025 | Wednesday | 🧪 QA and integration testing · Verified Tomcat stage deployment · Validated FHIR and QRDA service responses.                                                                                            | [View →](Week22/Day150-README.md) |
 | **Day 151** | October 16, 2025 | Thursday  | 🔧 Code cleanup and documentation · Prepared commit summaries · Synced next-release modules.                                                                                                             | [View →](Week22/Day151-README.md) |
@@ -331,9 +331,9 @@
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
 | **Day 155** | October 20, 2025 | Monday    | 🌴 **Leave**  | -                                 |
 | **Day 156** | October 21, 2025 | Tuesday   | 🌴 **Took Leave** for Diwali  | -                                 |
-| **Day 157** | October 22, 2025 | Wednesday | Fix **Apache Xalan** IllegalArgumentException for **accessExternalDTD** by forcing JDK TransformerFactory | [View →](Week23/Day157-README.md) |
-| **Day 158** | October 23, 2025 | Thursday  |  **DirectEmail.java** <br> **HtmlTransformer.java** <br> **XmlGenerationServiceImpl.java**            | [View →](Week23/Day158-README.md) |
-| **Day 159** | October 24, 2025 | Friday    | 🧾 Fixed all **XLS issues** (577 total) <br> Reviewed **CWE-20** input validation <br> Ensured safe XML parser config (`disallow-doctype-decl`)   | [View →](Week23/Day159-README.md) |
+| **Day 157** | October 22, 2025 | Wednesday | **Amazon code guru :** <br> Fix **Apache Xalan** IllegalArgumentException for **accessExternalDTD** by forcing JDK TransformerFactory | [View →](Week23/Day157-README.md) |
+| **Day 158** | October 23, 2025 | Thursday  |  **Amazon code guru :** <br> **DirectEmail.java** <br> **HtmlTransformer.java** <br> **XmlGenerationServiceImpl.java**            | [View →](Week23/Day158-README.md) |
+| **Day 159** | October 24, 2025 | Friday    | **Amazon code guru :** <br> 🧾 Fixed all **XLS issues** (577 total) <br> Reviewed **CWE-20** input validation <br> Ensured safe XML parser config (`disallow-doctype-decl`)   | [View →](Week23/Day159-README.md) |
 | **Day 160** | October 25, 2025 | Saturday  | 🌴 **Leave**  | -                                 |
 | **Day 161** | October 26, 2025 | Sunday    | 🌴 **Leave**  | -                                 |
 
@@ -343,11 +343,11 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights                                                                                                                                                                         | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| **Day 162** | October 27, 2025 | Monday    | Finalized updates in **EmailDocument** and **XmlGenerationServiceImpl**; moved changes to **testing + master**.                                                                       | [View →](Week24/Day162-README.md) |
-| **Day 163** | October 28, 2025 | Tuesday   | Reviewed and refactored **EmailDocumentServiceImpl** — focused on charset handling, exception logging, and endpoint testing.                                                          | [View →](Week24/Day163-README.md) |
-| **Day 164** | October 29, 2025 | Wednesday | Updated **FHIREncounterServiceImpl**, **SSORequester**, and **RxHistoryServiceImpl** — refined exception handling and reviewed i18n.                                                  | [View →](Week24/Day164-README.md) |
-| **Day 165** | October 30, 2025 | Thursday  | Performed large-scale review in **HealthcareSurveyServiceImpl**, **OrderEntryBean**, **FHIRR4Controller**, and **ExportQDM** for `SimpleDateFormat`, i18n, and exception consistency. | [View →](Week24/Day165-README.md) |
-| **Day 166** | October 31, 2025 | Friday    | 📚 Studied **Playwright** (E2E testing) and **React** fundamentals; explored integration for UI automation.                                                                           | [View →](Week24/Day166-README.md) |
+| **Day 162** | October 27, 2025 | Monday    |**Amazon code guru :** <br>  Finalized updates in **EmailDocument** and **XmlGenerationServiceImpl**; moved changes to **testing + master**.                                                                       | [View →](Week24/Day162-README.md) |
+| **Day 163** | October 28, 2025 | Tuesday   | **Amazon code guru :** <br> Reviewed and refactored **EmailDocumentServiceImpl** — focused on charset handling, exception logging, and endpoint testing.                                                          | [View →](Week24/Day163-README.md) |
+| **Day 164** | October 29, 2025 | Wednesday | **Amazon code guru :** <br> Updated **FHIREncounterServiceImpl**, **SSORequester**, and **RxHistoryServiceImpl** — refined exception handling and reviewed i18n.                                                  | [View →](Week24/Day164-README.md) |
+| **Day 165** | October 30, 2025 | Thursday  | **Amazon code guru :** <br> Performed large-scale review in **HealthcareSurveyServiceImpl**, **OrderEntryBean**, **FHIRR4Controller**, and **ExportQDM** for `SimpleDateFormat`, i18n, and exception consistency. | [View →](Week24/Day165-README.md) |
+| **Day 166** | October 31, 2025 | Friday    | **Amazon code guru :** <br> 📚 Studied **Playwright** (E2E testing) and **React** fundamentals; explored integration for UI automation.                                                                           | [View →](Week24/Day166-README.md) |
 | **Day 167** | November 1, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                          | –                                 |
 | **Day 168** | November 2, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                          | –                                 |
 
@@ -358,7 +358,7 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------- | --------------------------------- |
-| **Day 169** | November 3, 2025 | Monday    | Updated multiple services and utilities: <br>• Fixed string encoding issues in **HttpConnectionUtils.java** and **ExportHTMLAsPdf.java** <br>• Replaced `==` with `.equals()` in **OrdersServiceImpl.java** <br>• Reviewed i18n issues in **BillingConfigServiceImpl.java** <br>• Updated REST `@RequestMapping` in **FHIREncounterServiceImpl**, **HealthcareSurveyServiceImpl**, **OrderEntryBean**, and **ExportQDM** <br>• Improved exception handling and logging across **SSORequester**, **HealthcareSurveyServiceImpl**, and **OrderEntryBean**              | [View →](Week25/Day169-README.md) |
+| **Day 169** | November 3, 2025 | Monday    | **Amazon code guru :** <br> Updated multiple services and utilities: <br>• Fixed string encoding issues in **HttpConnectionUtils.java** and **ExportHTMLAsPdf.java** <br>• Replaced `==` with `.equals()` in **OrdersServiceImpl.java** <br>• Reviewed i18n issues in **BillingConfigServiceImpl.java** <br>• Updated REST `@RequestMapping` in **FHIREncounterServiceImpl**, **HealthcareSurveyServiceImpl**, **OrderEntryBean**, and **ExportQDM** <br>• Improved exception handling and logging across **SSORequester**, **HealthcareSurveyServiceImpl**, and **OrderEntryBean**              | [View →](Week25/Day169-README.md) |
 | **Day 170** | November 4, 2025 | Tuesday   | Finalized and reviewed **GWT ↔ React integration documentation**:<br>• Consolidated Activity–Place lifecycle with React render flow (`ReactInterop`, `PrescriptionActivityR`)<br>• Added **data-exchange section** (Java ↔ JS via JSInterop)<br>• Included **architecture and control-flow diagrams**<br>• Optimized **README structure** for clarity and onboarding              | [View →](Week25/Day170-README.md) |
 | **Day 171** | November 5, 2025 | Wednesday |Continued addressing **CodeGuru** findings:<br>• Ensured UTF-8 encoding in **HttpConnectionUtils.java**, **ExportHTMLAsPdf.java**, and **EncounterServiceImpl.java**<br>• Verified secure digest handling in **MD5.java** (no change needed)<br>• Updated multiple encoding and directory handling issues in **RefillRequestServiceImpl.java** (14 completed, 10 pending)<br>• Standardized string comparison using `.equals()` in **OrdersServiceImpl.java**               | [View →](Week25/Day171-README.md) |
 | **Day 172** | November 6, 2025 | Thursday  | Reviewed and fixed encoding and i18n issues:<br>• Verified **ObjectFactory.java** warnings as false positives (no code changes required)<br>• Reviewed **ImmunizationServiceImpl.java** – safe use of `Calendar.getInstance`, duplicate code noted<br>• Enforced UTF-8 in **PaymentTransactionExecutionServiceImpl.java** (`InputStreamReader`, `String.getBytes()`)<br>• Updated **PortalPaymentsServiceImpl.java** – UTF-8 Base64 encoding, fixed string comparison (`==` → `.equals()`)              | [View →](Week25/Day172-README.md) |
@@ -370,13 +370,13 @@
 
 ## 📅 Week 26 Summary
 
+| 📆 Day      | Date              | Day       | 🚀 Highlights                                                                                                                                                                                                                                             | 📄 Link                           |
+| ----------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| **Day 176** | November 10, 2025 | Monday    | **Amazon code guru :** <br> 🔧 Refactored `PortalPaymentsServiceImpl.java`: standardized `String.getBytes` with `StandardCharsets.UTF_8`, fixed unsafe `String` comparisons (`== / !=`), reviewed `Calendar.getInstance` & `DecimalFormat` usages, and marked remaining edge cases. | [View →](Week26/Day176-README.md) |
+| **Day 177** | November 11, 2025 | Tuesday   | **Amazon code guru :** <br> 🧩 Reviewed multiple services: confirmed `SimpleDateFormat`/`DateTimeFormatter` usages, cleaned up `String.getBytes` in `AjaxConnect.java`, validated `Calendar.getInstance` usages, and fixed charset usage in `ClinicalElementsServiceImpl`.          | [View →](Week26/Day177-README.md) |
+| **Day 178** | November 12, 2025 | Wednesday | **Amazon code guru :** <br> 🛠 Deep dive into `ClinicalElementsServiceImpl`, `PointClickCareServiceImpl`, `SchedulerServiceImpl`, and `LabResultsServiceImpl`: identified/fixed `String.getBytes` and `String` comparison issues, verified `catch` blocks, date formats & mkdir checks. | [View →](Week26/Day178-README.md) |
+| **Day 179** | November 13, 2025 | Thursday  |                                                                                                                                                                                                                                                           | [View →](Week26/Day179-README.md) |
+| **Day 180** | November 14, 2025 | Friday    |                                                                                                                                                                                                                                                           | [View →](Week26/Day180-README.md) |
+| **Day 181** | November 15, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                                                                                              | –                                 |
+| **Day 182** | November 16, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                                                                                              | –                                 |
 
-| 📆 Day      | Date              | Day       | 🚀 Highlights                                                                                                                                                                                                                                                                                 | 📄 Link                           |
-| ----------- | ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| **Day 176** | November 10, 2025 | Monday    |                | [View →](Week26/Day176-README.md) |
-| **Day 177** | November 11, 2025 | Tuesday   |                | [View →](Week26/Day177-README.md) |
-| **Day 178** | November 12, 2025 | Wednesday |                | [View →](Week26/Day178-README.md) |
-| **Day 179** | November 13, 2025 | Thursday  |                | [View →](Week26/Day179-README.md) |
-| **Day 180** | November 14, 2025 | Friday    |                | [View →](Week26/Day180-README.md) |
-| **Day 181** | November 15, 2025 | Saturday  | 🌴 **Leave**   | –                                 |
-| **Day 182** | November 16, 2025 | Sunday    | 🌴 **Leave**   | –                                 |
