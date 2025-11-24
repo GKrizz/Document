@@ -391,3 +391,21 @@
 | **Day 187** | November 21, 2025 | Friday    |               | [View →](Week27/Day187-README.md) |
 | **Day 188** | November 22, 2025 | Saturday  | 🌴 **Leave**  | – |
 | **Day 189** | November 23, 2025 | Sunday    | 🌴 **Leave**  | – |
+
+
+---
+
+## 📅 Week 28 Summary
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ----------------- | --------- | ------------- | --------------------------------- |
+| **Day 190** | November 24, 2025 | Monday    |               | [View →](Week28/Day190-README.md) |
+| **Day 191** | November 25, 2025 | Tuesday   |               | [View →](Week28/Day191-README.md) |
+| **Day 192** | November 26, 2025 | Wednesday |               | [View →](Week28/Day192-README.md) |
+| **Day 193** | November 27, 2025 | Thursday  |               | [View →](Week28/Day193-README.md) |
+| **Day 194** | November 28, 2025 | Friday    |               | [View →](Week28/Day194-README.md) |
+| **Day 195** | November 29, 2025 | Saturday  | 🌴 **Leave**  | –                                 |
+| **Day 196** | November 30, 2025 | Sunday    | 🌴 **Leave**  | –                                 |
+
+---
+
