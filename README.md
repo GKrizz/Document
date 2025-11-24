@@ -399,7 +399,7 @@
 
 | 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ----------------- | --------- | ------------- | --------------------------------- |
-| **Day 190** | November 24, 2025 | Monday    |               | [View →](Week28/Day190-README.md) |
+| **Day 190** | November 24, 2025 | Monday    | xml template not loaded -**D2DesktopNew** ✅              | [View →](Week28/Day190-README.md) |
 | **Day 191** | November 25, 2025 | Tuesday   |               | [View →](Week28/Day191-README.md) |
 | **Day 192** | November 26, 2025 | Wednesday |               | [View →](Week28/Day192-README.md) |
 | **Day 193** | November 27, 2025 | Thursday  |               | [View →](Week28/Day193-README.md) |
