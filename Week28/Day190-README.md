@@ -17,7 +17,7 @@ ls -lrth
 **Example context files:**
 
 * `D2DesktopNew.xml` – Main D2DesktopNew context
-* `D2Desktop.xml` – Old / other desktop version
+* `D2Desktop.xml` – Older desktop version
 * `glaceemr_backend_test.xml` – Backend test context
 
 **Typical XML inside a context file:**
@@ -47,6 +47,7 @@ ll jsp/chart/LeafTool/
 Example files:
 
 * `HeadacheQuestionnaireEaseTN.xml`
+* `Plan.xml`
 * Other LeafTool XML templates
 
 **Notes:**
@@ -84,7 +85,7 @@ Query parameters:
 
 **Notes:**
 
-* 404 or connection reset can happen if the Tomcat context is missing, misconfigured, or docBase path is wrong.
+* 404 or connection reset errors can occur if the Tomcat context is missing, misconfigured, or docBase path is wrong.
 
 ---
 
@@ -188,12 +189,9 @@ curl -I "https://dev2.glaceemr.com:444/D2DesktopNew/jsp/chart/LeafTool/HeadacheQ
 
 ---
 
+## 6. Access Flow – From Tomcat to LeafTool XML
 
-## 7. Access Flow – From Tomcat to LeafTool XML
-
-This section documents the exact steps to locate and verify LeafTool XML templates for `D2DesktopNew`.
-
-### 7.1 Step 1: Go to Tomcat context folder
+### 6.1 Step 1: Go to Tomcat context folder
 
 ```bash
 cd /usr/share/tomcat/apache-tomcat-9.0.12/conf/Catalina/localhost/
@@ -203,23 +201,15 @@ ls -lrth
 * Lists all deployed context XMLs for Catalina.
 * Look specifically for `D2DesktopNew.xml`.
 
-### 7.2 Step 2: View context XML
+### 6.2 Step 2: View context XML
 
 ```bash
 cat D2DesktopNew.xml
 ```
 
 * Confirms the `docBase` (version folder) for `D2DesktopNew`.
-* Example content:
 
-```xml
-<Context path="/D2DesktopNew" docBase="/var/version/D2glacelegacy_stagenew" reloadable="true">
-    <Parameter name="accountID" value="d2desktopnew" override="false"/>
-    <Parameter name="Version" value="v6.1.1" override="false"/>
-</Context>
-```
-
-### 7.3 Step 3: Go to version folder
+### 6.3 Step 3: Go to version folder
 
 ```bash
 cd /var/version/D2glacelegacy_stagenew
@@ -227,7 +217,7 @@ cd /var/version/D2glacelegacy_stagenew
 
 * This is the `docBase` defined in the context XML.
 
-### 7.4 Step 4: Locate the LeafTool XML
+### 6.4 Step 4: Locate the LeafTool XML
 
 ```bash
 ll jsp/chart/LeafTool/HeadacheQuestionnaireEaseTN.xml
@@ -236,9 +226,7 @@ ll jsp/chart/LeafTool/HeadacheQuestionnaireEaseTN.xml
 * Lists the specific template used by the API or frontend.
 * Make sure the file exists and has proper permissions.
 
----
-
-### 7.6 Step 5: Edit / View Another LeafTool XML (`Plan.xml`)
+### 6.5 Step 5: Edit / View Another LeafTool XML (`Plan.xml`)
 
 ```bash
 vi /var/version/D2glacelegacy_stagenew/jsp/chart/LeafTool/Plan.xml
@@ -256,3 +244,16 @@ vi /var/version/D2glacelegacy_stagenew/jsp/chart/LeafTool/Plan.xml
 └── (other templates)
 ```
 
+**Notes:**
+
+* Repeat for any other LeafTool XML templates as needed.
+* Always check permissions after editing:
+
+```bash
+chmod 644 Plan.xml
+chown <tomcat_user>:<tomcat_group> Plan.xml
+```
+
+* Changes might require a **Tomcat restart** if `reloadable="false"` in `D2DesktopNew.xml`.
+
+---
