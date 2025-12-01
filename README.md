@@ -415,7 +415,7 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights      | 📄 Link                           |
 | ----------- | ---------------- | --------- | ------------------ | --------------------------------- |
-| **Day 197** | December 1, 2025 | Monday    | ✏️ *To be updated* | [View →](Week29/Day197-README.md) |
+| **Day 197** | December 1, 2025 | Monday    | **Nelson MIPS Smoking Status (N/A Issue)** | [View →](Week29/Day197-README.md) |
 | **Day 198** | December 2, 2025 | Tuesday   | ✏️ *To be updated* | [View →](Week29/Day198-README.md) |
 | **Day 199** | December 3, 2025 | Wednesday | ✏️ *To be updated* | [View →](Week29/Day199-README.md) |
 | **Day 200** | December 4, 2025 | Thursday  | ✏️ *To be updated* | [View →](Week29/Day200-README.md) |
