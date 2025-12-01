@@ -164,7 +164,7 @@
 7. Record exact field names and codes you find so Tech Support can fix mappings if needed.
 ---
 
-# Quick decision flow you can use for each patient (copy/paste style)
+# Quick decision flow you can use for each patient
 
 1. Check age ≥12 and visit requirement (≥2 qualifying visits OR ≥1 preventive visit). If not → **Not included**.
 2. Check hospice status during period → if yes → **Excluded**.
