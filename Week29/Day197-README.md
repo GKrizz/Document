@@ -164,6 +164,109 @@
 7. Record exact field names and codes you find so Tech Support can fix mappings if needed.
 ---
 
+
+# ✅ **FINAL CHECKLIST (Use this for every patient)**
+
+**Step 1 — Age + Visit Requirement**
+✔ Age ≥ 12
+✔ At least **2 qualifying visits** OR **1 preventive visit** during the measurement period
+→ If not satisfied → **Patient not included** (measure shows N/A)
+
+---
+
+**Step 2 — Hospice Status**
+✔ If patient was in hospice at any time during period
+→ **Exclude from denominator** (measure should not evaluate them)
+
+---
+
+**Step 3 — Tobacco Use Screening**
+✔ Find **Most Recent Tobacco Use Screening** **during the measurement period**
+
+* Check where it is documented (Assessment tab, flowsheet, history, etc.)
+* Must be in **Tobacco Use Screening** valueset
+* Must have a coded result:
+
+  * **Tobacco Non User** OR
+  * **Tobacco User**
+
+❗If missing, incorrect, or free text → System shows **N/A**
+
+---
+
+**Step 4 — Code Mapping Verification**
+✔ Check whether the screening field uses correct LOINC/SNOMED from valueset
+✔ If documented in social history or custom field → It **will not count**
+✔ If multiple screens, ensure **latest** is coded correctly
+✔ If system still shows N/A → possible **valueset OID mapping failure**
+
+---
+
+**Step 5 — If Patient is a Tobacco User**
+✔ Check for Tobacco Cessation Intervention:
+
+* Tobacco cessation counseling (coded)
+* OR Tobacco cessation pharmacotherapy
+* OR Active medication for cessation
+
+✔ Check dates → valid if during measurement period **OR within 6 months before**
+
+If no intervention →
+
+* **Pop2 = Not Met**
+* **Pop3 = Not Met**
+
+---
+
+**Step 6 — Identify System-Level Issues**
+✔ If multiple patients show N/A →
+
+* Possible “Failed to get Valueset OIDs” issue
+* Codelist may not have loaded
+* Mapping from Glace EMR flowsheet to eCQM engine may be broken
+
+Record:
+
+* Field name
+* Data element
+* Code expected
+* Code used
+
+→ Tech Support can fix mapping.
+
+---
+
+# 🔍 **FINAL DECISION FLOW (fast evaluation)**
+
+Use this **flowchart logic** per patient:
+
+### 1️⃣ Age ≥12 + 2 visits (or 1 preventive)?
+
+* No → **Not included** (N/A)
+* Yes → Continue
+
+### 2️⃣ Hospice?
+
+* Yes → Excluded
+* No → Continue
+
+### 3️⃣ Most Recent Screening (this year)?
+
+* No → Pop1 = No; Pop3 = No
+* Yes → Continue
+
+### 4️⃣ Screening Result?
+
+* **Non-user** → Pop1 = Yes; Pop3 = Yes
+* **User** → Continue to interventions
+
+### 5️⃣ Intervention for users (counseling or medication)?
+
+* Yes → Pop2 = Yes; Pop3 = Yes
+* No → Pop2 = No; Pop3 = No
+
+---
+
 # Quick decision flow you can use for each patient
 
 1. Check age ≥12 and visit requirement (≥2 qualifying visits OR ≥1 preventive visit). If not → **Not included**.
