@@ -143,3 +143,37 @@
 * **Pop 3** = everyone eligible → **if non-user then screened = ok; if user then must also have intervention in allowed window**.
 
 ---
+
+# Concrete examples
+
+* Patient A: age 45; 2 office visits; screened on 2025-06-10 as **Non-User** → Pop1 met, Pop3 met.
+* Patient B: age 60; 1 preventive visit; screened as **User** on 2025-03-01; counseling documented on 2024-12-15 (within 6 months prior) → Pop1 met, Pop2 met, Pop3 met.
+* Patient C: age 30; 3 visits; no screening recorded in 2025 → Pop1 not met (denom yes but numerator no), Pop3 not met.
+* Patient D: age 70; screened as **User**; no counseling or meds recorded in 6 months prior or during period → Pop2 not met (Not Met), Pop3 not met.
+
+--- 
+
+# Debug / investigation checklist (step-by-step for each reported patient)
+
+1. Verify **age** and **visit counts** (which visits counted as qualifying? check visit mapping).
+2. Verify **hospice** status.
+3. Find **most recent Tobacco Use Screening** during measurement period: confirm date, where it’s stored, and that the **result** is coded as `Tobacco User` or `Tobacco Non User`.
+4. If screening exists but system shows **N/A**, check whether the screening used the correct **LOINC/SNOMED** code or was entered as free text.
+5. If user and shows **Not Met**, check for **Tobacco Cessation Counseling** code or **pharmacotherapy order/active med** in measurement period OR 6 months prior.
+6. If multiple patients show the same failure pattern, check **valueset OID loading** / codelist fetching and mapping in the eCQM engine.
+7. Record exact field names and codes you find so Tech Support can fix mappings if needed.
+---
+
+# Quick decision flow you can use for each patient (copy/paste style)
+
+1. Check age ≥12 and visit requirement (≥2 qualifying visits OR ≥1 preventive visit). If not → **Not included**.
+2. Check hospice status during period → if yes → **Excluded**.
+3. Look for the **most recent Tobacco Use Screening** during measurement period:
+
+   * If **no screening** → Pop1 numerator = **No**; Pop3 numerator = **No**.
+   * If screening result = **Tobacco Non-User** → Pop1 = **Yes**, Pop3 = **Yes** (Pop2 not applicable).
+   * If screening result = **Tobacco User** → Pop1 = **Yes**, check interventions:
+
+     * If counseling or pharmacotherapy exists (during period OR 6 months prior) → Pop2 = **Yes**, Pop3 = **Yes**.
+     * If no counseling or pharmacotherapy → Pop2 = **No**, Pop3 = **No**.
+---
