@@ -403,9 +403,28 @@
 | **Day 191** | November 25, 2025 | Tuesday   | **D2DesktopNew Deployment Issue:** <br>🔥 Tomcat 9.0.12 running on dev2, but deployment requires 9.0.19. <br>📌 Missing `/D2DesktopNew` webapp under `/usr/share/tomcat/apache-tomcat-9.0.12/webapps`. <br>📌 Real app under `/var/version/D2glacelegacy_stagenew`. <br>⚠ SSO mismatch due to context path case sensitivity. | [View →](Week28/Day191-README.md) |
 | **Day 192** | November 26, 2025 | Wednesday | **Faxing Referrals – mClinic Follow-Up:** <br>📧 Tested referral fax for reported patient; all pages received successfully. <br>🔍 Could not replicate original issue; Loom recording shared for reference. <br>📌 Requested additional details from Sheeba for further investigation.                                       | [View →](Week28/Day192-README.md) |
 | **Day 193** | November 27, 2025 | Thursday  | **Amazon CodeGuru:** <br>🛠 Continued review of services, focusing on JSON handling, exception blocks, and code optimization for reliability.                                                                                                                                                                                | [View →](Week28/Day193-README.md) |
-| **Day 194** | November 28, 2025 | Friday    |                                                                                                                                                                                                                                                                                                                              | [View →](Week28/Day194-README.md) |
+| **Day 194** | November 28, 2025 | Friday    |   **Care Plan XML Not Loading (Venkat Reddy MD PC)**                                                                                                                                                                                                                                                                                                                           | [View →](Week28/Day194-README.md) |
 | **Day 195** | November 29, 2025 | Saturday  | 🌴 **Leave**                                                                                                                                                                                                                                                                                                                 | –                                 |
 | **Day 196** | November 30, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                                                                                                                                                                 | –                                 |
 
 
 ---
+
+
+## 📅 Week 29 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights      | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------------ | --------------------------------- |
+| **Day 197** | December 1, 2025 | Monday    | ✏️ *To be updated* | [View →](Week29/Day197-README.md) |
+| **Day 198** | December 2, 2025 | Tuesday   | ✏️ *To be updated* | [View →](Week29/Day198-README.md) |
+| **Day 199** | December 3, 2025 | Wednesday | ✏️ *To be updated* | [View →](Week29/Day199-README.md) |
+| **Day 200** | December 4, 2025 | Thursday  | ✏️ *To be updated* | [View →](Week29/Day200-README.md) |
+| **Day 201** | December 5, 2025 | Friday    | ✏️ *To be updated* | [View →](Week29/Day201-README.md) |
+| **Day 202** | December 6, 2025 | Saturday  | 🌴 **Leave**       | –                                 |
+| **Day 203** | December 7, 2025 | Sunday    | 🌴 **Leave**       | –                                 |
+
+---
+
+
+
+
