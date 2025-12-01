@@ -1,3 +1,198 @@
+# **Nelson MIPS Smoking Status (N/A Issue) & Patient Analysis**
+
+**Date:** December 1, 2025
+**Prepared by:** *Gobala Krishnan*
+**Related To:** MIPS Measure – CMS138v13
+**Provider:** *Edward Nelson MD*
+**Reported By:** *Indira Reddy*
+**Escalation From:** *Raji*, *Paddy*
+
+---
+
+# **1. Overview of the Issue**
+
+Indira Reddy reported that the **Smoking Status** for several of Dr. Nelson’s patients shows **“N/A”** inside Glenwood, even though the clinic documented them as *Non-smoker* or *Smoker*.
+
+She requested that the correct **screens and follow-ups** be uploaded.
+
+Later, a second email reported additional **MIPS errors**, including:
+
+* Depression MIPS screen value set loading issue
+* Smoking not calculated even after entering screening
+* Missing “Not Met” list
+
+This README summarizes the issue, the MIPS measure requirements, the investigation steps, and the status of each reported patient.
+
+---
+
+# **2. Difference Between the Two Emails**
+
+### **Mail 1 – Nelson MIPs – Smoking (only Smoking issue)**
+
+* Several patients show **N/A** for Smoking Measure.
+* Smoking is recorded in chart, but **MIPS measure not recognizing it**.
+* Expected fix: identify why and correct documentation.
+
+### **Mail 2 – MIPs errors for Dr. Nelson**
+
+Issues include:
+
+1. **Depression MIPS screen error:** “Failed to get Valueset Oids codelist.”
+2. **Smoking documented but still showing Not Met**
+3. **Not Met list not sent for Dr. Reddy & Dr. Nelson**
+
+---
+
+# **3. Understanding CMS138 – Tobacco Use: Screening & Cessation Intervention**
+
+The measure includes **3 populations (rates):**
+
+### **Population 1 – Screening Performed**
+
+Patient screened for tobacco use at least once.
+
+### **Population 2 – Users who received intervention**
+
+Only applies if the patient is a **Tobacco User**.
+
+### **Population 3 – Screening + Intervention (combined)**
+
+* If Non-user → screening alone satisfies measure
+* If User → screening + intervention needed
+
+---
+
+## **3.1 Initial Population Requirements**
+
+Patient must be:
+
+* **Age ≥ 12 years**, and
+* Have **≥2 qualifying visits** OR **1 preventive visit** in the measurement period.
+
+### **Qualifying Visits Examples**
+
+* Office Visits → 99212–99215
+* Virtual, Telephone encounters
+* Psychotherapy, PT/OT, Ophthalmology, etc.
+
+### **Preventive Visits Examples**
+
+* AWV (G0402 / G0438 / G0439)
+* Preventive counseling
+* Nutrition services
+
+---
+
+## **3.2 Data That Counts as Screening (Numerator 1)**
+
+Screening must be documented as:
+
+**Assessment, Performed: Tobacco Use Screening**
+with result coded as:
+
+* **Tobacco Non User**, or
+* **Tobacco User**
+
+⚠ Entries in **Social History** or non-coded flowsheets do **NOT** count.
+
+---
+
+## **3.3 Data Needed for Intervention (Numerator 2)**
+
+Only if patient is tobacco user:
+
+* Tobacco cessation counseling
+* Pharmacotherapy order
+* Active pharmacotherapy within measurement period or 6 months before
+
+---
+
+# **4. Root Cause (Summary of Findings)**
+
+When checking patient encounters, the **first provider** in the list was often *not* Dr. Nelson, so MIPS for that provider shows **N/A**.
+
+When switching to **Edward Nelson MD**, MIPS loads correctly and shows:
+
+* **Not Met** for most patients
+* **Met** for one patient
+
+Most **Not Met** cases were because:
+
+* Smoking status was only documented in **History XML** (not MIPS-required field), OR
+* Smoking status was **not documented at all**
+
+---
+
+# **5. Reported Patients – Final Audit Status**
+
+Below is the final assessment for all reported patients under **Dr. Nelson**:
+
+### **1. 6531982 – Sandra Boone**
+
+* Clinic says: Non-smoker
+* Status: **Not Met**
+* Reason: Smoking documented only in **history XML** (11/12/2025)
+
+---
+
+### **2. 6532289 – Terri Brewer**
+
+* Clinic says: Non-smoker
+* Status: **Not Met**
+* Reason: **Smoking status not documented**
+
+---
+
+### **3. 6537272 – Robin Cox**
+
+* Clinic says: Non-smoker
+* Status: **MET**
+* Reason: Valid tobacco screening documented
+
+---
+
+### **4. 6536247 – Dwayne Hansbro**
+
+* Clinic says: Non-smoker
+* Status: **Not Met**
+* Reason: Smoking documented only in **history XML** (11/03/2025)
+
+---
+
+### **5. 6537264 – Shane Hasty**
+
+* Clinic says: Non-smoker
+* Status: **Not Met**
+* Reason: Smoking documented only in **history XML** (11/17/2025)
+
+---
+
+### **6. 6537152 – Kenyatta Nevins**
+
+* Clinic says: Non-smoker
+* Status: **Not Met**
+* Reason: **Smoking status not documented**
+
+---
+
+### **7. 6537297 – Willie Coleman**
+
+* Clinic says: Smoker
+* Status: **Not Met**
+* Reason: **Smoking status not documented**
+
+---
+
+# **6. Conclusion**
+
+* **Only 1 patient (Cox, Robin)** meets the MIPS measure.
+* All remaining patients are **Not Met** because smoking status was either:
+
+  * Not documented, OR
+  * Only stored in history XML (not recognized by MIPS)
+
+
+---
 ## Population Criteria 1 — (Rate / Population 1 = *Screened for tobacco at least once*)
 
 **Purpose:** identifies patients who should be counted for the *screening* rate.
