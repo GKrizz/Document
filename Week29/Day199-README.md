@@ -237,6 +237,110 @@ export function unmountReactAxiosFetch() {
 ---
 
 
+Perfect! Let’s visualize the **entire flow** from the starting URL to React mounting with a **step-by-step diagram**. I’ll show **how data moves** and **what gets called** at each stage.
+
+---
+
+## **Flow Diagram: R_CurrentMedRootPlace → React**
+
+```
+[Browser URL]
+  |
+  | URL param: ?r_currentMedIntegration=true
+  v
+[MainPresenter.java]
+  - Reads Window.Location.getParameter("r_currentMedIntegration")
+  - Decides to render R_CurrentMedRootPlace
+  - Calls:
+      slottedController.setActivityMapper(mainActivityMapper)
+      slottedController.setDefaultPlace(new R_CurrentMedRootPlace(bean))
+      slottedController.setDisplay(view.getMainDisplayPanel())
+      setIsSlotted(true)
+  |
+  v
+[SlottedController]
+  - Takes default place: R_CurrentMedRootPlace
+  - Asks ActivityMapper: "Which activity for this place?"
+  |
+  v
+[DesktopMainActivityMapper]
+  - Checks place instance:
+        if (place instanceof R_CurrentMedRootPlace)
+            activity = r_currentMedicationActivityProvider.get().withPlace(place)
+  - Returns activity to SlottedController
+  |
+  v
+[R_CurrentMedActivity]
+  - start(panel) called
+  - panel.setWidget(ourUiBinder.createAndBindUi(this)) -> creates HTML DOM shell:
+        <div id="react-axiosfetch-container"></div>
+  - Scheduler polls for isReactReady() every 100ms
+  - When ready:
+        ReactInterop.renderReactAxiosFetch("1") called
+  |
+  v
+[ReactInterop.java / JS interop]
+  - Calls global JS function:
+        window.renderReactAxiosFetch("1")
+  |
+  v
+[renderReactAxiosFetch.js]
+  - Finds container: document.getElementById("react-axiosfetch-container")
+  - Creates React root if not exists
+  - Renders React component:
+        root.render(<ReactAxiosFetchView id="1" />)
+  |
+  v
+[ReactAxiosFetchView.jsx]
+  - React takes over
+  - Manages its own state, lifecycle, API calls, rendering
+```
+
+---
+
+### **Unmounting Flow (onStop / navigation)**
+
+```
+[R_CurrentMedActivity.onStop()]
+  |
+  | calls (if enabled)
+  v
+[ReactInterop.unmountReactAxiosFetch()]
+  |
+  v
+[renderReactAxiosFetch.js -> root.unmount()]
+  - React cleans up component
+  - Removes from DOM
+```
+
+---
+
+### **Step-by-Step Data Passing**
+
+| Step | From                         | To                        | Data / Parameter Passed                                 |
+| ---- | ---------------------------- | ------------------------- | ------------------------------------------------------- |
+| 1    | Browser URL                  | MainPresenter             | `r_currentMedIntegration=true`                          |
+| 2    | MainPresenter                | SlottedController         | `R_CurrentMedRootPlace(bean)`                           |
+| 3    | SlottedController            | DesktopMainActivityMapper | `R_CurrentMedRootPlace`                                 |
+| 4    | ActivityMapper               | R_CurrentMedActivity      | `ChartVariablesBean` (from place)                       |
+| 5    | R_CurrentMedActivity.start() | GWT UI                    | DOM `<div id="react-axiosfetch-container">`             |
+| 6    | R_CurrentMedActivity         | ReactInterop              | `"1"` (customerId / placeholder id)                     |
+| 7    | ReactInterop                 | renderReactAxiosFetch.js  | id → used as prop for React component                   |
+| 8    | renderReactAxiosFetch.js     | React                     | `<ReactAxiosFetchView id="1" />` mounted                |
+| 9    | React                        | React component tree      | Manages own internal state, API calls, and UI rendering |
+
+---
+
+### **Key Takeaways**
+
+1. **Flow is URL → Place → Activity → React**.
+2. `R_CurrentMedRootPlace` is just a **state holder**; `R_CurrentMedActivity` does the actual **UI work**.
+3. React is **completely decoupled from GWT**, except through the container and interop.
+4. React’s prop (`id="1"`) can be replaced with **dynamic patient info** from `ChartVariablesBean`.
+5. Unmounting React properly avoids memory leaks.
+
+---
+
 # **1️⃣ GWT Place / Route**
 
 **File:** `R_CurrentMedRootPlace.java`
