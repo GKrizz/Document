@@ -440,3 +440,16 @@
 | **Day 210** | December 14, 2025 | Sunday    | 🌴 **Leave**                                                                                                                                                                                                                                                                                                                                                                                                                         | –                                 |
 
 ---
+
+## 📅 Week 31 Summary
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ----------------- | --------- | ------------- | --------------------------------- |
+| **Day 211** | December 15, 2025 | Monday    | –             | [View →](Week31/Day211-README.md) |
+| **Day 212** | December 16, 2025 | Tuesday   | –             | [View →](Week31/Day212-README.md) |
+| **Day 213** | December 17, 2025 | Wednesday | –             | [View →](Week31/Day213-README.md) |
+| **Day 214** | December 18, 2025 | Thursday  | –             | [View →](Week31/Day214-README.md) |
+| **Day 215** | December 19, 2025 | Friday    | –             | [View →](Week31/Day215-README.md) |
+| **Day 216** | December 20, 2025 | Saturday  | 🌴 **Leave**  | –                                 |
+| **Day 217** | December 21, 2025 | Sunday    | 🌴 **Leave**  | –                                 |
+
