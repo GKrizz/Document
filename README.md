@@ -445,7 +445,7 @@
 
 | 📆 Day      | Date              | Day       | 🚀 Highlights | 📄 Link                           |
 | ----------- | ----------------- | --------- | ------------- | --------------------------------- |
-| **Day 211** | December 15, 2025 | Monday    | –             | [View →](Week31/Day211-README.md) |
+| **Day 211** | December 15, 2025 | Monday    | **Bug ID: 239135** – Remove Sysouts from Spring (Catalina) Project             | [View →](Week31/Day211-README.md) |
 | **Day 212** | December 16, 2025 | Tuesday   | **HAPI FHIR Plain Server project**             | [View →](Week31/Day212-README.md) |
 | **Day 213** | December 17, 2025 | Wednesday | –             | [View →](Week31/Day213-README.md) |
 | **Day 214** | December 18, 2025 | Thursday  | –             | [View →](Week31/Day214-README.md) |
