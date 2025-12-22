@@ -1,28 +1,30 @@
-# 📘 MIPS Measures – Glace EHR
+# 📘 README
 
-This README documents **how MIPS eCQM measures are mapped in Glace EHR**, focusing on:
+## MIPS Measure Documentation – CMS122v13 & CMS138v13
 
-* **CMS122v13 – Diabetes: Glycemic Status Assessment > 9%**
-* **CMS138v13 – Tobacco Use: Screening and Cessation Intervention**
-
-It explains:
-
-* Measure intent
-* UI tabs used by providers
-* Backend database tables involved
-* How MET / NOT MET is derived
-
-This document is intended for **developers, QA, support, and MIPS verification**.
+**Day 218 – December 22, 2025 (Monday)**
 
 ---
 
-## 🧩 Measure 1: CMS122v13
+## 1️⃣ Measure Overview
 
-### Diabetes: Glycemic Status Assessment > 9%
+### **CMS122v13**
 
-### 🔹 Measure Type
+**Measure Name:**
+**Diabetes: Glycemic Status Assessment Greater Than 9%**
 
-* **Inverse Measure**
+**Measure Type:**
+🔁 **Inverse Measure**
+
+* **Good control (< 9%) → NOT MET**
+* **Poor control (≥ 9%) → MET**
+* **HbA1c not done → MET**
+
+---
+
+## 2️⃣ CMS122v13 – Measure Logic Summary
+
+### 🔹 HbA1c Result Interpretation
 
 | HbA1c Status   | Measure Result |
 | -------------- | -------------- |
@@ -30,98 +32,151 @@ This document is intended for **developers, QA, support, and MIPS verification**
 | HbA1c ≥ 9%     | ✅ MET          |
 | HbA1c NOT DONE | ✅ MET          |
 
-> Good glycemic control = NOT MET
+**Interpretation:**
+
+* **Good control = NOT MET**
+* **Poor or missing control = MET**
 
 ---
 
-### 🔹 Measure Logic Overview
+## 3️⃣ CMS122v13 – UI Tabs & Database Tables Mapping
 
-1. Patient must have **eligible encounter**
-2. Patient must have **diabetes diagnosis**
-3. System checks for **HbA1c lab result**
-4. MET / NOT MET decided based on HbA1c value
-
----
-
-### 🖥️ UI Tabs → 🗄️ Database Tables
-
-| Requirement          | UI Tab               | Database Table               |
+| Measure Requirement  | UI Tab               | Database Table               |
 | -------------------- | -------------------- | ---------------------------- |
 | Eligible encounter   | Encounter            | `encounter`                  |
-| CPT visit support    | Superbill            | `service_detail`             |
+| CPT support          | Superbill            | `service_detail`             |
 | Diabetes diagnosis   | Assessment           | `service_detail` (dx fields) |
-| HbA1c test & value   | Investigation / Labs | ⭐ `lab_entries_parameter`    |
+| HbA1c test performed | Investigation / Labs | ⭐ `lab_entries_parameter`    |
 | Provider attribution | Encounter            | `encounter`, `emp_profile`   |
 
 ---
 
-### 🗄️ Key Tables Explained
+## 4️⃣ CMS122v13 – Functional Breakdown
 
-#### `encounter`
+### 1. **Eligible Encounter (Initial Population & Denominator)**
 
-* Defines visit date, status, provider
-* Only **completed encounters** (`encounter_status = 1`) are used
+* **UI Tab:** Encounter / Superbill
+* **Table:** `encounter`, `service_detail`
+* **Purpose:**
 
-#### `service_detail`
-
-* Stores:
-
-  * CPT codes (office visits)
-  * ICD-10 diabetes diagnoses (E10*, E11*)
-* Supports denominator qualification
-
-#### `lab_entries_parameter`
-
-* **Source of truth for HbA1c**
-* Stores:
-
-  * HbA1c numeric value
-  * Result date
-* Drives numerator decision
+  * Confirms completed visit
+  * Links provider and visit date
 
 ---
 
-## 🧩 Measure 2: CMS138v13
+### 2. **CPT Codes**
 
-### Preventive Care and Screening: Tobacco Use
+* **UI Tab:** Superbill
+* **Table:** `service_detail`
+* **Purpose:**
 
-### 🔹 Measure Logic Overview
+  * Confirms eligible visit type
+  * Supports denominator qualification
 
-A patient is **MET** if:
-
-* Tobacco use is screened **AND**
-
-  * Patient is a **non-smoker**, OR
-  * Patient is a **smoker with cessation counseling**
+⚠️ *CPT codes alone do NOT decide MET / NOT MET.*
 
 ---
 
-### 🖥️ UI Tabs → 🗄️ Database Tables
+### 3. **Diabetes Diagnosis**
 
-| Requirement                | UI Tab                   | Database Table                |
+* **UI Tab:** Assessment
+* **Table:** `service_detail` (DX fields)
+* **Purpose:**
+
+  * Identifies diabetic patients
+
+---
+
+### 4. **HbA1c Test (Critical Component)**
+
+* **UI Tab:** Investigation / Labs
+* **Table:** ⭐ `lab_entries_parameter`
+* **Purpose:**
+
+  * Determines if HbA1c was performed
+  * Reads numeric HbA1c value
+
+✅ **This table drives MET / NOT MET logic**
+
+---
+
+## 5️⃣ CMS138v13 – Measure Overview
+
+### **Measure Name**
+
+**Preventive Care and Screening: Tobacco Use – Screening and Cessation Intervention**
+
+---
+
+## 6️⃣ CMS138v13 – Screening Workflow
+
+### 1. **Eligible Encounter**
+
+* **UI Tab:** Encounter / Superbill
+* **Tables:** `encounter`, `service_detail`
+
+---
+
+### 2. **Tobacco Use Screening**
+
+* **UI Tab:**
+  **History → Social History**
+
+  * Smoking
+
+    * Smoker
+    * Non-smoker
+
+* **Tables:**
+
+  * `patient_clinical_findings`
+  * `risk_assessment` (when applicable)
+
+**Stored Data Includes:**
+
+* Tobacco use question
+* Smoker / Non-smoker responses
+
+---
+
+## 7️⃣ CMS138v13 – Numerator Logic (MET Conditions)
+
+### ✅ **Numerator Option 1**
+
+**Non-Smoker documented**
+
+* **UI Tab:** History
+* **Table:** `patient_clinical_findings`
+* **Result:** ✔ MET
+
+---
+
+### ✅ **Numerator Option 2**
+
+**Smoker + Counseling performed**
+
+#### UI Tabs
+
+* History → Smoker
+* MUP / Plan Instructions → Tobacco Abuse Counseling
+
+#### Tables
+
+* `patient_clinical_findings` → Smoking status
+* `risk_assessment` → Counseling intervention
+
+✔ **MET only if BOTH exist**
+
+---
+
+## 8️⃣ CMS138v13 – UI Tabs & Database Tables Mapping
+
+| Measure Requirement        | UI Tab                   | Database Table                |
 | -------------------------- | ------------------------ | ----------------------------- |
 | Eligible encounter         | Encounter / Superbill    | `encounter`, `service_detail` |
 | Tobacco screening          | History → Social History | `patient_clinical_findings`   |
-| Smoker / non-smoker status | History                  | `patient_clinical_findings`   |
-| Cessation counseling       | Plan Instructions        | `risk_assessment`             |
+| Smoker / Non-smoker status | History                  | `patient_clinical_findings`   |
+| Tobacco counseling         | Plan Instructions (MUP)  | `risk_assessment`             |
 | Provider attribution       | Encounter                | `encounter`, `emp_profile`    |
-
----
-
-### 🗄️ Key Tables Explained
-
-#### `patient_clinical_findings`
-
-* Stores structured answers for:
-
-  * Smoking status
-  * Tobacco use screening
-
-#### `risk_assessment`
-
-* Stores:
-
-  * Tobacco cessation counseling
-  * Follow-up / intervention plans
 
 ---
