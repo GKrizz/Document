@@ -453,3 +453,18 @@
 | **Day 216** | December 20, 2025 | Saturday  | 🌴 **Leave**  | –                                 |
 | **Day 217** | December 21, 2025 | Sunday    | 🌴 **Leave**  | –                                 |
 
+---
+
+## 📅 Week 32 Summary
+
+| 📆 Day      | Date              | Day       | 🚀 Highlights                    | 📄 Link                           |
+| ----------- | ----------------- | --------- | -------------------------------- | --------------------------------- |
+| **Day 218** | December 22, 2025 | Monday    | *To be updated*                  | [View →](Week32/Day218-README.md) |
+| **Day 219** | December 23, 2025 | Tuesday   | *To be updated*                  | [View →](Week32/Day219-README.md) |
+| **Day 220** | December 24, 2025 | Wednesday | *To be updated*                  | [View →](Week32/Day220-README.md) |
+| **Day 221** | December 25, 2025 | Thursday  | 🎄 **Holiday** / *To be updated* | [View →](Week32/Day221-README.md) |
+| **Day 222** | December 26, 2025 | Friday    | *To be updated*                  | [View →](Week32/Day222-README.md) |
+| **Day 223** | December 27, 2025 | Saturday  | 🌴 **Leave**                     | –                                 |
+| **Day 224** | December 28, 2025 | Sunday    | 🌴 **Leave**                     | –                                 |
+
+---
