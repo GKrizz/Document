@@ -180,3 +180,29 @@
 | Provider attribution       | Encounter                | `encounter`, `emp_profile`    |
 
 ---
+
+
+**Today’s Work Status:**
+
+* Analyzed MIPS eCQM specifications in detail.
+* Studied **CMS122v13 – Diabetes: Glycemic Status Assessment > 9%**:
+
+  * Understood inverse measure logic (HbA1c < 9% → NOT MET, ≥ 9% or not done → MET).
+  * Identified correct **documentation tabs**:
+
+    * Encounter, Assessment, Superbill, Investigation.
+  * Mapped **backend tables involved**:
+
+    * `encounter`, `service_detail`, `lab_entries_parameter`, `emp_profile`.
+* Studied **CMS138v13 – Preventive Care and Screening: Tobacco Use**:
+
+  * Understood screening and counseling workflow.
+  * Identified correct **documentation tabs**:
+
+    * History → Social History, Plan Instructions (MUP).
+  * Mapped **backend tables involved**:
+
+    * `patient_clinical_findings`, `risk_assessment`, `encounter`, `service_detail`.
+* Prepared clear UI tab ↔ database table mappings for both measures for MIPS understanding and debugging.
+
+---
