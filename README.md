@@ -459,7 +459,7 @@
 
 | 📆 Day      | Date              | Day       | 🚀 Highlights                    | 📄 Link                           |
 | ----------- | ----------------- | --------- | -------------------------------- | --------------------------------- |
-| **Day 218** | December 22, 2025 | Monday    | *To be updated*  | [View →](Week32/Day218-README.md) |
+| **Day 218** | December 22, 2025 | Monday    | **MIPS Measure Documentation** – CMS122v13 & CMS138v13  | [View →](Week32/Day218-README.md) |
 | **Day 219** | December 23, 2025 | Tuesday   | *To be updated*  | [View →](Week32/Day219-README.md) |
 | **Day 220** | December 24, 2025 | Wednesday | *To be updated*  | [View →](Week32/Day220-README.md) |
 | **Day 221** | December 25, 2025 | Thursday  | 🎄 **Holiday**   | [View →](Week32/Day221-README.md) |
