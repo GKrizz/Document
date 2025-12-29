@@ -1,5 +1,5 @@
 
-# 📘 CMS146 (Measure ID 66) – Daily Investigation & Status Report
+# 📘 CMS146 (Measure ID 66) 
 
 **Date:** *Today*
 **Patient ID:** `2942`
