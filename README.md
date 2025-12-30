@@ -475,7 +475,7 @@
 | 📆 Day      | Date              | Day       | 🚀 Highlights           | 📄 Link                           |
 | ----------- | ----------------- | --------- | ----------------------- | --------------------------------- |
 | **Day 225** | December 29, 2025 | Monday    | **CMS146**- Appropriate Testing for Pharyngitis         | [View →](Week33/Day225-README.md) |
-| **Day 226** | December 30, 2025 | Tuesday   | *To be updated*         | [View →](Week33/Day226-README.md) |
+| **Day 226** | December 30, 2025 | Tuesday   | **CMS146**- Appropriate Testing for Pharyngitis         | [View →](Week33/Day226-README.md) |
 | **Day 227** | December 31, 2025 | Wednesday | 🎉 **Year End**         | [View →](Week33/Day227-README.md) |
 | **Day 228** | January 01, 2026  | Thursday  | 🎊 **New Year Holiday** | –                                 |
 | **Day 229** | January 02, 2026  | Friday    | *To be updated*         | [View →](Week33/Day229-README.md) |
