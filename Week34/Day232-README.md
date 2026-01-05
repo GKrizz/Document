@@ -516,3 +516,355 @@ This documentation explains:
 * How validation ensures correctness
 
 ---
+
+
+# 🧠 BIG PICTURE: What is MIPS (in one line)
+
+**MIPS = a scoring system by CMS that decides whether a doctor gets MORE money, LESS money, or NO change in Medicare payments based on performance.**
+
+Everything in this document exists to answer **one question**:
+
+> “Did this provider deliver quality care in this year?”
+
+---
+
+# 1️⃣ MIPS FUNDAMENTALS (CONCEPT LEVEL)
+
+### Why MIPS exists
+
+CMS moved from:
+❌ *“More patients = more money”*
+to
+✅ *“Better care = more money”*
+
+So CMS measures doctors on **4 categories**:
+
+| Category                            | What it checks                                          |
+| ----------------------------------- | ------------------------------------------------------- |
+| **Quality**                         | Did the doctor follow clinical best practices?          |
+| **Promoting Interoperability (PI)** | Did they use EHR properly?                              |
+| **Improvement Activities (IA)**     | Did they improve care processes?                        |
+| **Cost**                            | Did they avoid unnecessary costs? (CMS calculates this) |
+
+Each category gives points → **Final Score (0–100)** → **Payment adjustment (after 2 years)**
+
+---
+
+# 2️⃣ HOW GLENWOOD IMPLEMENTS MIPS (SYSTEM VIEW)
+
+Think of Glenwood MIPS as **6 layers**:
+
+```
+CMS Rules
+   ↓
+Yearly Measure Data (ECQI / CMS)
+   ↓
+Database Tables
+   ↓
+Provider Configuration
+   ↓
+MIPS Job (Batch)
+   ↓
+Reports + Validation + Export
+```
+
+---
+
+# 3️⃣ DATABASE TABLES (VERY IMPORTANT 🔥)
+
+These tables are the **backbone**.
+
+### A. Patient-level truth tables
+
+| Table                                        | Meaning                                              |
+| -------------------------------------------- | ---------------------------------------------------- |
+| **quality_measures_patient_entries**         | Final status (Met / Not Met) per patient per measure |
+| **quality_measures_patient_entries_history** | Audit/history of changes                             |
+
+👉 *This answers:*
+“Why is THIS patient NOT MET for THIS measure?”
+
+---
+
+### B. Provider configuration tables
+
+| Table                                 | Purpose                              |
+| ------------------------------------- | ------------------------------------ |
+| **quality_measures_provider_mapping** | Which doctor reports which measures  |
+| **macra_provider_configuration**      | Reporting period + submission method |
+| **macra_configuration**               | Year-level MIPS rules                |
+
+👉 *This answers:*
+“What did the provider promise CMS to report?”
+
+---
+
+### C. Scoring tables
+
+| Table                   | Purpose                             |
+| ----------------------- | ----------------------------------- |
+| **macra_measures_rate** | Numerator / denominator per measure |
+| **mips_scores**         | Final score (for PDF & dashboard)   |
+| **mips_weightage**      | Category weights per year           |
+
+👉 *This answers:*
+“How many points does the doctor get?”
+
+---
+
+### D. Special cases
+
+| Table                                   | Why                                |
+| --------------------------------------- | ---------------------------------- |
+| **pi_exclusion / pi_exclusion_details** | PI hardship                        |
+| **ia_measures**                         | Improvement Activity documentation |
+| **mips_notification**                   | Threshold alerts                   |
+
+---
+
+# 4️⃣ YEARLY DATA IMPORT (MOST CONFUSING PART — NOW SIMPLE)
+
+Every **January**, CMS changes rules.
+
+So Glenwood must **IMPORT CMS DATA**.
+
+### Core idea:
+
+> “We copy last year → update CMS changes → remove retired measures → add new ones”
+
+---
+
+## 🔹 quality_measures_2024
+
+This table defines **WHAT measures exist**.
+
+Steps:
+
+1. Copy last year table
+2. Rename benchmark column
+3. Delete **removed CMS measures**
+4. Update **CMS versions** (v11 → v12 etc.)
+5. Update:
+
+   * UUIDs
+   * Version GUIDs
+   * Criteria JSON
+   * Stratification IDs
+6. Add **new v1 measures**
+
+👉 This table = **Master definition of quality measures**
+
+---
+
+## 🔹 submission method table
+
+**quality_measures_submission_method_2024**
+
+Defines:
+
+> “Can this measure be submitted via EHR / Claims / Registry?”
+
+Mostly:
+
+* Copy last year
+* Remove retired measures
+* Add new measures as `EHR`
+
+---
+
+## 🔹 ECQM specifications
+
+**ecqm_specifications_2024**
+
+This maps:
+
+> Measure → Value sets → QDM category
+
+Used during **GlaceCDS validation**.
+
+---
+
+## 🔹 Additional valuesets
+
+Manual, risky table 😅
+Used when CMS data is **incomplete**.
+
+Example:
+
+* Statin contraindications
+* Single-code measures
+
+---
+
+## 🔹 Benchmarks & IA
+
+| Table                                | Source          |
+| ------------------------------------ | --------------- |
+| **mips_benchmark_2024**              | CMS benchmarks  |
+| **mips_improvement_activities_2024** | IA CSV from CMS |
+
+---
+
+## 🔹 Registry & Claims
+
+Used for **non-EHR submissions**, mostly CMS validation.
+
+---
+
+## 🔹 Final APIs (VERY IMPORTANT)
+
+After import, you **MUST run**:
+
+```text
+updateECQMSpecification
+updatePQRSSpecification
+```
+
+Otherwise:
+❌ UI looks fine
+❌ Job runs
+❌ BUT data is WRONG
+
+---
+
+# 5️⃣ PROVIDER CONFIGURATION (FUNCTIONAL FLOW)
+
+### Where?
+
+```
+Configure → General Practice → Meaningful Use → QPP Configuration
+```
+
+### What happens?
+
+1. Select **Year**
+2. Select **Doctor**
+3. Choose **Reporting period**
+4. Submission method = EHR
+5. Add **Quality Measures**
+6. Save
+
+This creates rows in:
+
+* `macra_provider_configuration`
+* `quality_measures_provider_mapping`
+
+---
+
+# 6️⃣ MIPS JOB (HEART OF THE SYSTEM ❤️)
+
+Batch Job:
+
+```
+MIPSPerformanceJob
+```
+
+### Modes (IMPORTANT)
+
+| Mode | Meaning               |
+| ---- | --------------------- |
+| 1    | Only changed patients |
+| 2    | Current month         |
+| 3    | FULL YEAR (most used) |
+| 4    | Date range            |
+
+### What the job does:
+
+1. Load patients
+2. Collect codes (CPT, LOINC, SNOMED, CVX)
+3. Build QDM request
+4. Call **GlaceCDS**
+5. Insert patient status
+6. Calculate numerator/denominator
+7. Update scores
+
+---
+
+# 7️⃣ REPORTS & UI (WHAT USERS SEE)
+
+### Dashboard
+
+* Provider score
+* Category scores
+* Group (TIN-based) score
+
+### Quality tab
+
+* Numerator
+* Denominator
+* Exclusions
+* Rate
+* Points
+
+### Patient drill-down
+
+* Click number → patient list
+* Click info → measure reason
+
+---
+
+# 8️⃣ MIPS FLOWSHEET (DEBUGGING TOOL 🔍)
+
+This is your **truth screen**.
+
+Used to:
+
+* See real-time patient measure status
+* Document NOT MET measures
+* Trigger re-validation
+
+Flowsheet → Pencil icon → Document → Save → Revalidate via CDS
+
+---
+
+# 9️⃣ VALIDATION FLOW (VERY IMPORTANT FOR DEV)
+
+```
+Patient Data
+   ↓
+getEPStatusByPatient API
+   ↓
+GlaceCDS validateECQM
+   ↓
+QualityMeasuresPatientEntries
+```
+
+Only **some measures allow manual documentation** (BMI, Flu, Tobacco, Depression, etc.)
+
+---
+
+# 🔟 EXPORTS (FINAL OUTPUT)
+
+| Format       | Used for           |
+| ------------ | ------------------ |
+| PDF          | Provider review    |
+| Excel        | Internal analysis  |
+| QPP JSON     | CMS submission     |
+| QRDA I / III | Cypress validation |
+
+---
+
+# ✅ HOW YOU SHOULD STUDY THIS (RECOMMENDED)
+
+### Phase 1 – Concept
+
+* Understand **4 categories**
+* Understand **score → payment**
+
+### Phase 2 – Data
+
+* Learn **quality_measures_20xx**
+* Learn **patient_entries**
+
+### Phase 3 – Job
+
+* Understand **MIPSPerformanceJob**
+* Understand **GlaceCDS**
+
+### Phase 4 – UI & Debug
+
+* Flowsheet
+* Patient drill-down
+* Edit screen
+
+---
