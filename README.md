@@ -478,9 +478,24 @@
 | **Day 226** | December 30, 2025 | Tuesday   | **CMS146**- Appropriate Testing for Pharyngitis         | [View →](Week33/Day226-README.md) |
 | **Day 227** | December 31, 2025 | Wednesday | 🎉 **Year End**         | [View →](Week33/Day227-README.md) |
 | **Day 228** | January 01, 2026  | Thursday  | 🎊 **New Year Holiday** | –                                 |
-| **Day 229** | January 02, 2026  | Friday    | *To be updated*         | [View →](Week33/Day229-README.md) |
+| **Day 229** | January 02, 2026  | Friday    | 🌴 **Personal Leave**         | [View →](Week33/Day229-README.md) |
 | **Day 230** | January 03, 2026  | Saturday  | 🌴 **Leave**            | –                                 |
 | **Day 231** | January 04, 2026  | Sunday    | 🌴 **Leave**            | –                                 |
+
+---
+
+
+## 📅 Week 34 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights   | 📄 Link                           |
+| ----------- | ---------------- | --------- | --------------- | --------------------------------- |
+| **Day 232** | January 05, 2026 | Monday    | *To be updated* | [View →](Week34/Day232-README.md) |
+| **Day 233** | January 06, 2026 | Tuesday   | *To be updated* | [View →](Week34/Day233-README.md) |
+| **Day 234** | January 07, 2026 | Wednesday | *To be updated* | [View →](Week34/Day234-README.md) |
+| **Day 235** | January 08, 2026 | Thursday  | *To be updated* | [View →](Week34/Day235-README.md) |
+| **Day 236** | January 09, 2026 | Friday    | *To be updated* | [View →](Week34/Day236-README.md) |
+| **Day 237** | January 10, 2026 | Saturday  | 🌴 **Leave**    | –                                 |
+| **Day 238** | January 11, 2026 | Sunday    | 🌴 **Leave**    | –                                 |
 
 ---
 
