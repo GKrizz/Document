@@ -489,7 +489,7 @@
 
 | 📆 Day      | Date             | Day       | 🚀 Highlights   | 📄 Link                           |
 | ----------- | ---------------- | --------- | --------------- | --------------------------------- |
-| **Day 232** | January 05, 2026 | Monday    | *To be updated* | [View →](Week34/Day232-README.md) |
+| **Day 232** | January 05, 2026 | Monday    | **Understand MIPS Documentation** | [View →](Week34/Day232-README.md) |
 | **Day 233** | January 06, 2026 | Tuesday   | *To be updated* | [View →](Week34/Day233-README.md) |
 | **Day 234** | January 07, 2026 | Wednesday | *To be updated* | [View →](Week34/Day234-README.md) |
 | **Day 235** | January 08, 2026 | Thursday  | *To be updated* | [View →](Week34/Day235-README.md) |
