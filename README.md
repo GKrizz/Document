@@ -499,3 +499,15 @@
 
 ---
 
+## 📅 Week 35 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights       | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------------- | --------------------------------- |
+| **Day 239** | January 12, 2026 | Monday    | **[Add Highlight]** | [View →](Week35/Day239-README.md) |
+| **Day 240** | January 13, 2026 | Tuesday   | **[Add Highlight]** | [View →](Week35/Day240-README.md) |
+| **Day 241** | January 14, 2026 | Wednesday | **[Add Highlight]** | [View →](Week35/Day241-README.md) |
+| **Day 242** | January 15, 2026 | Thursday  |  **🌾 Happy Pongal** * | [View →](Week35/Day242-README.md) |
+| **Day 243** | January 16, 2026 | Friday    | **[Add Highlight]** | [View →](Week35/Day243-README.md) |
+| **Day 244** | January 17, 2026 | Saturday  | 🌴 **Leave**        | –                                 |
+| **Day 245** | January 18, 2026 | Sunday    | 🌴 **Leave**        | –                                 |
+
