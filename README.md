@@ -492,8 +492,8 @@
 | **Day 232** | January 05, 2026 | Monday    | **Understand MIPS Documentation** | [View →](Week34/Day232-README.md) |
 | **Day 233** | January 06, 2026 | Tuesday   | **Tables for TABS** | [View →](Week34/Day233-README.md) |
 | **Day 234** | January 07, 2026 | Wednesday | **PQRS Documentation** | [View →](Week34/Day234-README.md) |
-| **Day 235** | January 08, 2026 | Thursday  | *To be updated* | [View →](Week34/Day235-README.md) |
-| **Day 236** | January 09, 2026 | Friday    | *To be updated* | [View →](Week34/Day236-README.md) |
+| **Day 235** | January 08, 2026 | Thursday  | **QRDA I Timeout & Patient Clinical Elements Investigation** | [View →](Week34/Day235-README.md) |
+| **Day 236** | January 09, 2026 | Friday    | **CMS2v14 – Preventive Care and Screening: Screening for Depression and Follow-Up Plan (Measure 134)** | [View →](Week34/Day236-README.md) |
 | **Day 237** | January 10, 2026 | Saturday  | 🌴 **Leave**    | –                                 |
 | **Day 238** | January 11, 2026 | Sunday    | 🌴 **Leave**    | –                                 |
 
