@@ -520,7 +520,7 @@
 | ----------- | ---------------- | --------- | ----------------- | --------------------------------- |
 | **Day 246** | January 19, 2026 | Monday    | **MIPS – Frequently Asked Questions (FAQ)** | [View →](Week36/Day246-README.md) |
 | **Day 247** | January 20, 2026 | Tuesday   | **CMS2v14 – Depression Screening & Follow-Up** | [View →](Week36/Day247-README.md) |
-| **Day 248** | January 21, 2026 | Wednesday | **To be updated** | [View →](Week36/Day248-README.md) |
+| **Day 248** | January 21, 2026 | Wednesday | **MIPS / PQRS / QPP – FAQ & Troubleshooting** | [View →](Week36/Day248-README.md) |
 | **Day 249** | January 22, 2026 | Thursday  | **To be updated** | [View →](Week36/Day249-README.md) |
 | **Day 250** | January 23, 2026 | Friday    | **To be updated** | [View →](Week36/Day250-README.md) |
 | **Day 251** | January 24, 2026 | Saturday  | 🌴 **Leave**      | –                                 |
