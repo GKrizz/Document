@@ -522,7 +522,20 @@
 | **Day 247** | January 20, 2026 | Tuesday   | **CMS2v14 – Depression Screening & Follow-Up** | [View →](Week36/Day247-README.md) |
 | **Day 248** | January 21, 2026 | Wednesday | **MIPS / PQRS / QPP – FAQ & Troubleshooting** | [View →](Week36/Day248-README.md) |
 | **Day 249** | January 22, 2026 | Thursday  | **BMI (CMS69v13)** – EAAM Account Investigation | [View →](Week36/Day249-README.md) |
-| **Day 250** | January 23, 2026 | Friday    | **To be updated** | [View →](Week36/Day250-README.md) |
+| **Day 250** | January 23, 2026 | Friday    | **AR-KM 3 – Medication Reconciliation** | [View →](Week36/Day250-README.md) |
 | **Day 251** | January 24, 2026 | Saturday  | 🌴 **Leave**      | –                                 |
 | **Day 252** | January 25, 2026 | Sunday    | 🌴 **Leave**      | –                                 |
 
+---
+
+## 📅 Week 37 Summary
+
+| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
+| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
+| **Day 253** | January 26, 2026 | Monday    | **TBD**       | [View →](Week37/Day253-README.md) |
+| **Day 254** | January 27, 2026 | Tuesday   | **TBD**       | [View →](Week37/Day254-README.md) |
+| **Day 255** | January 28, 2026 | Wednesday | **TBD**       | [View →](Week37/Day255-README.md) |
+| **Day 256** | January 29, 2026 | Thursday  | **TBD**       | [View →](Week37/Day256-README.md) |
+| **Day 257** | January 30, 2026 | Friday    | **TBD**       | [View →](Week37/Day257-README.md) |
+| **Day 258** | January 31, 2026 | Saturday  | 🌴 **Leave**  | –                                 |
+| **Day 259** | February 1, 2026 | Sunday    | 🌴 **Leave**  | –                                 |
