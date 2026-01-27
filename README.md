@@ -530,12 +530,12 @@
 
 ## 📅 Week 37 Summary
 
-| 📆 Day      | Date             | Day       | 🚀 Highlights | 📄 Link                           |
-| ----------- | ---------------- | --------- | ------------- | --------------------------------- |
-| **Day 253** | January 26, 2026 | Monday    | **TBD**       | [View →](Week37/Day253-README.md) |
-| **Day 254** | January 27, 2026 | Tuesday   | **TBD**       | [View →](Week37/Day254-README.md) |
-| **Day 255** | January 28, 2026 | Wednesday | **TBD**       | [View →](Week37/Day255-README.md) |
-| **Day 256** | January 29, 2026 | Thursday  | **TBD**       | [View →](Week37/Day256-README.md) |
-| **Day 257** | January 30, 2026 | Friday    | **TBD**       | [View →](Week37/Day257-README.md) |
-| **Day 258** | January 31, 2026 | Saturday  | 🌴 **Leave**  | –                                 |
-| **Day 259** | February 1, 2026 | Sunday    | 🌴 **Leave**  | –                                 |
+| 📆 Day      | Date             | Day       | 🚀 Highlights                                | 📄 Link                           |
+| ----------- | ---------------- | --------- | -------------------------------------------- | --------------------------------- |
+| **Day 253** | January 26, 2026 | Monday    | 🇮🇳 **Republic Day – Leave**                  | [View →](Week37/Day253-README.md)                                |
+| **Day 254** | January 27, 2026 | Tuesday   | **Value Set OID Processing via SFTP (2026)** | [View →](Week37/Day254-README.md) |
+| **Day 255** | January 28, 2026 | Wednesday | **TBD**                                      | [View →](Week37/Day255-README.md) |
+| **Day 256** | January 29, 2026 | Thursday  | **TBD**                                      | [View →](Week37/Day256-README.md) |
+| **Day 257** | January 30, 2026 | Friday    | **TBD**                                      | [View →](Week37/Day257-README.md) |
+| **Day 258** | January 31, 2026 | Saturday  | 🌴 **Leave**                                 | –                                 |
+| **Day 259** | February 1, 2026 | Sunday    | 🌴 **Leave**                                 | –                                 |
