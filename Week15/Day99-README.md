@@ -30,7 +30,11 @@ String hub_url = "http://192.168.2.241:8080/glacecds/ECQMServices/validateECQM";
 ```
 
 ## ⚙️ CDS Configuration
+```
+root@software-H110M-H:~# chmod -Rf 777 /mnt/Glacecds_master/glacecds/
+root@software-H110M-H:~# pwd
 
+```
 > **Note:** Every time a change is made in **Drools**, follow these steps:
 
 1. **Give execution permission** for the rule files.
